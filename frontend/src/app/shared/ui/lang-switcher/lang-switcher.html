@@ -1,0 +1,23 @@
+<div class="lang-switcher">
+  <button
+    type="button"
+    [class.active]="translation.lang() === 'en'"
+    (click)="setLang('en')"
+  >
+    EN
+  </button>
+  <button
+    type="button"
+    [class.active]="translation.lang() === 'es'"
+    (click)="setLang('es')"
+  >
+    ES
+  </button>
+  <button
+    type="button"
+    [class.active]="translation.lang() === 'ca'"
+    (click)="setLang('ca')"
+  >
+    CA
+  </button>
+</div>

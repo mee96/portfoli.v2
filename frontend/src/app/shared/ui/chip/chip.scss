@@ -1,0 +1,13 @@
+@use '../../variables' as vars;
+
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: vars.$radius;
+  background: vars.$paper-2;
+  border: 1px solid vars.$grid;
+  color: vars.$ink-60;
+  font-family: vars.$font-mono;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}

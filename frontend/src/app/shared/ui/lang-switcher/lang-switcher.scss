@@ -1,0 +1,9 @@
+.lang-switcher {
+  display: flex;
+  gap: 0.5rem;
+
+  button.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
