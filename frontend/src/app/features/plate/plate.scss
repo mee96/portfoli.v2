@@ -1,0 +1,40 @@
+@use '../../shared/variables' as vars;
+
+.plate {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem;
+}
+
+.well {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid vars.$grid;
+  background: transparent;
+  padding: 0;
+  cursor: default;
+
+  &--stack {
+    background: vars.$indigo;
+    border-color: vars.$indigo;
+    cursor: pointer;
+  }
+
+  &--ai {
+    background: vars.$eosin;
+    border-color: vars.$eosin;
+    cursor: pointer;
+  }
+
+  &--client {
+    background: vars.$cyan;
+    border-color: vars.$cyan;
+    cursor: pointer;
+  }
+}

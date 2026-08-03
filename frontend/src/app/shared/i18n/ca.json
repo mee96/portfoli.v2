@@ -5,5 +5,8 @@
     "lede": "Tres anys llegint assajos clínics i després un canvi de rumb. Dotze projectes publicats més tard, el mètode no ha canviat: definir la mostra, aplicar el mètode, llegir el resultat.",
     "cta1": "Llegir la placa",
     "cta2": "Escriu-me"
+  },
+  "plate": {
+    "empty": "Selecciona un pou per llegir la mostra."
   }
 }

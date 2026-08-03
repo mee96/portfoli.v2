@@ -5,5 +5,8 @@
     "lede": "Tres años leyendo ensayos clínicos y después un cambio de rumbo. Doce proyectos publicados más tarde, el método sigue siendo el mismo: definir la muestra, aplicar el método, leer el resultado.",
     "cta1": "Leer la placa",
     "cta2": "Escríbeme"
+  },
+  "plate": {
+    "empty": "Selecciona un pocillo para leer la muestra."
   }
 }

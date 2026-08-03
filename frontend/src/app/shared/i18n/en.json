@@ -5,5 +5,8 @@
     "lede": "Three years reading clinical assays, then a change of direction. A dozen shipped projects later the method hasn't changed: define the sample, run the method, read the result.",
     "cta1": "Read the plate",
     "cta2": "Get in touch"
+  },
+  "plate": {
+    "empty": "Select a well to read the sample."
   }
 }

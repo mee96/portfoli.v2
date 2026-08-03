@@ -1,1 +1,19 @@
-<p>readout works!</p>
+@if (project) {
+  <article class="readout">
+    <div class="meta">
+      <span class="well-label">{{ project.well }}</span>
+      <span class="year">{{ project.year }}</span>
+    </div>
+    <h3 class="name">{{ name }}</h3>
+    <p class="tag">{{ translationForLang?.tag }}</p>
+    <p class="method">{{ translationForLang?.method }}</p>
+    <p class="reading">{{ translationForLang?.reading }}</p>
+    <div class="stack">
+      @for (tech of project.stack; track tech) {
+        <app-chip [label]="tech" />
+      }
+    </div>
+  </article>
+} @else {
+  <p class="empty">{{ translation.t('plate.empty') }}</p>
+}
