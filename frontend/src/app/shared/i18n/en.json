@@ -8,5 +8,9 @@
   },
   "plate": {
     "empty": "Select a well to read the sample."
+  },
+  "skills": {
+    "title": "How the lab shows up in the code",
+    "lede": "Three years running RIA and EIA assays before I wrote production code. Lab work is engineering with worse consequences — a mislabelled tube is somebody's diagnosis. Six habits came with me."
   }
 }

@@ -1,1 +1,16 @@
-<p>skills works!</p>
+<section class="skills">
+  <app-section-header
+    fig="Fig. 2"
+    [title]="translation.t('skills.title')"
+    [subtitle]="translation.t('skills.lede')"
+  />
+
+  <div class="grid">
+    @for (skill of skills; track skill.id) {
+      <article class="card">
+        <h3 class="title">{{ skill.translations[translation.lang()].title }}</h3>
+        <p class="body">{{ skill.translations[translation.lang()].body }}</p>
+      </article>
+    }
+  </div>
+</section>

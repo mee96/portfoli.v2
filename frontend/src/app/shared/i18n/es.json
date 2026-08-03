@@ -8,5 +8,9 @@
   },
   "plate": {
     "empty": "Selecciona un pocillo para leer la muestra."
+  },
+  "skills": {
+    "title": "Cómo se nota el laboratorio en el código",
+    "lede": "Tres años haciendo ensayos RIA y EIA antes de escribir código en producción. El laboratorio es ingeniería con peores consecuencias: un tubo mal etiquetado es el diagnóstico de alguien. Me traje seis costumbres."
   }
 }

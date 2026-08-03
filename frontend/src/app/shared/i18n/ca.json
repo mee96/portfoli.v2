@@ -8,5 +8,9 @@
   },
   "plate": {
     "empty": "Selecciona un pou per llegir la mostra."
+  },
+  "skills": {
+    "title": "Com es nota el laboratori en el codi",
+    "lede": "Tres anys fent assajos RIA i EIA abans d'escriure codi en producció. El laboratori és enginyeria amb pitjors conseqüències: un tub mal etiquetat és el diagnòstic d'algú. Me'n vaig endur sis costums."
   }
 }
