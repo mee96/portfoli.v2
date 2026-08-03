@@ -7,7 +7,14 @@
     "cta2": "Escríbeme"
   },
   "plate": {
+    "title": "Mapa de placa",
+    "sub": "Toca un pocillo para leer la muestra.",
     "empty": "Selecciona un pocillo para leer la muestra."
+  },
+  "legend": {
+    "stack": "App full stack",
+    "ai": "Capa de IA",
+    "client": "Cliente y CMS"
   },
   "skills": {
     "title": "Cómo se nota el laboratorio en el código",

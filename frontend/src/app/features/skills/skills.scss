@@ -1,11 +1,16 @@
 @use '../../shared/variables' as vars;
+@use '../../shared/layout';
+
+:host {
+  @extend %section-shell;
+  display: block;
+}
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
   gap: 1px;
   background: vars.$grid;
-  margin-top: 1.5rem;
 }
 
 .card {

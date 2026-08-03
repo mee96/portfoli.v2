@@ -1,4 +1,19 @@
 <div class="plate">
+  <app-section-header
+    fig="Fig. 1"
+    [title]="translation.t('plate.title')"
+    [subtitle]="translation.t('plate.sub')"
+  />
+
+  <div class="legend">
+    @for (item of legend; track item.kind) {
+      <span class="legend-item">
+        <i class="dot dot--{{ item.kind }}"></i>
+        {{ translation.t(item.labelKey) }}
+      </span>
+    }
+  </div>
+
   <div class="plate-frame">
     <div class="grid">
       @for (row of rows; track row) {

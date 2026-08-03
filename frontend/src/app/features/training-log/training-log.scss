@@ -1,7 +1,9 @@
 @use '../../shared/variables' as vars;
+@use '../../shared/layout';
 
-.group {
-  margin-top: 1.5rem;
+:host {
+  @extend %section-shell;
+  display: block;
 }
 
 .group-label {

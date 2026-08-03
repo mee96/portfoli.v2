@@ -1,0 +1,9 @@
+@use './variables' as vars;
+
+%section-shell {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: clamp(18px, 5vw, 72px);
+  padding-block: clamp(52px, 8vw, 96px);
+  border-top: 1px solid vars.$grid;
+}

@@ -1,3 +1,11 @@
+@use '../../shared/layout';
+
+:host {
+  @extend %section-shell;
+  display: block;
+  border-top: none;
+}
+
 .cta-group {
   display: flex;
   gap: 0.75rem;

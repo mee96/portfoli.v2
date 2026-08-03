@@ -1,7 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { Plate } from './plate';
 import { PROJECTS } from '../../core/data/projects.data';
+import { SectionHeader } from '../../shared/ui/section-header/section-header';
 
 describe('Plate', () => {
   let component: Plate;
@@ -47,5 +49,28 @@ describe('Plate', () => {
 
     expect(component.selectedId()).toBeNull();
     expect(component.selected()).toBeNull();
+  });
+
+  it('passes the correct inputs to SectionHeader', () => {
+    const header = fixture.debugElement.query(By.directive(SectionHeader))
+      .componentInstance as SectionHeader;
+
+    expect(header.fig).toBe('Fig. 1');
+    expect(header.title).toBe('Plate map');
+    expect(header.subtitle).toBe('Tap a well to read the sample.');
+  });
+
+  it('renders the 3 legend entries with the correct labels', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const items = Array.from(compiled.querySelectorAll('.legend-item'));
+
+    expect(items.length).toBe(3);
+    expect(items[0].textContent).toContain('Full-stack app');
+    expect(items[1].textContent).toContain('AI layer');
+    expect(items[2].textContent).toContain('Client & CMS work');
+
+    expect(compiled.querySelector('.legend-item .dot--stack')).not.toBeNull();
+    expect(compiled.querySelector('.legend-item .dot--ai')).not.toBeNull();
+    expect(compiled.querySelector('.legend-item .dot--client')).not.toBeNull();
   });
 });

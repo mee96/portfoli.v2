@@ -1,4 +1,10 @@
 @use '../../shared/variables' as vars;
+@use '../../shared/layout';
+
+:host {
+  @extend %section-shell;
+  display: block;
+}
 
 .plate {
   display: flex;
@@ -6,12 +12,49 @@
   gap: 1.5rem;
 }
 
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: vars.$font-mono;
+  font-size: 0.75rem;
+  color: vars.$ink-60;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &--stack {
+    background: vars.$indigo;
+  }
+
+  &--ai {
+    background: vars.$eosin;
+  }
+
+  &--client {
+    background: vars.$cyan;
+  }
+}
+
 .plate-frame {
   display: flex;
   justify-content: center;
   max-width: 900px;
   margin-inline: auto;
-  padding: clamp(8px, 1.5vw, 16px);
+  background: vars.$paper-2;
+  border: 1px solid vars.$grid;
+  border-radius: vars.$radius;
+  padding: clamp(12px, 2.4vw, 26px);
 }
 
 .grid {

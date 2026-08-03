@@ -7,7 +7,14 @@
     "cta2": "Get in touch"
   },
   "plate": {
+    "title": "Plate map",
+    "sub": "Tap a well to read the sample.",
     "empty": "Select a well to read the sample."
+  },
+  "legend": {
+    "stack": "Full-stack app",
+    "ai": "AI layer",
+    "client": "Client & CMS work"
   },
   "skills": {
     "title": "How the lab shows up in the code",

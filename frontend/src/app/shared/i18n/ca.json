@@ -7,7 +7,14 @@
     "cta2": "Escriu-me"
   },
   "plate": {
+    "title": "Mapa de placa",
+    "sub": "Toca un pou per llegir la mostra.",
     "empty": "Selecciona un pou per llegir la mostra."
+  },
+  "legend": {
+    "stack": "App full stack",
+    "ai": "Capa d'IA",
+    "client": "Client i CMS"
   },
   "skills": {
     "title": "Com es nota el laboratori en el codi",
