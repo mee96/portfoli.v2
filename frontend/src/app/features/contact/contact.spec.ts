@@ -52,16 +52,47 @@ describe('Contact', () => {
 
   it('shows the placeholder once the photo fails to load', async () => {
     const compiled = fixture.nativeElement as HTMLElement;
+    const photo = () => compiled.querySelector('.photo') as HTMLElement;
 
-    expect(compiled.querySelector('.photo-placeholder')).toBeNull();
-    expect(compiled.querySelector('img')).not.toBeNull();
+    expect(photo().querySelector('.photo-placeholder')).toBeNull();
+    expect(photo().querySelector('img')).not.toBeNull();
 
-    compiled.querySelector('img')?.dispatchEvent(new Event('error'));
+    photo().querySelector('img')?.dispatchEvent(new Event('error'));
     await fixture.whenStable();
 
-    expect(compiled.querySelector('img')).toBeNull();
-    expect(compiled.querySelector('.photo-placeholder')?.textContent).toContain(
+    expect(photo().querySelector('img')).toBeNull();
+    expect(photo().querySelector('.photo-placeholder')?.textContent).toContain(
       'Add foto.jpg next to this file',
     );
+  });
+
+  it('renders the footer with two decorative, lazy-loaded gifs around the text', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const gifs = Array.from(compiled.querySelectorAll('footer.site-footer img.footer-gif'));
+
+    expect(gifs.length).toBe(2);
+    for (const gif of gifs) {
+      expect(gif.getAttribute('alt')).toBe('');
+      expect(gif.getAttribute('loading')).toBe('lazy');
+    }
+    expect(compiled.querySelector('.footer-text')?.textContent).toContain('Barcelona ·');
+  });
+
+  it('renders 3 social links with aria-label, opening in a new tab safely', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const links = Array.from(compiled.querySelectorAll('.footer-socials a'));
+
+    expect(links.length).toBe(3);
+
+    const labels = links.map((link) => link.getAttribute('aria-label'));
+    expect(labels).toEqual(['GitHub', 'LinkedIn', 'Instagram']);
+
+    for (const link of links) {
+      expect(link.getAttribute('target')).toBe('_blank');
+      expect(link.getAttribute('rel')).toBe('noopener noreferrer');
+      expect(link.querySelector('svg')).not.toBeNull();
+    }
+
+    expect(links[0].getAttribute('href')).toBe('https://github.com/mee96');
   });
 });
