@@ -65,4 +65,23 @@ describe('Button', () => {
 
     expect(emitted).toBe(true);
   });
+
+  it('defaults to type="button"', async () => {
+    fixture.componentRef.setInput('label', 'Send');
+    await fixture.whenStable();
+
+    const button = (fixture.nativeElement as HTMLElement).querySelector('button');
+    expect(button?.getAttribute('type')).toBe('button');
+  });
+
+  it('applies type="submit" and the disabled attribute when passed', async () => {
+    fixture.componentRef.setInput('label', 'Send');
+    fixture.componentRef.setInput('type', 'submit');
+    fixture.componentRef.setInput('disabled', true);
+    await fixture.whenStable();
+
+    const button = (fixture.nativeElement as HTMLElement).querySelector('button');
+    expect(button?.getAttribute('type')).toBe('submit');
+    expect(button?.disabled).toBe(true);
+  });
 });

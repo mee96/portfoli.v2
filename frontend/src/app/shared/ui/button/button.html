@@ -1,5 +1,7 @@
 @if (href) {
   <a [class]="classes" [href]="href">{{ label }}</a>
 } @else {
-  <button [class]="classes" type="button" (click)="onClick()">{{ label }}</button>
+  <button [class]="classes" [type]="type" [disabled]="disabled" (click)="onClick()">
+    {{ label }}
+  </button>
 }

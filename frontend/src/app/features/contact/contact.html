@@ -1,1 +1,53 @@
-<p>contact works!</p>
+<section class="contact">
+  <app-section-header
+    fig="Fig. 4"
+    [title]="translation.t('contact.title')"
+    [subtitle]="translation.t('contact.lede')"
+  />
+
+  <div class="layout">
+    <div class="side">
+      <div class="photo">
+        @if (!photoFailed) {
+          <img src="foto.jpg" alt="" (error)="onPhotoError()" />
+        } @else {
+          <div class="photo-placeholder">{{ translation.t('contact.photo') }}</div>
+        }
+      </div>
+
+      <ul class="links">
+        <li><a href="mailto:dev.mee96@gmail.com">dev.mee96@gmail.com</a></li>
+        <li>
+          <a href="https://github.com/mee96" target="_blank" rel="noopener">github.com/mee96</a>
+        </li>
+        <!-- TODO: pendent URL real de LinkedIn -->
+        <li><a href="#">LinkedIn</a></li>
+        <!-- TODO: pendent pujar el PDF del CV -->
+        <li><a href="#">CV</a></li>
+      </ul>
+    </div>
+
+    <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <label class="field">
+        <span>{{ translation.t('contact.name') }}</span>
+        <input type="text" formControlName="name" />
+      </label>
+
+      <label class="field">
+        <span>{{ translation.t('contact.email') }}</span>
+        <input type="email" formControlName="email" />
+      </label>
+
+      <label class="field">
+        <span>{{ translation.t('contact.message') }}</span>
+        <textarea formControlName="message"></textarea>
+      </label>
+
+      <app-button
+        type="submit"
+        [label]="translation.t('contact.send')"
+        [disabled]="form.invalid"
+      />
+    </form>
+  </div>
+</section>

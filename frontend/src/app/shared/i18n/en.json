@@ -12,5 +12,21 @@
   "skills": {
     "title": "How the lab shows up in the code",
     "lede": "Three years running RIA and EIA assays before I wrote production code. Lab work is engineering with worse consequences — a mislabelled tube is somebody's diagnosis. Six habits came with me."
+  },
+  "log": {
+    "title": "Training log",
+    "sub": "Read it as a curve, not a list.",
+    "dev": "Development",
+    "lab": "Laboratory",
+    "active": "In progress"
+  },
+  "contact": {
+    "title": "Let's talk.",
+    "lede": "Tell me what you're building. I answer everything, usually within a day.",
+    "photo": "Add foto.jpg next to this file",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message"
   }
 }

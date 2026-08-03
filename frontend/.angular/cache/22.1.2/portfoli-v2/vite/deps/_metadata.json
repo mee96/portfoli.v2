@@ -1,25 +1,35 @@
 {
-  "hash": "a3ee7eaf",
-  "configHash": "f85a5086",
+  "hash": "4699fe2c",
+  "configHash": "d3136ca1",
   "lockfileHash": "78b320c0",
-  "browserHash": "edf75855",
+  "browserHash": "db0a3234",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "9f7feca3",
+      "fileHash": "c12b5b96",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "e68961e0",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "15ea898c",
+      "fileHash": "003ce74e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "core-D_AcWHMy": {
-      "file": "core-D_AcWHMy.js",
+    "common-O6y-KgTs": {
+      "file": "common-O6y-KgTs.js",
+      "isDynamicEntry": false
+    },
+    "core-iejs3GN9": {
+      "file": "core-iejs3GN9.js",
       "isDynamicEntry": false
     }
   }

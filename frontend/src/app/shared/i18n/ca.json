@@ -12,5 +12,21 @@
   "skills": {
     "title": "Com es nota el laboratori en el codi",
     "lede": "Tres anys fent assajos RIA i EIA abans d'escriure codi en producció. El laboratori és enginyeria amb pitjors conseqüències: un tub mal etiquetat és el diagnòstic d'algú. Me'n vaig endur sis costums."
+  },
+  "log": {
+    "title": "Registre de formació",
+    "sub": "Llegeix-ho com una corba, no com una llista.",
+    "dev": "Desenvolupament",
+    "lab": "Laboratori",
+    "active": "En curs"
+  },
+  "contact": {
+    "title": "Parlem-ne.",
+    "lede": "Explica'm què estàs construint. Contesto sempre, normalment en un dia.",
+    "photo": "Posa foto.jpg al costat d'aquest fitxer",
+    "name": "Nom",
+    "email": "Correu",
+    "message": "Missatge",
+    "send": "Enviar missatge"
   }
 }
