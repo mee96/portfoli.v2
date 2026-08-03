@@ -24,3 +24,22 @@
     CA
   </button>
 </div>
+
+<div class="lang-switcher-compact">
+  <button
+    type="button"
+    class="lang-current"
+    [attr.aria-expanded]="compactMenuOpen()"
+    (click)="toggleCompactMenu()"
+  >
+    {{ translation.lang() }} ▾
+  </button>
+
+  @if (compactMenuOpen()) {
+    <div class="lang-dropdown">
+      @for (lang of otherLangs; track lang) {
+        <button type="button" (click)="setLang(lang)">{{ lang }}</button>
+      }
+    </div>
+  }
+</div>

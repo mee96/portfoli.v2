@@ -95,4 +95,23 @@ describe('Contact', () => {
 
     expect(links[0].getAttribute('href')).toBe('https://github.com/mee96');
   });
+
+  it('renders only mail and CV in .links, each with an icon', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const links = Array.from(compiled.querySelectorAll('.links a'));
+
+    expect(links.length).toBe(2);
+
+    expect(links[0].getAttribute('href')).toBe('mailto:dev.mee96@gmail.com');
+    expect(links[0].textContent).toContain('dev.mee96@gmail.com');
+    expect(links[0].querySelector('svg')).not.toBeNull();
+
+    expect(links[1].getAttribute('href')).toBe('#');
+    expect(links[1].textContent).toContain('CV');
+    expect(links[1].querySelector('svg')).not.toBeNull();
+
+    const hrefs = links.map((link) => link.getAttribute('href'));
+    expect(hrefs).not.toContain('https://github.com/mee96');
+    expect(links.map((link) => link.textContent)).not.toContain('LinkedIn');
+  });
 });

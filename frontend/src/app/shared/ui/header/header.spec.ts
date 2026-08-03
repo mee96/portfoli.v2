@@ -35,4 +35,13 @@ describe('Header', () => {
     const langSwitcher = fixture.debugElement.query(By.directive(LangSwitcher));
     expect(langSwitcher).not.toBeNull();
   });
+
+  it('always renders the nav links, regardless of viewport width (no hamburger menu)', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    // .nav has no media query hiding it — it's never conditionally rendered or toggled.
+    expect(compiled.querySelector('.menu-toggle')).toBeNull();
+    expect(compiled.querySelector('.mobile-menu')).toBeNull();
+    expect(compiled.querySelectorAll('.nav a').length).toBe(4);
+  });
 });

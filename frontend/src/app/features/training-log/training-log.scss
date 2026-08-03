@@ -28,6 +28,7 @@
 
 .title {
   font-family: vars.$font-display;
+  font-size: 1.15rem;
   color: vars.$ink;
   display: flex;
   align-items: center;
@@ -37,6 +38,7 @@
 .org,
 .description {
   font-family: vars.$font-body;
+  font-size: 1rem;
   color: vars.$ink-60;
 }
 

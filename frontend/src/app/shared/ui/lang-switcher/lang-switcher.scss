@@ -32,3 +32,63 @@
     color: vars.$paper;
   }
 }
+
+.lang-switcher-compact {
+  display: none;
+  position: relative;
+}
+
+.lang-current {
+  font-family: vars.$font-mono;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid vars.$grid;
+  border-radius: 999px;
+  background: vars.$paper-2;
+  color: vars.$ink;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 64px;
+  background: vars.$paper-2;
+  border: 1px solid vars.$grid;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+
+  button {
+    font-family: vars.$font-mono;
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 0;
+    background: none;
+    color: vars.$ink-60;
+    padding: 8px 12px;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.$ink;
+      background: vars.$paper;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    display: none;
+  }
+
+  .lang-switcher-compact {
+    display: block;
+  }
+}

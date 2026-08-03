@@ -15,6 +15,7 @@
 
 .name {
   font-family: vars.$font-display;
+  font-size: 1.3rem;
   color: vars.$ink;
 }
 
@@ -22,6 +23,7 @@
 .method,
 .reading {
   font-family: vars.$font-body;
+  font-size: 1.1rem;
   color: vars.$ink;
 }
 

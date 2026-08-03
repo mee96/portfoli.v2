@@ -16,15 +16,17 @@
 
 .card {
   background: vars.$paper-2;
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .title {
   font-family: vars.$font-display;
+  font-size: 1.35rem;
   color: vars.$ink;
 }
 
 .body {
   font-family: vars.$font-body;
+  font-size: 1rem;
   color: vars.$ink-60;
 }

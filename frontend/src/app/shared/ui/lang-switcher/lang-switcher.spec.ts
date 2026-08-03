@@ -49,4 +49,39 @@ describe('LangSwitcher', () => {
     expect(caButton?.getAttribute('aria-pressed')).toBe('true');
     expect(enButton?.getAttribute('aria-pressed')).toBe('false');
   });
+
+  it('compact variant shows only the current language until clicked', async () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const current = compiled.querySelector('.lang-current') as HTMLButtonElement;
+
+    expect(current.textContent).toContain('en');
+    expect(compiled.querySelector('.lang-dropdown')).toBeNull();
+
+    current.click();
+    await fixture.whenStable();
+
+    const dropdown = compiled.querySelector('.lang-dropdown');
+    expect(dropdown).not.toBeNull();
+    const options = Array.from(dropdown!.querySelectorAll('button')).map((btn) =>
+      btn.textContent?.trim(),
+    );
+    expect(options).toEqual(['es', 'ca']);
+  });
+
+  it('compact variant switches language and closes the dropdown on selection', async () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const current = () => compiled.querySelector('.lang-current') as HTMLButtonElement;
+
+    current().click();
+    await fixture.whenStable();
+
+    const caOption = Array.from(compiled.querySelectorAll('.lang-dropdown button')).find(
+      (btn) => btn.textContent?.trim() === 'ca',
+    ) as HTMLButtonElement;
+    caOption.click();
+    await fixture.whenStable();
+
+    expect(current().textContent).toContain('ca');
+    expect(compiled.querySelector('.lang-dropdown')).toBeNull();
+  });
 });

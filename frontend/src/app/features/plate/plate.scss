@@ -60,7 +60,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, clamp(24px, 4vw, 38px));
+  grid-template-columns: repeat(12, clamp(24px, 4vw, 44px));
   gap: clamp(3px, 0.7vw, 9px);
 }
 
