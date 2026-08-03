@@ -1,0 +1,26 @@
+@use '../../variables' as vars;
+
+.btn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  border-radius: vars.$radius;
+  font-family: vars.$font-body;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background: vars.$indigo;
+  border-color: vars.$indigo;
+  color: vars.$paper;
+}
+
+.btn--secondary {
+  background: transparent;
+  border-color: vars.$grid;
+  color: vars.$ink;
+}

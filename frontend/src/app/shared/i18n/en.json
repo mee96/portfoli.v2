@@ -1,6 +1,9 @@
 {
   "hero": {
-    "title": "Hi, I'm building my portfolio",
-    "lede": "A RAG-powered assistant, one commit at a time."
+    "eyebrow": "Assay 001 · Full stack developer · Barcelona",
+    "title": "Same rigour.<br>Different <em>bench</em>.",
+    "lede": "Three years reading clinical assays, then a change of direction. A dozen shipped projects later the method hasn't changed: define the sample, run the method, read the result.",
+    "cta1": "Read the plate",
+    "cta2": "Get in touch"
   }
 }

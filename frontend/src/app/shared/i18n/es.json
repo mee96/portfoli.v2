@@ -1,6 +1,9 @@
 {
   "hero": {
-    "title": "Hola, estoy construyendo mi portfolio",
-    "lede": "Un asistente RAG, un commit a la vez."
+    "eyebrow": "Assay 001 · Full stack developer · Barcelona",
+    "title": "El mismo rigor.<br>Otra <em>poyata</em>.",
+    "lede": "Tres años leyendo ensayos clínicos y después un cambio de rumbo. Doce proyectos publicados más tarde, el método sigue siendo el mismo: definir la muestra, aplicar el método, leer el resultado.",
+    "cta1": "Leer la placa",
+    "cta2": "Escríbeme"
   }
 }

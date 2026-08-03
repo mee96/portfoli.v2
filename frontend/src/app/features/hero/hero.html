@@ -1,13 +1,12 @@
 <section class="hero">
-  <h1>{{ translation.t('hero.title') }}</h1>
+  <span class="eyebrow">{{ translation.t('hero.eyebrow') }}</span>
+  <h1 [innerHTML]="translation.t('hero.title')"></h1>
   <p>{{ translation.t('hero.lede') }}</p>
 
-  <app-lang-switcher />
-
-  <!-- TODO: temporal, per provar visualment ChipComponent — s'eliminarà quan skills/plate rebin dades reals. -->
-  <div class="demo-chips">
-    @for (chip of demoChips; track chip) {
-      <app-chip [label]="chip" />
-    }
+  <div class="cta-group">
+    <app-button [label]="translation.t('hero.cta1')" href="#plate" variant="primary" />
+    <app-button [label]="translation.t('hero.cta2')" href="#contact" variant="secondary" />
   </div>
+
+  <app-lang-switcher />
 </section>

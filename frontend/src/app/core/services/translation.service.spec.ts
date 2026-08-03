@@ -26,10 +26,10 @@ describe('TranslationService', () => {
   });
 
   it('t() resolves nested translation keys per language', () => {
-    expect(service.t('hero.title')).toBe("Hi, I'm building my portfolio");
+    expect(service.t('hero.cta1')).toBe('Read the plate');
 
     service.setLang('ca');
-    expect(service.t('hero.title')).toBe('Hola, estic construint el meu portfolio');
+    expect(service.t('hero.cta1')).toBe('Llegir la placa');
   });
 
   it('t() falls back to the key when the translation is missing', () => {

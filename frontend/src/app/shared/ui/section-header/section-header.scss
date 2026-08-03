@@ -1,0 +1,13 @@
+@use '../../variables' as vars;
+
+.mono {
+  font-family: vars.$font-mono;
+}
+
+h2 {
+  font-family: vars.$font-display;
+}
+
+.subtitle {
+  color: vars.$ink-60;
+}
