@@ -1,21 +1,23 @@
 <div class="plate">
-  <div class="grid">
-    @for (row of rows; track row) {
-      @for (col of columns; track col) {
-        @let project = wellAt(row, col);
-        @if (project) {
-          <button
-            type="button"
-            class="well well--{{ project.kind }}"
-            [attr.data-well]="row + col"
-            (click)="select(project.id)"
-            (mouseenter)="select(project.id)"
-          ></button>
-        } @else {
-          <button type="button" class="well" [attr.data-well]="row + col" disabled></button>
+  <div class="plate-frame">
+    <div class="grid">
+      @for (row of rows; track row) {
+        @for (col of columns; track col) {
+          @let project = wellAt(row, col);
+          @if (project) {
+            <button
+              type="button"
+              class="well well--{{ project.kind }}"
+              [attr.data-well]="row + col"
+              (click)="select(project.id)"
+              (mouseenter)="select(project.id)"
+            ></button>
+          } @else {
+            <button type="button" class="well" [attr.data-well]="row + col" disabled></button>
+          }
         }
       }
-    }
+    </div>
   </div>
 
   <app-readout [project]="selected()" />
