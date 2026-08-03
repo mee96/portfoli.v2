@@ -1,8 +1,8 @@
 import { PROJECTS } from './projects.data';
 
 describe('PROJECTS', () => {
-  it('has at least 2 entries', () => {
-    expect(PROJECTS.length).toBeGreaterThanOrEqual(2);
+  it('has all 12 entries', () => {
+    expect(PROJECTS.length).toBe(12);
   });
 
   it('every project satisfies the Project shape', () => {
@@ -27,5 +27,10 @@ describe('PROJECTS', () => {
   it('has unique ids', () => {
     const ids = PROJECTS.map((project) => project.id);
     expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it('has unique wells', () => {
+    const wells = PROJECTS.map((project) => project.well);
+    expect(new Set(wells).size).toBe(wells.length);
   });
 });
