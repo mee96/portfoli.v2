@@ -1,0 +1,14 @@
+<div class="header-inner">
+  <span class="name">
+    <span class="full">Carme Medina</span>
+    <span class="short">CMC</span>
+  </span>
+
+  <nav class="nav">
+    @for (link of navLinks; track link.href) {
+      <a [href]="link.href">{{ translation.t(link.labelKey) }}</a>
+    }
+  </nav>
+
+  <app-lang-switcher />
+</div>

@@ -1,21 +1,24 @@
-<div class="lang-switcher">
+<div class="lang-switcher" role="group">
   <button
     type="button"
-    [class.active]="translation.lang() === 'en'"
+    class="lang"
+    [attr.aria-pressed]="translation.lang() === 'en'"
     (click)="setLang('en')"
   >
     EN
   </button>
   <button
     type="button"
-    [class.active]="translation.lang() === 'es'"
+    class="lang"
+    [attr.aria-pressed]="translation.lang() === 'es'"
     (click)="setLang('es')"
   >
     ES
   </button>
   <button
     type="button"
-    [class.active]="translation.lang() === 'ca'"
+    class="lang"
+    [attr.aria-pressed]="translation.lang() === 'ca'"
     (click)="setLang('ca')"
   >
     CA

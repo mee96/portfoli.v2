@@ -1,4 +1,10 @@
 {
+  "nav": {
+    "plate": "Placa",
+    "skills": "Habilitats",
+    "log": "Registre",
+    "contact": "Contacte"
+  },
   "hero": {
     "eyebrow": "Assay 001 · Full stack developer · Barcelona",
     "title": "El mateix rigor.<br>Una altra <em>poiata</em>.",

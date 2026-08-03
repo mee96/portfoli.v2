@@ -4,6 +4,7 @@
 :host {
   @extend %section-shell;
   display: block;
+  scroll-margin-top: 58px;
 }
 
 .layout {

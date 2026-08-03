@@ -20,25 +20,33 @@ describe('LangSwitcher', () => {
     expect(component).toBeTruthy();
   });
 
-  it('marks the active language button based on translation.lang()', () => {
+  it('wraps the three buttons in a group container', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const enButton = Array.from(compiled.querySelectorAll('button')).find(
+    const group = compiled.querySelector('.lang-switcher[role="group"]');
+
+    expect(group).not.toBeNull();
+    expect(group?.querySelectorAll('button.lang').length).toBe(3);
+  });
+
+  it('marks the active language button with aria-pressed="true"', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const enButton = Array.from(compiled.querySelectorAll('button.lang')).find(
       (btn) => btn.textContent?.trim() === 'EN',
     );
 
-    expect(enButton?.classList.contains('active')).toBe(true);
+    expect(enButton?.getAttribute('aria-pressed')).toBe('true');
   });
 
-  it('switches the active button when a language is clicked', async () => {
+  it('switches aria-pressed when a language is clicked', async () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const buttons = Array.from(compiled.querySelectorAll('button'));
+    const buttons = Array.from(compiled.querySelectorAll<HTMLButtonElement>('button.lang'));
     const caButton = buttons.find((btn) => btn.textContent?.trim() === 'CA');
     const enButton = buttons.find((btn) => btn.textContent?.trim() === 'EN');
 
     caButton?.click();
     await fixture.whenStable();
 
-    expect(caButton?.classList.contains('active')).toBe(true);
-    expect(enButton?.classList.contains('active')).toBe(false);
+    expect(caButton?.getAttribute('aria-pressed')).toBe('true');
+    expect(enButton?.getAttribute('aria-pressed')).toBe('false');
   });
 });

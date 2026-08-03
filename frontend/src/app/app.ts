@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Header } from './shared/ui/header/header';
 import { Hero } from './features/hero/hero';
 import { Plate } from './features/plate/plate';
 import { Skills } from './features/skills/skills';
@@ -7,7 +8,7 @@ import { Contact } from './features/contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [Hero, Plate, Skills, TrainingLog, Contact],
+  imports: [Header, Hero, Plate, Skills, TrainingLog, Contact],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

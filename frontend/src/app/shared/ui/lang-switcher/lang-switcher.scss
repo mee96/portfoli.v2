@@ -2,17 +2,33 @@
 
 .lang-switcher {
   display: flex;
-  gap: 0.5rem;
+  gap: 2px;
+  border: 1px solid vars.$grid;
+  border-radius: 999px;
+  padding: 2px;
+  background: vars.$paper-2;
+}
 
-  button {
-    font-family: vars.$font-mono;
-    font-size: 0.6rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+.lang {
+  font-family: vars.$font-mono;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 0;
+  background: none;
+  color: vars.$ink-60;
+  padding: 5px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.18s;
+
+  &:hover {
+    color: vars.$ink;
+    background: vars.$paper;
   }
 
-  button.active {
-    font-weight: bold;
-    text-decoration: underline;
+  &[aria-pressed='true'] {
+    background: vars.$ink;
+    color: vars.$paper;
   }
 }

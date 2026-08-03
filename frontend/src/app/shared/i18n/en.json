@@ -1,4 +1,10 @@
 {
+  "nav": {
+    "plate": "Plate",
+    "skills": "Skills",
+    "log": "Log",
+    "contact": "Contact"
+  },
   "hero": {
     "eyebrow": "Assay 001 · Full stack developer · Barcelona",
     "title": "Same rigour.<br>Different <em>bench</em>.",

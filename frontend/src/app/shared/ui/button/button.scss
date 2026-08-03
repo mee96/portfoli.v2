@@ -2,25 +2,34 @@
 
 .btn {
   display: inline-block;
-  padding: 0.625rem 1.25rem;
-  border-radius: vars.$radius;
-  font-family: vars.$font-body;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  text-align: center;
+  padding: 13px 22px;
+  border-radius: 999px;
+  border: 1px solid vars.$ink;
+  font-family: vars.$font-mono;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid transparent;
+  transition: 0.2s;
 }
 
 .btn--primary {
-  background: vars.$indigo;
-  border-color: vars.$indigo;
+  background: vars.$ink;
   color: vars.$paper;
+
+  &:hover {
+    background: vars.$indigo;
+    border-color: vars.$indigo;
+  }
 }
 
 .btn--secondary {
-  background: transparent;
-  border-color: vars.$grid;
+  background: none;
   color: vars.$ink;
+
+  &:hover {
+    background: vars.$ink;
+    color: vars.$paper;
+  }
 }
