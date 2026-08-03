@@ -1,6 +1,15 @@
+@use '../../variables' as vars;
+
 .lang-switcher {
   display: flex;
   gap: 0.5rem;
+
+  button {
+    font-family: vars.$font-mono;
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
 
   button.active {
     font-weight: bold;

@@ -1,9 +1,44 @@
+@use '../../shared/variables' as vars;
 @use '../../shared/layout';
 
 :host {
   @extend %section-shell;
   display: block;
   border-top: none;
+}
+
+.eyebrow {
+  font-family: vars.$font-mono;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: vars.$ink-35;
+  margin: 0 0 26px;
+}
+
+h1 {
+  font-family: vars.$font-display;
+  font-variation-settings: 'wdth' 88, 'opsz' 96;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 600;
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  margin: 0;
+  max-width: 15ch;
+  color: vars.$ink;
+
+  em {
+    font-style: normal;
+    color: vars.$indigo;
+  }
+}
+
+.lede {
+  font-family: vars.$font-body;
+  max-width: 52ch;
+  margin: 26px 0 0;
+  font-size: clamp(1rem, 1.6vw, 1.17rem);
+  color: vars.$ink-60;
 }
 
 .cta-group {
