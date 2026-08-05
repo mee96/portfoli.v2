@@ -47,4 +47,12 @@ describe('LogEntry', () => {
     expect(compiled.querySelector('.description')?.textContent).toContain('Doing things.');
     expect(compiled.querySelector('.badge')?.textContent).toContain('Now');
   });
+
+  it('omits the org paragraph entirely when org is not passed', async () => {
+    fixture.componentRef.setInput('org', undefined);
+    await fixture.whenStable();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.org')).toBeNull();
+  });
 });

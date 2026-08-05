@@ -10,7 +10,7 @@ import { Chip } from '../chip/chip';
 export class LogEntry {
   @Input({ required: true }) dt!: string;
   @Input({ required: true }) title!: string;
-  @Input({ required: true }) org!: string;
+  @Input() org?: string;
   @Input() description?: string;
   @Input({ required: true }) chips!: string[];
   @Input() active = false;

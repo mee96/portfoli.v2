@@ -2,7 +2,7 @@ import { ExperienceEntry } from '../models/experience.model';
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
-    id: 'esplai-job',
+    id: 'esplai',
     active: true,
     org: 'Fundació Esplai',
     chips: ['Angular', 'Ionic', 'WordPress', 'Git'],
@@ -10,23 +10,22 @@ export const EXPERIENCE: ExperienceEntry[] = [
       en: {
         dt: 'Mar 2026 – Present',
         t: 'Junior Web Developer',
-        d: 'Full redesign of a digital transformation programme website for the third sector, reusable Angular + Ionic components in a team of four, weekly deployment cycles.',
+        d: 'A third-sector organisation building websites and apps.',
       },
       es: {
         dt: 'Mar 2026 – Actualidad',
         t: 'Desarrolladora Web Junior',
-        d: 'Rediseño completo del sitio de un programa de transformación digital del tercer sector, componentes reutilizables en Angular e Ionic en un equipo de cuatro, ciclos de despliegue semanales.',
+        d: 'Una organización del tercer sector que construye webs y aplicaciones.',
       },
       ca: {
         dt: 'Mar 2026 – Actualitat',
         t: 'Desenvolupadora Web Júnior',
-        d: "Redisseny complet del web d'un programa de transformació digital del tercer sector, components reutilitzables en Angular i Ionic en un equip de quatre, cicles de desplegament setmanals.",
+        d: 'Una organització del tercer sector que construeix webs i aplicacions.',
       },
     },
   },
   {
-    id: 'freelance-wedding',
-    org: 'Freelance',
+    id: 'freelance',
     chips: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
     translations: {
       en: {
@@ -47,7 +46,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
     },
   },
   {
-    id: 'lab-technician',
+    id: 'lab',
     org: 'Unilabs · Synlab · Reference Laboratory',
     chips: ['RIA', 'EIA', 'Patient care', 'Quality control'],
     translations: {
@@ -65,6 +64,28 @@ export const EXPERIENCE: ExperienceEntry[] = [
         dt: '2021–2024',
         t: 'Tècnica de Laboratori',
         d: "Tres anys entre els departaments de RIA, EIA i UGM — atenció al pacient, extracció de mostres i anàlisi per immunoassaig. De pas, també vaig fer tests d'antígens de COVID al Mobile World Congress, la primera vegada treballant en un esdeveniment tech, anys abans d'assistir-hi com a developer.",
+      },
+    },
+  },
+  {
+    id: 'teleperformance',
+    org: 'Teleperformance',
+    chips: ['Technical support', 'Communication', 'Troubleshooting'],
+    translations: {
+      en: {
+        dt: 'Jun 2019 – Jul 2021',
+        t: 'Technical Support Agent',
+        d: "Two years of inbound and outbound technical support calls, plus back-office email management — explaining technical problems to people who didn't ask for them, over the phone.",
+      },
+      es: {
+        dt: 'Jun 2019 – Jul 2021',
+        t: 'Agente de Soporte Técnico',
+        d: 'Dos años de llamadas de soporte técnico entrantes y salientes, más gestión de back-office por correo — explicando problemas técnicos a gente que no los había pedido, por teléfono.',
+      },
+      ca: {
+        dt: 'Jun 2019 – Jul 2021',
+        t: 'Agent de Suport Tècnic',
+        d: 'Dos anys de trucades de suport tècnic entrants i sortints, més gestió de back-office per correu — explicant problemes tècnics a gent que no els havia demanat, per telèfon.',
       },
     },
   },

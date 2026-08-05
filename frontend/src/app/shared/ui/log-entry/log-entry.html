@@ -6,7 +6,9 @@
       <span class="badge">{{ activeLabel }}</span>
     }
   </h4>
-  <p class="org">{{ org }}</p>
+  @if (org) {
+    <p class="org">{{ org }}</p>
+  }
   @if (description) {
     <p class="description">{{ description }}</p>
   }

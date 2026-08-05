@@ -9,7 +9,7 @@ export interface ExperienceTranslation {
 export interface ExperienceEntry {
   id: string;
   active?: boolean;
-  org: string;
+  org?: string;
   chips: string[];
   translations: Record<Lang, ExperienceTranslation>;
 }

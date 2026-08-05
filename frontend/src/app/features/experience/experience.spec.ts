@@ -23,12 +23,12 @@ describe('Experience', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders the 3 entries via the shared LogEntry component', () => {
+  it('renders the 4 entries via the shared LogEntry component', () => {
     const entries = fixture.debugElement.queryAll(By.directive(LogEntry));
-    expect(entries.length).toBe(3);
+    expect(entries.length).toBe(4);
   });
 
-  it('marks Fundació Esplai as active, and the other two as not active', () => {
+  it('marks Fundació Esplai as active with activeLabel "Now", and the other three as not active', () => {
     const entries = fixture.debugElement
       .queryAll(By.directive(LogEntry))
       .map((el) => el.componentInstance as LogEntry);
@@ -36,10 +36,22 @@ describe('Experience', () => {
     const esplai = entries.find((e) => e.org === 'Fundació Esplai');
     const freelance = entries.find((e) => e.title === 'Freelance Web Developer');
     const lab = entries.find((e) => e.title === 'Laboratory Technician');
+    const teleperformance = entries.find((e) => e.org === 'Teleperformance');
 
     expect(esplai?.active).toBe(true);
+    expect(esplai?.activeLabel).toBe('Now');
     expect(freelance?.active).toBe(false);
     expect(lab?.active).toBe(false);
+    expect(teleperformance?.active).toBe(false);
+  });
+
+  it('renders no org for the freelance entry, since it has none', () => {
+    const freelance = fixture.debugElement
+      .queryAll(By.directive(LogEntry))
+      .map((el) => el.componentInstance as LogEntry)
+      .find((e) => e.title === 'Freelance Web Developer');
+
+    expect(freelance?.org).toBeUndefined();
   });
 
   it('passes the correct inputs to SectionHeader', () => {
