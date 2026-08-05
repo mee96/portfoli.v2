@@ -1,0 +1,68 @@
+@use '../../variables' as vars;
+
+.entry {
+  display: grid;
+  grid-template-columns: [date] 140px [content] 1fr;
+  grid-template-rows: [title] auto [org] auto [desc] auto [chips] auto;
+  align-items: start;
+  column-gap: 1rem;
+  row-gap: 0.375rem;
+  min-height: 190px;
+  padding-block: 1rem;
+  border-top: 1px solid vars.$grid;
+}
+
+.dt {
+  grid-column: date;
+  grid-row: title / -1;
+  font-family: vars.$font-mono;
+  color: vars.$ink-60;
+  font-size: 0.8125rem;
+}
+
+.title {
+  grid-column: content;
+  grid-row: title;
+  margin: 0;
+  font-family: vars.$font-display;
+  font-size: 1.15rem;
+  color: vars.$ink;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.org,
+.description {
+  grid-column: content;
+  margin: 0;
+  font-family: vars.$font-body;
+  font-size: 1rem;
+  color: vars.$ink-60;
+}
+
+.org {
+  grid-row: org;
+}
+
+.description {
+  grid-row: desc;
+}
+
+.chips {
+  grid-column: content;
+  grid-row: chips;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  background: vars.$amber;
+  color: vars.$ink;
+  font-family: vars.$font-mono;
+  font-size: 0.6875rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: vars.$radius;
+}

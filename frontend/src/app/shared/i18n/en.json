@@ -1,6 +1,7 @@
 {
   "nav": {
     "plate": "Plate",
+    "experience": "Experience",
     "skills": "Skills",
     "log": "Log",
     "contact": "Contact"
@@ -21,6 +22,11 @@
     "stack": "Full-stack app",
     "ai": "AI layer",
     "client": "Client & CMS work"
+  },
+  "experience": {
+    "title": "Experience",
+    "sub": "Where the work has actually happened.",
+    "now": "Now"
   },
   "skills": {
     "title": "How the lab shows up in the code",

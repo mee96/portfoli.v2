@@ -84,4 +84,19 @@ describe('Button', () => {
     expect(button?.getAttribute('type')).toBe('submit');
     expect(button?.disabled).toBe(true);
   });
+
+  it('adds btn--primary--warm only when variant is primary and warm is true', async () => {
+    fixture.componentRef.setInput('label', 'Send');
+    fixture.componentRef.setInput('warm', true);
+    await fixture.whenStable();
+
+    let button = (fixture.nativeElement as HTMLElement).querySelector('button');
+    expect(button?.classList.contains('btn--primary--warm')).toBe(true);
+
+    fixture.componentRef.setInput('variant', 'secondary');
+    await fixture.whenStable();
+
+    button = (fixture.nativeElement as HTMLElement).querySelector('button');
+    expect(button?.classList.contains('btn--primary--warm')).toBe(false);
+  });
 });

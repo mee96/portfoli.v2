@@ -24,6 +24,13 @@
   }
 }
 
+.btn--primary--warm {
+  &:hover {
+    background: vars.$eosin;
+    border-color: vars.$eosin;
+  }
+}
+
 .btn--secondary {
   background: none;
   color: vars.$ink;

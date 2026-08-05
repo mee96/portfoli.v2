@@ -1,8 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { TrainingLog } from './training-log';
 import { TranslationService } from '../../core/services/translation.service';
 import { EDUCATION } from '../../core/data/education.data';
+import { LogEntry } from '../../shared/ui/log-entry/log-entry';
 
 describe('TrainingLog', () => {
   let component: TrainingLog;
@@ -25,6 +27,11 @@ describe('TrainingLog', () => {
   it('renders 7 entries in total (5 dev + 2 lab)', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelectorAll('article.entry').length).toBe(7);
+  });
+
+  it('renders each entry via the shared LogEntry component', () => {
+    const entries = fixture.debugElement.queryAll(By.directive(LogEntry));
+    expect(entries.length).toBe(7);
   });
 
   it('does not render any "active" badge, since no entry has active: true', () => {

@@ -1,6 +1,6 @@
 <section class="contact">
   <app-section-header
-    fig="Fig. 4"
+    fig="Fig. 5"
     [title]="translation.t('contact.title')"
     [subtitle]="translation.t('contact.lede')"
   />
@@ -73,6 +73,7 @@
         type="submit"
         [label]="translation.t('contact.send')"
         [disabled]="form.invalid"
+        [warm]="true"
       />
     </form>
   </div>

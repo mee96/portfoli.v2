@@ -15,10 +15,12 @@ export class Button {
   @Input() variant: ButtonVariant = 'primary';
   @Input() type: ButtonType = 'button';
   @Input() disabled = false;
+  @Input() warm = false;
   @Output() clicked = new EventEmitter<void>();
 
   protected get classes(): string {
-    return `btn btn--${this.variant}`;
+    const base = `btn btn--${this.variant}`;
+    return this.variant === 'primary' && this.warm ? `${base} btn--primary--warm` : base;
   }
 
   protected onClick(): void {

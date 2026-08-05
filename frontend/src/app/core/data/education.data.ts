@@ -4,21 +4,21 @@ export const EDUCATION: EducationEntry[] = [
   {
     id: 'fpo-dual',
     group: 'dev',
-    org: 'Fundació Esplai – Talent IT',
+    org: 'Fundació Esplai',
     chips: ['Angular', 'Ionic', 'WordPress', 'MySQL', 'AI fundamentals'],
     translations: {
       en: {
-        dt: 'Feb–29 Jul 2026',
+        dt: 'Feb–Jul 2026',
         t: 'Dual VET — Full Stack Developer (Level 3)',
         d: 'Classroom training combined with placement work, building the projects on the plate above.',
       },
       es: {
-        dt: 'Feb–29 Jul 2026',
+        dt: 'Feb–Jul 2026',
         t: 'FPO Dual — Desarrollo Full Stack (Nivel 3)',
         d: 'Formación en aula combinada con trabajo en prácticas, construyendo los proyectos de la placa de arriba.',
       },
       ca: {
-        dt: 'Feb–29 Jul 2026',
+        dt: 'Feb–Jul 2026',
         t: 'FPO Dual — Desenvolupament Full Stack (Nivell 3)',
         d: "Formació a l'aula combinada amb feina en pràctiques, construint els projectes de la placa de dalt.",
       },

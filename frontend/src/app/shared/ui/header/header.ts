@@ -4,6 +4,7 @@ import { LangSwitcher } from '../lang-switcher/lang-switcher';
 
 const NAV_LINKS = [
   { href: '#plate', labelKey: 'nav.plate' },
+  { href: '#experience', labelKey: 'nav.experience' },
   { href: '#skills', labelKey: 'nav.skills' },
   { href: '#training-log', labelKey: 'nav.log' },
   { href: '#contact', labelKey: 'nav.contact' },

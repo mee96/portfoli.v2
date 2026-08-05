@@ -1,6 +1,6 @@
 <section class="training-log">
   <app-section-header
-    fig="Fig. 3"
+    fig="Fig. 4"
     [title]="translation.t('log.title')"
     [subtitle]="translation.t('log.sub')"
   />
@@ -9,26 +9,15 @@
     <div class="group">
       <h3 class="group-label">{{ translation.t(group.labelKey) }}</h3>
       @for (entry of group.entries; track entry.id) {
-        <article class="entry">
-          <span class="dt">{{ entry.translations[translation.lang()].dt }}</span>
-          <div class="content">
-            <h4 class="title">
-              {{ entry.translations[translation.lang()].t }}
-              @if (entry.active) {
-                <span class="badge">{{ translation.t('log.active') }}</span>
-              }
-            </h4>
-            <p class="org">{{ entry.org }}</p>
-            @if (entry.translations[translation.lang()].d) {
-              <p class="description">{{ entry.translations[translation.lang()].d }}</p>
-            }
-            <div class="chips">
-              @for (chip of entry.chips; track chip) {
-                <app-chip [label]="chip" />
-              }
-            </div>
-          </div>
-        </article>
+        <app-log-entry
+          [dt]="entry.translations[translation.lang()].dt"
+          [title]="entry.translations[translation.lang()].t"
+          [org]="entry.org"
+          [description]="entry.translations[translation.lang()].d"
+          [chips]="entry.chips"
+          [active]="entry.active ?? false"
+          [activeLabel]="translation.t('log.active')"
+        />
       }
     </div>
   }

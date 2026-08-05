@@ -1,0 +1,19 @@
+<section class="experience">
+  <app-section-header
+    fig="Fig. 2"
+    [title]="translation.t('experience.title')"
+    [subtitle]="translation.t('experience.sub')"
+  />
+
+  @for (entry of entries; track entry.id) {
+    <app-log-entry
+      [dt]="entry.translations[translation.lang()].dt"
+      [title]="entry.translations[translation.lang()].t"
+      [org]="entry.org"
+      [description]="entry.translations[translation.lang()].d"
+      [chips]="entry.chips"
+      [active]="entry.active ?? false"
+      [activeLabel]="translation.t('experience.now')"
+    />
+  }
+</section>

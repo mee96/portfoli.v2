@@ -49,7 +49,7 @@ describe('Skills', () => {
     const header = fixture.debugElement.query(By.directive(SectionHeader))
       .componentInstance as SectionHeader;
 
-    expect(header.fig).toBe('Fig. 2');
+    expect(header.fig).toBe('Fig. 3');
     expect(header.title).toBe('How the lab shows up in the code');
     expect(header.subtitle).toBe(
       "Three years running RIA and EIA assays before I wrote production code. Lab work is engineering with worse consequences — a mislabelled tube is somebody's diagnosis. Six habits came with me.",

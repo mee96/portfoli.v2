@@ -1,0 +1,18 @@
+<article class="entry">
+  <span class="dt">{{ dt }}</span>
+  <h4 class="title">
+    {{ title }}
+    @if (active) {
+      <span class="badge">{{ activeLabel }}</span>
+    }
+  </h4>
+  <p class="org">{{ org }}</p>
+  @if (description) {
+    <p class="description">{{ description }}</p>
+  }
+  <div class="chips">
+    @for (chip of chips; track chip) {
+      <app-chip [label]="chip" />
+    }
+  </div>
+</article>

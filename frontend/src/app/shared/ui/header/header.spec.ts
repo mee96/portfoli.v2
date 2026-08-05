@@ -22,13 +22,13 @@ describe('Header', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders the 4 anchor links with the correct hrefs', () => {
+  it('renders the 5 anchor links with the correct hrefs', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const hrefs = Array.from(compiled.querySelectorAll('.nav a')).map((a) =>
       a.getAttribute('href'),
     );
 
-    expect(hrefs).toEqual(['#plate', '#skills', '#training-log', '#contact']);
+    expect(hrefs).toEqual(['#plate', '#experience', '#skills', '#training-log', '#contact']);
   });
 
   it('renders app-lang-switcher inside the header', () => {
@@ -42,6 +42,6 @@ describe('Header', () => {
     // .nav has no media query hiding it — it's never conditionally rendered or toggled.
     expect(compiled.querySelector('.menu-toggle')).toBeNull();
     expect(compiled.querySelector('.mobile-menu')).toBeNull();
-    expect(compiled.querySelectorAll('.nav a').length).toBe(4);
+    expect(compiled.querySelectorAll('.nav a').length).toBe(5);
   });
 });

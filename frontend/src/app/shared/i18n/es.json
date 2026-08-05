@@ -1,6 +1,7 @@
 {
   "nav": {
     "plate": "Placa",
+    "experience": "Experiencia",
     "skills": "Habilidades",
     "log": "Registro",
     "contact": "Contacto"
@@ -21,6 +22,11 @@
     "stack": "App full stack",
     "ai": "Capa de IA",
     "client": "Cliente y CMS"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "sub": "Donde ha pasado el trabajo de verdad.",
+    "now": "Ahora"
   },
   "skills": {
     "title": "Cómo se nota el laboratorio en el código",
