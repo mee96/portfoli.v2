@@ -1,8 +1,8 @@
 import { PROJECTS } from './projects.data';
 
 describe('PROJECTS', () => {
-  it('has all 12 entries', () => {
-    expect(PROJECTS.length).toBe(12);
+  it('has all 11 entries', () => {
+    expect(PROJECTS.length).toBe(11);
   });
 
   it('every project satisfies the Project shape', () => {

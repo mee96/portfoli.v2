@@ -53,4 +53,49 @@ describe('Readout', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.tag')?.textContent).toContain(bbt.translations.ca.tag);
   });
+
+  it('renders GitHub and Live links only when the project defines them', async () => {
+    const plantealo = PROJECTS.find((p) => p.id === 'plantealo')!;
+    fixture.componentRef.setInput('project', plantealo);
+    await fixture.whenStable();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const links = Array.from(compiled.querySelectorAll('.link-circle'));
+    expect(links.length).toBe(1);
+    expect(links[0].getAttribute('aria-label')).toBe('GitHub');
+    expect(links[0].getAttribute('href')).toBe(plantealo.githubUrl);
+  });
+
+  it('renders no links row at all when the project has neither githubUrl nor demoUrl', async () => {
+    const nikkura = PROJECTS.find((p) => p.id === 'nikkura')!;
+    expect(nikkura.githubUrl).toBeUndefined();
+    expect(nikkura.demoUrl).toBeUndefined();
+
+    fixture.componentRef.setInput('project', nikkura);
+    await fixture.whenStable();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.links')).toBeNull();
+    expect(compiled.querySelector('.link-circle')).toBeNull();
+  });
+
+  it('sets the correct aria-label (and matching data-tooltip) on the GitHub and Live circles', async () => {
+    const plantealo = PROJECTS.find((p) => p.id === 'plantealo')!;
+    fixture.componentRef.setInput('project', plantealo);
+    await fixture.whenStable();
+
+    let compiled = fixture.nativeElement as HTMLElement;
+    const github = compiled.querySelector('.link-circle')!;
+    expect(github.getAttribute('aria-label')).toBe('GitHub');
+    expect(github.getAttribute('data-tooltip')).toBe('GitHub');
+
+    const bbt = PROJECTS.find((p) => p.id === 'bbt')!;
+    fixture.componentRef.setInput('project', bbt);
+    await fixture.whenStable();
+
+    compiled = fixture.nativeElement as HTMLElement;
+    const live = compiled.querySelector('.link-circle--live')!;
+    expect(live.getAttribute('aria-label')).toBe('Live demo');
+    expect(live.getAttribute('data-tooltip')).toBe('Live demo');
+  });
 });

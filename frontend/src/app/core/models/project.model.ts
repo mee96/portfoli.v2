@@ -15,5 +15,7 @@ export interface Project {
   kind: ProjectKind;
   year: string;
   stack: string[];
+  githubUrl?: string;
+  demoUrl?: string;
   translations: Record<Lang, ProjectTranslation>;
 }

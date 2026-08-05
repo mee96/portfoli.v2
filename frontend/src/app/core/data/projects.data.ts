@@ -15,6 +15,7 @@ export const PROJECTS: Project[] = [
       'Render',
       'Vercel',
     ],
+    demoUrl: 'https://bubbletea-api.vercel.app/',
     translations: {
       en: {
         tag: 'Full-stack catalogue with authenticated CRUD.',
@@ -53,6 +54,7 @@ export const PROJECTS: Project[] = [
       'fastembed',
       'Render',
     ],
+    demoUrl: 'https://chat-frontend-o57q.onrender.com/',
     translations: {
       en: {
         tag: 'Real-time messenger with two AI assistants.',
@@ -138,38 +140,12 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    id: 'animeapi',
-    well: 'C11',
-    kind: 'stack',
-    year: '2024',
-    stack: ['Node.js', 'Express', 'REST API', 'CRUD'],
-    translations: {
-      en: {
-        tag: 'Backend for an anime and character database.',
-        method:
-          'REST API with full CRUD over a database, built as a backend-only exercise.',
-        reading: 'First project where I owned the data model from end to end.',
-      },
-      es: {
-        tag: 'Backend para una base de datos de animes y personajes.',
-        method:
-          'API REST con CRUD completo sobre una base de datos, hecha como ejercicio solo de backend.',
-        reading: 'Primer proyecto donde llevé el modelo de datos de principio a fin.',
-      },
-      ca: {
-        tag: "Backend per a una base de dades d'animes i personatges.",
-        method:
-          "API REST amb CRUD complet sobre una base de dades, feta com a exercici només de backend.",
-        reading: 'Primer projecte on vaig portar el model de dades de principi a fi.',
-      },
-    },
-  },
-  {
     id: 'connect4',
     well: 'D11',
     kind: 'ai',
     year: '2026',
     stack: ['Angular 19', 'FastAPI', 'WebSockets', 'Groq', 'Render'],
+    demoUrl: 'https://conecta4-frontend.onrender.com/',
     translations: {
       en: {
         tag: 'Connect 4 against an AI opponent.',
@@ -199,6 +175,7 @@ export const PROJECTS: Project[] = [
     kind: 'ai',
     year: '2026',
     stack: ['Angular 17+', 'FastAPI', 'PostgreSQL', 'Groq vision', 'Firebase', 'Aiven'],
+    githubUrl: 'https://github.com/AlmaQm/Plantealo',
     translations: {
       en: {
         tag: 'Mobile-first plant care app, built by three.',
@@ -262,6 +239,7 @@ export const PROJECTS: Project[] = [
     kind: 'client',
     year: '2024',
     stack: ['HTML', 'CSS', 'JavaScript', 'Figma', 'Team of 4'],
+    demoUrl: 'https://angelacamu.github.io/project-promo-A-module-2-team-1/',
     translations: {
       en: {
         tag: 'Character-sheet generator for tabletop RPGs.',
@@ -289,6 +267,7 @@ export const PROJECTS: Project[] = [
     kind: 'client',
     year: '2026',
     stack: ['Angular', 'TypeScript', 'SCSS', 'Vercel'],
+    demoUrl: 'https://projectmodulo1fpo.vercel.app/tienda',
     translations: {
       en: {
         tag: 'Responsive online shop.',
@@ -313,6 +292,7 @@ export const PROJECTS: Project[] = [
     kind: 'client',
     year: '2024–25',
     stack: ['HTML', 'CSS', 'JavaScript', 'Vercel', 'Freelance'],
+    demoUrl: 'https://boda-laura-y-jonathan.vercel.app/',
     translations: {
       en: {
         tag: 'Wedding site for a private client.',
@@ -335,26 +315,33 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    id: 'rickmorty',
+    id: 'portfolio-v1',
     well: 'A4',
     kind: 'client',
     year: '2024',
-    stack: ['React', 'Hooks', 'REST API', 'CSS'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    demoUrl: 'https://portfolio-carme.vercel.app/',
     translations: {
       en: {
-        tag: 'Character search and filtering over a public API.',
-        method: 'React with Hooks, asynchronous data handling and client-side filtering.',
-        reading: 'Personal project from the Adalab bootcamp, 2024.',
+        tag: 'My first portfolio — the one that got me here.',
+        method:
+          'Plain HTML, CSS and JavaScript: dark mode toggle, language switch, contact form.',
+        reading:
+          "Rough around the edges by today's standards, but I still have a soft spot for it — it's the site that took me from bootcamp graduate to everything else on this plate.",
       },
       es: {
-        tag: 'Búsqueda y filtrado de personajes sobre una API pública.',
-        method: 'React con Hooks, manejo de datos asíncronos y filtrado en cliente.',
-        reading: 'Proyecto personal del bootcamp de Adalab, 2024.',
+        tag: 'Mi primer portfolio — el que me trajo hasta aquí.',
+        method:
+          'HTML, CSS y JavaScript puros: toggle de modo oscuro, selector de idioma, formulario de contacto.',
+        reading:
+          'Con las costuras a la vista para los estándares de hoy, pero le tengo cariño — es la web que me llevó de recién graduada del bootcamp a todo lo demás de esta placa.',
       },
       ca: {
-        tag: 'Cerca i filtratge de personatges sobre una API pública.',
-        method: 'React amb Hooks, gestió de dades asíncrones i filtratge al client.',
-        reading: "Projecte personal del bootcamp d'Adalab, 2024.",
+        tag: 'El meu primer portfolio — el que em va portar fins aquí.',
+        method:
+          "HTML, CSS i JavaScript purs: toggle de mode fosc, selector d'idioma, formulari de contacte.",
+        reading:
+          'Amb les costures a la vista pels estàndards d\'avui, però li tinc carinyo — és el web que em va portar de graduada del bootcamp a tot la resta d\'aquesta placa.',
       },
     },
   },

@@ -34,6 +34,63 @@
   margin-top: 0.5rem;
 }
 
+.links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.link-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid vars.$grid;
+  color: vars.$ink-60;
+  transition: 0.18s;
+  position: relative;
+
+  &:hover {
+    border-color: vars.$ink;
+    color: vars.$ink;
+  }
+
+  &--live {
+    border-color: vars.$indigo;
+    color: vars.$indigo;
+
+    &:hover {
+      background: vars.$indigo;
+      color: vars.$paper;
+    }
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: vars.$ink;
+    color: vars.$paper;
+    font-family: vars.$font-mono;
+    font-size: 0.65rem;
+    white-space: nowrap;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
+}
+
 .empty {
   font-family: vars.$font-mono;
   color: vars.$ink-35;
