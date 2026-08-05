@@ -324,28 +324,27 @@ export const PROJECTS: Project[] = [
     well: 'A4',
     kind: 'client',
     year: '2024',
-    stack: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    stack: ['React', 'JavaScript', 'Vercel'],
     demoUrl: 'https://portfolio-carme.vercel.app/',
     githubUrl: 'https://github.com/mee96/portfolio',
     translations: {
       en: {
         tag: 'My first portfolio — the one that got me here.',
-        method:
-          'Plain HTML, CSS and JavaScript: dark mode toggle, language switch, contact form.',
+        method: 'Built with React: dark mode toggle, language switch, contact form.',
         reading:
           "Rough around the edges by today's standards, but I still have a soft spot for it — it's the site that took me from bootcamp graduate to everything else on this plate.",
       },
       es: {
         tag: 'Mi primer portfolio — el que me trajo hasta aquí.',
         method:
-          'HTML, CSS y JavaScript puros: toggle de modo oscuro, selector de idioma, formulario de contacto.',
+          'Construido con React: toggle de modo oscuro, selector de idioma, formulario de contacto.',
         reading:
           'Con las costuras a la vista para los estándares de hoy, pero le tengo cariño — es la web que me llevó de recién graduada del bootcamp a todo lo demás de esta placa.',
       },
       ca: {
         tag: 'El meu primer portfolio — el que em va portar fins aquí.',
         method:
-          "HTML, CSS i JavaScript purs: toggle de mode fosc, selector d'idioma, formulari de contacte.",
+          "Construït amb React: toggle de mode fosc, selector d'idioma, formulari de contacte.",
         reading:
           'Amb les costures a la vista pels estàndards d\'avui, però li tinc carinyo — és el web que em va portar de graduada del bootcamp a tot la resta d\'aquesta placa.',
       },
