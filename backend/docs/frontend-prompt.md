@@ -12,12 +12,34 @@ Cercle fix (position: fixed, bottom/right ~24px), fons $ink, icona
 (xat o poiata, tu decideixes), z-index alt perquè quedi per sobre de
 tot. En clicar, obre/tanca el panell.
 
-PANELL
-Es desplega des del botó (o com a sheet en mòbil), amb:
-- Capçalera: nom "Secretari" + botó de tancar
-- Zona de missatges, scroll intern, distingint visualment missatges
-  de l'usuari vs. del secretari
-- Input de text + botó d'enviar
+ESTIL DEL PANELL — consola de lectura
+
+Contenidor: fons $ink, border-radius $radius, sense vora (el fons
+fosc ja el separa prou de la pàgina).
+
+Capçalera: padding 11px 14px, border-bottom 1px solid #3A3450
+(un lila fosc, afegeix-lo com a token nou $ink-line a _variables.scss).
+Conté "bunsen@carme:~$" en $font-mono, 0.6rem, letter-spacing .08em,
+color $indigo, i un botó de tancar a la dreta en $ink-35.
+
+Cos dels missatges: $font-mono, però a 0.8rem (NO més petit — el mono
+sobre fons fosc necessita mida per llegir-se en paràgrafs llargs),
+line-height 1.7, padding 14px.
+- Missatges de Bunsen: color #E7E3F2, precedits d'un "›" en $cyan
+- Missatges de l'usuari: color $eosin, precedits d'un "›" en $ink-35
+- Separació entre torns: 10px
+
+Cursor: mentre Bunsen escriu en streaming, un bloc de 6x13px en
+$indigo al final del text, amb animació de parpelleig (opacity 1→0,
+1s, steps(1), infinite). Desapareix quan acaba la resposta.
+Respecta prefers-reduced-motion: sense parpelleig, cursor fix.
+
+Input: border-top 1px solid $ink-line, $font-mono 0.8rem, fons
+transparent, color $paper, cursor "_" com a placeholder, sense vora
+pròpia ni border-radius — que sembli part de la consola.
+
+Botó flotant: cercle fix a baix a la dreta, fons $ink, icona en
+$indigo. Al hover, fons $indigo amb icona $paper.
 
 PRE-ESCALFAMENT
 En carregar l'app (a app.ts o un servei arrencat des d'allà), fes
