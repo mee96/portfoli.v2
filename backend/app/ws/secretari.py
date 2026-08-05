@@ -22,6 +22,21 @@ WELCOME_MESSAGE = (
 CONTEXT_HEADER = "FRAGMENTOS RECUPERADOS DEL EXPEDIENTE DE CARME:"
 NO_CONTEXT = "(No se ha recuperado ningún fragmento relevante para esta pregunta.)"
 
+COFFEE_NOTE_ONCE = (
+    "Ya le has ofrecido un café antes en esta conversación — si quieres "
+    "volver sobre el tema, usa la variante del suspiro con la máquina de la "
+    "oficina, no repitas la oferta literal."
+)
+COFFEE_NOTE_ENOUGH = "Ya has mencionado el café dos veces en esta conversación. No lo menciones más."
+
+
+def _coffee_note(coffee_mentions: int) -> str | None:
+    if coffee_mentions == 0:
+        return None
+    if coffee_mentions == 1:
+        return COFFEE_NOTE_ONCE
+    return COFFEE_NOTE_ENOUGH
+
 
 @router.websocket("/ws/secretari")
 async def secretari_ws(websocket: WebSocket) -> None:
@@ -30,6 +45,7 @@ async def secretari_ws(websocket: WebSocket) -> None:
 
     # Per-connection conversation history, lost on disconnect — no persistence.
     history: list[dict] = []
+    coffee_mentions = 0
 
     try:
         while True:
@@ -42,8 +58,13 @@ async def secretari_ws(websocket: WebSocket) -> None:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 *history,
                 {"role": "system", "content": f"{CONTEXT_HEADER}\n\n{context_block}"},
-                {"role": "user", "content": user_message},
             ]
+
+            coffee_note = _coffee_note(coffee_mentions)
+            if coffee_note:
+                messages.append({"role": "system", "content": coffee_note})
+
+            messages.append({"role": "user", "content": user_message})
 
             full_response = ""
             async for delta in stream_completion(messages):
@@ -52,5 +73,8 @@ async def secretari_ws(websocket: WebSocket) -> None:
 
             history.append({"role": "user", "content": user_message})
             history.append({"role": "assistant", "content": full_response})
+
+            if "café" in full_response.lower():
+                coffee_mentions += 1
     except WebSocketDisconnect:
         pass
