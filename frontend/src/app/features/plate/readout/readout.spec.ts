@@ -94,7 +94,7 @@ describe('Readout', () => {
     await fixture.whenStable();
 
     compiled = fixture.nativeElement as HTMLElement;
-    const live = compiled.querySelector('.link-circle--live')!;
+    const live = compiled.querySelector('.link-circle[aria-label="Live demo"]')!;
     expect(live.getAttribute('aria-label')).toBe('Live demo');
     expect(live.getAttribute('data-tooltip')).toBe('Live demo');
   });

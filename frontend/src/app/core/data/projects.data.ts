@@ -16,6 +16,7 @@ export const PROJECTS: Project[] = [
       'Vercel',
     ],
     demoUrl: 'https://bubbletea-api.vercel.app/',
+    githubUrl: 'https://github.com/mee96/BBT',
     translations: {
       en: {
         tag: 'Full-stack catalogue with authenticated CRUD.',
@@ -55,6 +56,7 @@ export const PROJECTS: Project[] = [
       'Render',
     ],
     demoUrl: 'https://chat-frontend-o57q.onrender.com/',
+    githubUrl: 'https://github.com/mee96/Chat',
     translations: {
       en: {
         tag: 'Real-time messenger with two AI assistants.',
@@ -115,6 +117,7 @@ export const PROJECTS: Project[] = [
     kind: 'stack',
     year: '2026',
     stack: ['Angular 21', 'FastAPI', 'MySQL / Aiven', 'Firebase Auth', 'Groq', 'i18n'],
+    githubUrl: 'https://github.com/mee96/SkinCareApp',
     translations: {
       en: {
         tag: 'Korean skincare routine tracker.',
@@ -146,6 +149,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     stack: ['Angular 19', 'FastAPI', 'WebSockets', 'Groq', 'Render'],
     demoUrl: 'https://conecta4-frontend.onrender.com/',
+    githubUrl: 'https://github.com/mee96/juego-conecta-4',
     translations: {
       en: {
         tag: 'Connect 4 against an AI opponent.',
@@ -268,6 +272,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     stack: ['Angular', 'TypeScript', 'SCSS', 'Vercel'],
     demoUrl: 'https://projectmodulo1fpo.vercel.app/tienda',
+    githubUrl: 'https://github.com/mee96/ProjectModulo1FPO',
     translations: {
       en: {
         tag: 'Responsive online shop.',
@@ -321,6 +326,7 @@ export const PROJECTS: Project[] = [
     year: '2024',
     stack: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
     demoUrl: 'https://portfolio-carme.vercel.app/',
+    githubUrl: 'https://github.com/mee96/portfolio',
     translations: {
       en: {
         tag: 'My first portfolio — the one that got me here.',

@@ -53,18 +53,8 @@
   position: relative;
 
   &:hover {
-    border-color: vars.$ink;
-    color: vars.$ink;
-  }
-
-  &--live {
     border-color: vars.$indigo;
     color: vars.$indigo;
-
-    &:hover {
-      background: vars.$indigo;
-      color: vars.$paper;
-    }
   }
 
   &::after {
