@@ -17,16 +17,16 @@ def _get_client() -> QdrantClient:
     )
 
 
-def search(query: str, top_k: int = 5, threshold: float = 0.72) -> list[str]:
+def search(query: str, top_k: int = 5, threshold: float = 0.45) -> list[str]:
     """Return the corpus chunks relevant to `query`, or [] if none clear the threshold.
 
-    With multilingual-e5-large + cosine similarity, unrelated questions still
-    land in the 0.71-0.79 range, so this threshold is deliberately loose — a
-    safety net for the "no signal at all" case, not a fine relevance filter
-    (empirically, no clean cutoff separates relevant from irrelevant on this
-    corpus). Not inventing facts is the system prompt's job, not this
-    function's: it's told explicitly to only use what's literally in the
-    retrieved fragments.
+    With paraphrase-multilingual-MiniLM-L12-v2 (no query:/passage: prefixes,
+    unlike e5 models) + cosine similarity, relevant questions score ~0.48-0.80
+    while unrelated ones stay under ~0.43, so 0.45 sits in that gap. It's
+    still a safety net for the "no signal at all" case, not a fine relevance
+    filter — some off-topic-but-adjacent questions can still clear it. Not
+    inventing facts is the system prompt's job, not this function's: it's
+    told explicitly to only use what's literally in the retrieved fragments.
     """
     vector = embed_query(query)
     collection = os.environ["QDRANT_COLLECTION"]

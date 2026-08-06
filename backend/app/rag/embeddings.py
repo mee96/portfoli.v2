@@ -2,7 +2,7 @@ from functools import lru_cache
 
 from fastembed import TextEmbedding
 
-MODEL_NAME = "intfloat/multilingual-e5-large"
+MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 
 @lru_cache(maxsize=1)
@@ -12,12 +12,9 @@ def _get_model() -> TextEmbedding:
 
 
 def embed_query(text: str) -> list[float]:
-    # e5 models require the "query: " prefix on the search question.
-    vector = next(_get_model().embed([f"query: {text}"]))
+    vector = next(_get_model().embed([text]))
     return vector.tolist()
 
 
 def embed_passages(texts: list[str]) -> list[list[float]]:
-    # e5 models require the "passage: " prefix on indexed content.
-    prefixed = [f"passage: {text}" for text in texts]
-    return [vector.tolist() for vector in _get_model().embed(prefixed)]
+    return [vector.tolist() for vector in _get_model().embed(texts)]
