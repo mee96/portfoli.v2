@@ -7,16 +7,40 @@
   scroll-margin-top: 58px;
 }
 
-.grid {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: vars.$grid;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 560px) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding-bottom: 8px;
+    background: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
-.card {
+.skill-card {
   background: vars.$paper-2;
   padding: 1.5rem;
+
+  @media (max-width: 560px) {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    border-radius: vars.$radius;
+  }
 }
 
 .title {
@@ -29,4 +53,27 @@
   font-family: vars.$font-body;
   font-size: 1rem;
   color: vars.$ink-60;
+}
+
+.dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.75rem;
+
+  @media (max-width: 560px) {
+    display: flex;
+  }
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: vars.$grid;
+  transition: background 0.2s ease;
+
+  &--active {
+    background: vars.$indigo;
+  }
 }

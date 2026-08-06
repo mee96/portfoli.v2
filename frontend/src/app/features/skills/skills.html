@@ -5,12 +5,18 @@
     [subtitle]="translation.t('skills.lede')"
   />
 
-  <div class="grid">
+  <div class="skills-grid" #gridEl>
     @for (skill of skills; track skill.id) {
-      <article class="card">
+      <article class="skill-card" #cardEl>
         <h3 class="title">{{ skill.translations[translation.lang()].title }}</h3>
         <p class="body">{{ skill.translations[translation.lang()].body }}</p>
       </article>
+    }
+  </div>
+
+  <div class="dots" aria-hidden="true">
+    @for (skill of skills; track skill.id; let i = $index) {
+      <span class="dot" [class.dot--active]="activeSkillIndex() === i"></span>
     }
   </div>
 </section>

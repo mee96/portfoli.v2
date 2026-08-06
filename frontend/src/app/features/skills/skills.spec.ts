@@ -26,21 +26,21 @@ describe('Skills', () => {
 
   it('renders 6 skill cards', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelectorAll('article.card').length).toBe(6);
+    expect(compiled.querySelectorAll('article.skill-card').length).toBe(6);
   });
 
   it('renders the translated content for the active language and updates on change', async () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const first = SKILLS[0];
 
-    expect(compiled.querySelector('article.card .title')?.textContent).toContain(
+    expect(compiled.querySelector('article.skill-card .title')?.textContent).toContain(
       first.translations.en.title,
     );
 
     TestBed.inject(TranslationService).setLang('ca');
     await fixture.whenStable();
 
-    expect(compiled.querySelector('article.card .title')?.textContent).toContain(
+    expect(compiled.querySelector('article.skill-card .title')?.textContent).toContain(
       first.translations.ca.title,
     );
   });
@@ -54,5 +54,19 @@ describe('Skills', () => {
     expect(header.subtitle).toBe(
       "Three years running RIA and EIA assays before I wrote production code. Lab work is engineering with worse consequences — a mislabelled tube is somebody's diagnosis. Six habits came with me.",
     );
+  });
+
+  it('renders 6 dots for the mobile slide indicator, with the first one active by default', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const dots = compiled.querySelectorAll('.dot');
+
+    expect(dots.length).toBe(6);
+    expect(dots[0].classList.contains('dot--active')).toBe(true);
+    expect(dots[1].classList.contains('dot--active')).toBe(false);
+  });
+
+  it('does not throw when IntersectionObserver is unavailable (defensive guard)', () => {
+    expect(typeof IntersectionObserver).toBe('undefined');
+    expect(component).toBeTruthy();
   });
 });
