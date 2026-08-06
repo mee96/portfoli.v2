@@ -9,7 +9,7 @@ export const EDUCATION: EducationEntry[] = [
     translations: {
       en: {
         dt: 'Feb–Jul 2026',
-        t: 'Dual VET — Full Stack Developer (Level 3)',
+        t: 'College Diploma — Full Stack Developer (Level 3)',
         d: 'Classroom training combined with placement work, building the projects on the plate above.',
       },
       es: {
@@ -98,7 +98,7 @@ export const EDUCATION: EducationEntry[] = [
     org: 'INS Severo Ochoa',
     chips: ['GMP', 'Process control'],
     translations: {
-      en: { dt: '2022', t: 'Higher VET — Pharmaceutical & Biotechnology Manufacturing' },
+      en: { dt: '2022', t: 'College Diploma — Pharmaceutical & Biotechnology Manufacturing' },
       es: {
         dt: '2022',
         t: 'CFGS — Fabricación de Productos Farmacéuticos y Biotecnológicos',
@@ -117,7 +117,7 @@ export const EDUCATION: EducationEntry[] = [
     translations: {
       en: {
         dt: '2020',
-        t: 'Higher VET — Clinical Laboratory Technician',
+        t: 'College Diploma — Clinical Laboratory Technician',
         d: 'The origin of everything on the left-hand side of this page.',
       },
       es: {
