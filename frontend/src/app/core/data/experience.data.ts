@@ -4,7 +4,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
   {
     id: 'esplai',
     active: true,
-    org: 'Fundació Esplai',
+    org: 'Fundación Esplai',
     chips: ['Angular', 'Ionic', 'WordPress', 'Git'],
     translations: {
       en: {

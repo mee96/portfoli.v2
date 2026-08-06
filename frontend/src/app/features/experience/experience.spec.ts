@@ -28,12 +28,12 @@ describe('Experience', () => {
     expect(entries.length).toBe(4);
   });
 
-  it('marks Fundació Esplai as active with activeLabel "Now", and the other three as not active', () => {
+  it('marks Fundación Esplai as active with activeLabel "Now", and the other three as not active', () => {
     const entries = fixture.debugElement
       .queryAll(By.directive(LogEntry))
       .map((el) => el.componentInstance as LogEntry);
 
-    const esplai = entries.find((e) => e.org === 'Fundació Esplai');
+    const esplai = entries.find((e) => e.org === 'Fundación Esplai');
     const freelance = entries.find((e) => e.title === 'Freelance Web Developer');
     const lab = entries.find((e) => e.title === 'Laboratory Technician');
     const teleperformance = entries.find((e) => e.org === 'Teleperformance');

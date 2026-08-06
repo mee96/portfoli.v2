@@ -4,7 +4,7 @@ export const EDUCATION: EducationEntry[] = [
   {
     id: 'fpo-dual',
     group: 'dev',
-    org: 'Fundació Esplai',
+    org: 'Fundación Esplai',
     chips: ['Angular', 'Ionic', 'WordPress', 'MySQL', 'AI fundamentals'],
     translations: {
       en: {
