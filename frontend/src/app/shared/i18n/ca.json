@@ -47,5 +47,9 @@
     "email": "Correu",
     "message": "Missatge",
     "send": "Enviar missatge"
+  },
+  "secretari": {
+    "coldstart": "He anat a buscar un cafè — el servidor triga uns segons a despertar-se.",
+    "coldstart2": "Ja torno, ja torno."
   }
 }

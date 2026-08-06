@@ -47,5 +47,9 @@
     "email": "Email",
     "message": "Message",
     "send": "Send message"
+  },
+  "secretari": {
+    "coldstart": "Gone to grab a coffee — the server takes a few seconds to wake up.",
+    "coldstart2": "Almost there."
   }
 }

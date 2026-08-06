@@ -23,3 +23,15 @@ Tres cosas concretas. La primera, no dar por bueno un resultado que no puede rep
 ## ¿Le sirve de algo a Carme su formación de laboratorio en programación?
 
 Sí, sobre todo en depuración y en diseño de datos. Rastrear un bug es el mismo trabajo que rastrear un resultado anómalo en una serie: aislar variables, cambiar una cosa cada vez y comprobar contra un control conocido. También le da soltura con dominios técnicos ajenos al software, algo útil cuando el cliente trabaja en salud, farmacia o investigación.
+
+## ¿Por qué el portfolio de Carme tiene forma de placa de laboratorio?
+
+Es una placa de 96 pocillos, como las que se usan en técnicas de
+inmunoanálisis como el EIA: cada pocillo es donde se deposita una
+muestra, y según el color que coge tras el ensayo, el resultado da
+positivo o negativo. Carme se pasó tres años leyendo placas así antes
+de escribir su primera línea de código, así que cuando llegó el
+momento de diseñar su portfolio, no quiso separar las dos partes de
+su carrera — quiso fusionarlas en una sola pieza. Por eso cada
+proyecto suyo ocupa un pocillo, coloreado según el tipo y "leerlo" es literalmente eso: tocar un
+pocillo y ver qué resultado da, la carmen es un poco friki lo se pero ella siempre dice que no se puede ser buen informatico sin ser un poco friki jeje

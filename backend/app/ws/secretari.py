@@ -41,10 +41,13 @@ def _coffee_note(coffee_mentions: int) -> str | None:
 @router.websocket("/ws/secretari")
 async def secretari_ws(websocket: WebSocket) -> None:
     await websocket.accept()
-    await websocket.send_text(WELCOME_MESSAGE)
+    await websocket.send_json({"type": "welcome", "text": WELCOME_MESSAGE})
 
-    # Per-connection conversation history, lost on disconnect — no persistence.
-    history: list[dict] = []
+    # Seed the history with the welcome as Bunsen's own turn — otherwise Groq
+    # has no record of it, sees an empty history on the first real message,
+    # and (per the system prompt's "PRIMER MENSAJE" instruction) repeats the
+    # welcome text verbatim instead of actually answering.
+    history: list[dict] = [{"role": "assistant", "content": WELCOME_MESSAGE}]
     coffee_mentions = 0
 
     try:
@@ -69,7 +72,9 @@ async def secretari_ws(websocket: WebSocket) -> None:
             full_response = ""
             async for delta in stream_completion(messages):
                 full_response += delta
-                await websocket.send_text(delta)
+                await websocket.send_json({"type": "chunk", "text": delta})
+
+            await websocket.send_json({"type": "end"})
 
             history.append({"role": "user", "content": user_message})
             history.append({"role": "assistant", "content": full_response})
