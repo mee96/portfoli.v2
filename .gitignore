@@ -27,6 +27,7 @@ __pycache__/
 *.pyc
 *.egg-info/
 .pytest_cache/
+.fastembed_cache/
 
 # Environment variables — never commit real keys
 .env

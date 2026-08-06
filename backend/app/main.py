@@ -1,8 +1,6 @@
-import logging
 import os
 from contextlib import asynccontextmanager
 
-import psutil
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,14 +10,13 @@ from app.ws.secretari import router as secretari_router
 
 load_dotenv()
 
-logger = logging.getLogger("uvicorn")
-
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Non-blocking: FastAPI finishes starting up immediately while the model
+    # loads in the background thread (see embeddings.warm_up). It logs its
+    # own RSS reading once loading actually completes.
     warm_up()
-    rss_mb = psutil.Process(os.getpid()).memory_info().rss / (1024 * 1024)
-    logger.info(f"Embedding model loaded — process RSS: {rss_mb:.1f} MB")
     yield
 
 
