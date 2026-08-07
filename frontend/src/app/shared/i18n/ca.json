@@ -46,7 +46,10 @@
     "name": "Nom",
     "email": "Correu",
     "message": "Missatge",
-    "send": "Enviar missatge"
+    "send": "Enviar missatge",
+    "sending": "Enviant...",
+    "sent": "Missatge enviat! Et respondré aviat.",
+    "error": "Alguna cosa ha fallat. Torna-ho a provar o escriu-me a dev.mee96@gmail.com."
   },
   "secretari": {
     "coldstart": "He anat a buscar un cafè — el servidor triga uns segons a despertar-se.",

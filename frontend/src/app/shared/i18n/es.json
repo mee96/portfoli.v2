@@ -46,7 +46,10 @@
     "name": "Nombre",
     "email": "Correo",
     "message": "Mensaje",
-    "send": "Enviar mensaje"
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "sent": "¡Mensaje enviado! Te responderé pronto.",
+    "error": "Algo ha fallado. Vuelve a intentarlo o escríbeme a dev.mee96@gmail.com."
   },
   "secretari": {
     "coldstart": "He ido a por un café — el servidor tarda unos segundos en despertarse.",

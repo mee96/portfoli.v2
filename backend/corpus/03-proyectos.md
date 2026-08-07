@@ -53,3 +53,11 @@ Un portfolio personal hecho con React en 2024, con toggle de modo oscuro, select
 ## ¿Cuál es el proyecto favorito de Carme?
 
 Se que ella quiere a todas sus apps por igual y que se obsesiona con cada detalle, pero la que yo le he visto disfrutar más es cuando creo la API de BBT, a parte de tirarse horas en Pinterest mirando diseños.. no se cuantos bubbleteas pedimos en delivery para terminarla.. ella esta realmente obsesionada, deberian pagarle en bubbleteas en serio
+
+## ¿Qué proyectos tiene Carme en su portfolio?
+
+Tiene varios, cada uno con su propia lectura en la placa del
+portfolio — échale un vistazo ahí arriba, cada pocillo es un
+proyecto distinto. Si quieres que te cuente alguno en concreto,
+solo tienes que preguntarme por su nombre y te doy todos los
+detalles.

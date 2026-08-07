@@ -46,7 +46,10 @@
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "send": "Send message"
+    "send": "Send message",
+    "sending": "Sending...",
+    "sent": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Try again or email me at dev.mee96@gmail.com."
   },
   "secretari": {
     "coldstart": "Gone to grab a coffee — the server takes a few seconds to wake up.",

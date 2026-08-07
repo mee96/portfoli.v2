@@ -41,13 +41,41 @@ describe('Contact', () => {
     expect(submitButton().disabled).toBe(false);
   });
 
-  it('does not call any external service on submit — only warns', () => {
-    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+  it('POSTs the form values to {apiUrl}/contact and shows a success message', async () => {
+    const fetchSpy = vi.spyOn(window, 'fetch').mockResolvedValue(new Response(null, { status: 200 }));
 
     const compiled = fixture.nativeElement as HTMLElement;
-    compiled.querySelector('form')?.dispatchEvent(new Event('submit'));
+    setValue(compiled, 'input[type="text"]', 'Ada');
+    setValue(compiled, 'input[type="email"]', 'ada@example.com');
+    setValue(compiled, 'textarea', 'Hello!');
+    fixture.detectChanges();
 
-    expect(warnSpy).toHaveBeenCalledWith('Contact form submission not wired up yet');
+    await component['onSubmit']();
+    fixture.detectChanges();
+
+    expect(fetchSpy).toHaveBeenCalledWith(
+      expect.stringContaining('/contact'),
+      expect.objectContaining({
+        method: 'POST',
+        body: JSON.stringify({ name: 'Ada', email: 'ada@example.com', message: 'Hello!' }),
+      }),
+    );
+    expect(compiled.querySelector('.submit-status--success')).not.toBeNull();
+  });
+
+  it('shows an error message when the request fails', async () => {
+    vi.spyOn(window, 'fetch').mockResolvedValue(new Response(null, { status: 500 }));
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    setValue(compiled, 'input[type="text"]', 'Ada');
+    setValue(compiled, 'input[type="email"]', 'ada@example.com');
+    setValue(compiled, 'textarea', 'Hello!');
+    fixture.detectChanges();
+
+    await component['onSubmit']();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('.submit-status--error')).not.toBeNull();
   });
 
   it('shows the placeholder once the photo fails to load', async () => {

@@ -69,11 +69,19 @@
         <textarea formControlName="message"></textarea>
       </label>
 
-      <app-button
-        type="submit"
-        [label]="translation.t('contact.send')"
-        [disabled]="form.invalid"
-      />
+      <div class="submit-row">
+        <app-button
+          type="submit"
+          [label]="status() === 'sending' ? translation.t('contact.sending') : translation.t('contact.send')"
+          [disabled]="form.invalid || status() === 'sending'"
+        />
+
+        @if (status() === 'success') {
+          <p class="submit-status submit-status--success">{{ translation.t('contact.sent') }}</p>
+        } @else if (status() === 'error') {
+          <p class="submit-status submit-status--error">{{ translation.t('contact.error') }}</p>
+        }
+      </div>
     </form>
   </div>
 

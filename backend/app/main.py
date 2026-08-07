@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.contact import router as contact_router
 from app.ws.secretari import router as secretari_router
 
 load_dotenv()
@@ -21,6 +22,7 @@ app.add_middleware(
 )
 
 app.include_router(secretari_router)
+app.include_router(contact_router)
 
 
 @app.get("/health")

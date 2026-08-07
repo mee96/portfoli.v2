@@ -110,6 +110,27 @@
   }
 }
 
+.submit-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.submit-status {
+  margin: 0;
+  font-family: vars.$font-mono;
+  font-size: 0.875rem;
+
+  &--success {
+    color: vars.$cyan;
+  }
+
+  &--error {
+    color: vars.$eosin;
+  }
+}
+
 .site-footer {
   display: flex;
   flex-direction: column;
