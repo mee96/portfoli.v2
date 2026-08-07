@@ -5,21 +5,21 @@ export const EDUCATION: EducationEntry[] = [
     id: 'fpo-dual',
     group: 'dev',
     org: 'Fundación Esplai',
-    chips: ['Angular', 'Ionic', 'WordPress', 'MySQL', 'AI fundamentals'],
+    chips: ['AI fundamentals', 'Angular', 'Ionic', 'MySQL', 'Python'],
     translations: {
       en: {
         dt: 'Feb–Jul 2026',
-        t: 'College Diploma — Full Stack Developer (Level 3)',
+        t: 'College Diploma — Full Stack Developer',
         d: 'Classroom training combined with placement work, building the projects on the plate above.',
       },
       es: {
         dt: 'Feb–Jul 2026',
-        t: 'FPO Dual — Desarrollo Full Stack (Nivel 3)',
+        t: 'FPO Dual — Desarrollo Full Stack',
         d: 'Formación en aula combinada con trabajo en prácticas, construyendo los proyectos de la placa de arriba.',
       },
       ca: {
         dt: 'Feb–Jul 2026',
-        t: 'FPO Dual — Desenvolupament Full Stack (Nivell 3)',
+        t: 'FPO Dual — Desenvolupament Full Stack',
         d: "Formació a l'aula combinada amb feina en pràctiques, construint els projectes de la placa de dalt.",
       },
     },
@@ -62,7 +62,7 @@ export const EDUCATION: EducationEntry[] = [
     id: 'ioe-bigdata',
     group: 'dev',
     org: 'IOE Business School',
-    chips: ['Big Data', 'AI foundations'],
+    chips: ['Big Data', 'AI foundations', 'Python'],
     translations: {
       en: { dt: 'Jan 2026', t: 'Introduction to Big Data & AI' },
       es: { dt: 'Ene 2026', t: 'Introducción a Big Data e IA' },
@@ -95,17 +95,20 @@ export const EDUCATION: EducationEntry[] = [
   {
     id: 'severo-ochoa',
     group: 'lab',
-    org: 'INS Severo Ochoa',
-    chips: ['GMP', 'Process control'],
+    org: 'INS Severo Ochoa, Esplugues de Llobregat',
+    chips: [],
     translations: {
-      en: { dt: '2022', t: 'College Diploma — Pharmaceutical & Biotechnology Manufacturing' },
+      en: {
+        dt: '2022',
+        t: 'College Diploma — Pharmaceutical & Biotechnological Products Manufacturing',
+      },
       es: {
         dt: '2022',
-        t: 'CFGS — Fabricación de Productos Farmacéuticos y Biotecnológicos',
+        t: 'CFGS Fabricación de Productos Farmacéuticos, Biotecnológicos y Afines',
       },
       ca: {
         dt: '2022',
-        t: 'CFGS — Fabricació de Productes Farmacèutics i Biotecnològics',
+        t: 'CFGS Fabricació de Productes Farmacèutics, Biotecnològics i Afins',
       },
     },
   },
@@ -113,22 +116,19 @@ export const EDUCATION: EducationEntry[] = [
     id: 'ramon-i-cajal',
     group: 'lab',
     org: 'Escola Ramon i Cajal, Barcelona',
-    chips: ['RIA', 'EIA', 'Quality control'],
+    chips: [],
     translations: {
       en: {
         dt: '2020',
-        t: 'College Diploma — Clinical Laboratory Technician',
-        d: 'The origin of everything on the left-hand side of this page.',
+        t: 'College Diploma — Clinical and Biomedical Laboratory',
       },
       es: {
         dt: '2020',
-        t: 'CFGS — Laboratorio Clínico y Biomédico',
-        d: 'El origen de todo lo que hay en la parte izquierda de esta página.',
+        t: 'CFGS en Laboratorio Clínico y Biomédico',
       },
       ca: {
         dt: '2020',
-        t: 'CFGS — Laboratori Clínic i Biomèdic',
-        d: "L'origen de tot el que hi ha a la part esquerra d'aquesta pàgina.",
+        t: 'CFGS en Laboratori Clínic i Biomèdic',
       },
     },
   },

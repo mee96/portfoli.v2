@@ -5,7 +5,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
     id: 'esplai',
     active: true,
     org: 'Fundación Esplai',
-    chips: ['Angular', 'Ionic', 'WordPress', 'Git'],
+    chips: ['Angular', 'Ionic', 'WordPress', 'Git', 'PHP', 'Python'],
     translations: {
       en: {
         dt: 'Mar 2026 – Present',
@@ -53,17 +53,17 @@ export const EXPERIENCE: ExperienceEntry[] = [
       en: {
         dt: '2021–2024',
         t: 'Laboratory Technician',
-        d: 'Three years across RIA, EIA and UGM departments — patient intake, sample extraction, and immunoassay analysis. Along the way, also ran COVID antigen testing at Mobile World Congress — my first time working a tech event, years before attending one as a developer.',
+        d: 'Three years across RIA, EIA and UGM departments — patient intake, sample extraction, and immunoassay analysis. UGM (Sample Management Unit) is where incoming samples are received, pre-treated and distributed to the right department. Along the way, also ran COVID antigen testing at Mobile World Congress — years before going back twice more as a developer.',
       },
       es: {
         dt: '2021–2024',
         t: 'Técnica de Laboratorio',
-        d: 'Tres años entre los departamentos de RIA, EIA y UGM — atención al paciente, extracción de muestras y análisis por inmunoensayo. De paso, también hice tests de antígenos de COVID en el Mobile World Congress, mi primera vez trabajando en un evento tech, años antes de asistir a uno como developer.',
+        d: 'Tres años entre los departamentos de RIA, EIA y UGM — atención al paciente, extracción de muestras y análisis por inmunoensayo. La UGM (Unidad de Gestión de Muestras) es donde llegan las muestras, se les da el tratamiento previo y se distribuyen al departamento que corresponda. De paso, también hizo tests de antígenos de COVID en el Mobile World Congress — años antes de volver dos veces más como desarrolladora.',
       },
       ca: {
         dt: '2021–2024',
         t: 'Tècnica de Laboratori',
-        d: "Tres anys entre els departaments de RIA, EIA i UGM — atenció al pacient, extracció de mostres i anàlisi per immunoassaig. De pas, també vaig fer tests d'antígens de COVID al Mobile World Congress, la primera vegada treballant en un esdeveniment tech, anys abans d'assistir-hi com a developer.",
+        d: "Tres anys entre els departaments de RIA, EIA i UGM — atenció al pacient, extracció de mostres i anàlisi per immunoassaig. La UGM (Unitat de Gestió de Mostres) és on arriben les mostres, se'ls fa el tractament previ i es distribueixen al departament que toqui. De pas, també va fer tests d'antígens de COVID al Mobile World Congress — anys abans de tornar-hi dues vegades més com a desenvolupadora.",
       },
     },
   },
@@ -75,17 +75,17 @@ export const EXPERIENCE: ExperienceEntry[] = [
       en: {
         dt: 'Jun 2019 – Jul 2021',
         t: 'Technical Support Agent',
-        d: "Two years of inbound and outbound technical support calls, plus back-office email management — explaining technical problems to people who didn't ask for them, over the phone.",
+        d: 'Two years of inbound and outbound technical support calls, plus back-office email management.',
       },
       es: {
         dt: 'Jun 2019 – Jul 2021',
         t: 'Agente de Soporte Técnico',
-        d: 'Dos años de llamadas de soporte técnico entrantes y salientes, más gestión de back-office por correo — explicando problemas técnicos a gente que no los había pedido, por teléfono.',
+        d: 'Dos años de llamadas de soporte técnico entrantes y salientes, más gestión de back-office por correo.',
       },
       ca: {
         dt: 'Jun 2019 – Jul 2021',
         t: 'Agent de Suport Tècnic',
-        d: 'Dos anys de trucades de suport tècnic entrants i sortints, més gestió de back-office per correu — explicant problemes tècnics a gent que no els havia demanat, per telèfon.',
+        d: 'Dos anys de trucades de suport tècnic entrants i sortints, més gestió de back-office per correu.',
       },
     },
   },

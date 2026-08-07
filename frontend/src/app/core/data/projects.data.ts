@@ -87,6 +87,7 @@ export const PROJECTS: Project[] = [
     kind: 'stack',
     year: '2026',
     stack: ['Angular 21', 'FastAPI', 'MySQL / Aiven', 'Firebase Auth', 'Jikan API'],
+    githubUrl: 'https://github.com/mee96/Nikkura',
     translations: {
       en: {
         tag: 'Anime discovery app with role-based presets.',
@@ -180,27 +181,28 @@ export const PROJECTS: Project[] = [
     year: '2026',
     stack: ['Angular 17+', 'FastAPI', 'PostgreSQL', 'Groq vision', 'Firebase', 'Aiven'],
     githubUrl: 'https://github.com/AlmaQm/Plantealo',
+    demoUrl: 'https://plantealo-1.onrender.com/',
     translations: {
       en: {
         tag: 'Mobile-first plant care app, built by three.',
         method:
           'Angular 17+, FastAPI and PostgreSQL. Mine: a custom datepicker and select, the SSR to SPA migration and the AI chat.',
         reading:
-          'Vision chat on Groq and a full Firebase to Aiven migration with uid-sync endpoints deployed on Render.',
+          'Vision chat on Groq and a full Firebase to Aiven migration with uid-sync endpoints deployed on Render. Installable as a PWA.',
       },
       es: {
         tag: 'App de cuidado de plantas mobile-first, a tres manos.',
         method:
           'Angular 17+, FastAPI y PostgreSQL. Lo mío: datepicker y select propios, la migración de SSR a SPA y el chat de IA.',
         reading:
-          'Chat con visión en Groq y migración completa de Firebase a Aiven con endpoints de sync por uid en Render.',
+          'Chat con visión en Groq y migración completa de Firebase a Aiven con endpoints de sync por uid en Render. Instalable como PWA.',
       },
       ca: {
         tag: 'App de cura de plantes mobile-first, feta entre tres.',
         method:
           "Angular 17+, FastAPI i PostgreSQL. El meu tros: datepicker i select propis, la migració d'SSR a SPA i el xat d'IA.",
         reading:
-          "Xat amb visió a Groq i migració completa de Firebase a Aiven amb endpoints de sync per uid a Render.",
+          "Xat amb visió a Groq i migració completa de Firebase a Aiven amb endpoints de sync per uid a Render. Instal·lable com a PWA.",
       },
     },
   },
@@ -298,6 +300,7 @@ export const PROJECTS: Project[] = [
     year: '2024–25',
     stack: ['HTML', 'CSS', 'JavaScript', 'Vercel', 'Freelance'],
     demoUrl: 'https://boda-laura-y-jonathan.vercel.app/',
+    githubUrl: 'https://github.com/mee96/bodaLJ',
     translations: {
       en: {
         tag: 'Wedding site for a private client.',

@@ -61,3 +61,15 @@ portfolio — échale un vistazo ahí arriba, cada pocillo es un
 proyecto distinto. Si quieres que te cuente alguno en concreto,
 solo tienes que preguntarme por su nombre y te doy todos los
 detalles.
+
+## ¿Cómo se instala Plantealo como PWA?
+
+Plantealo es instalable directamente desde el navegador, sin pasar por ninguna app store. Los pasos varían un poco según el dispositivo:
+
+En Android (Chrome): abre https://plantealo-1.onrender.com/, toca el menú de tres puntos arriba a la derecha, y selecciona "Instalar aplicación" o "Añadir a pantalla de inicio".
+
+En iPhone (Safari): abre la web, toca el icono de compartir (el cuadrado con la flecha hacia arriba), y busca "Añadir a pantalla de inicio".
+
+En ordenador (Chrome/Edge): a la derecha de la barra de direcciones aparece un icono de instalación (una pantalla con una flecha); haz clic ahí y confirma.
+
+Una vez instalada, se abre como una app normal, con su propio icono, sin la barra del navegador.

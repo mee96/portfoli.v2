@@ -55,23 +55,23 @@ describe('Readout', () => {
   });
 
   it('renders GitHub and Live links only when the project defines them', async () => {
-    const plantealo = PROJECTS.find((p) => p.id === 'plantealo')!;
-    fixture.componentRef.setInput('project', plantealo);
+    const skincare = PROJECTS.find((p) => p.id === 'skincare')!;
+    fixture.componentRef.setInput('project', skincare);
     await fixture.whenStable();
 
     const compiled = fixture.nativeElement as HTMLElement;
     const links = Array.from(compiled.querySelectorAll('.link-circle'));
     expect(links.length).toBe(1);
     expect(links[0].getAttribute('aria-label')).toBe('GitHub');
-    expect(links[0].getAttribute('href')).toBe(plantealo.githubUrl);
+    expect(links[0].getAttribute('href')).toBe(skincare.githubUrl);
   });
 
   it('renders no links row at all when the project has neither githubUrl nor demoUrl', async () => {
-    const nikkura = PROJECTS.find((p) => p.id === 'nikkura')!;
-    expect(nikkura.githubUrl).toBeUndefined();
-    expect(nikkura.demoUrl).toBeUndefined();
+    const cms = PROJECTS.find((p) => p.id === 'cms')!;
+    expect(cms.githubUrl).toBeUndefined();
+    expect(cms.demoUrl).toBeUndefined();
 
-    fixture.componentRef.setInput('project', nikkura);
+    fixture.componentRef.setInput('project', cms);
     await fixture.whenStable();
 
     const compiled = fixture.nativeElement as HTMLElement;
