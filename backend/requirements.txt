@@ -2,6 +2,4 @@ fastapi==0.115.6
 uvicorn[standard]==0.34.0
 python-dotenv==1.0.1
 groq==0.15.0
-qdrant-client==1.12.2
-fastembed==0.8.0
-psutil==7.2.2
+qdrant-client==1.19.0

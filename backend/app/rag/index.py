@@ -13,12 +13,18 @@ from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 from qdrant_client.http import models as qmodels
 
-from app.rag.embeddings import embed_passages
+from app.rag.embeddings import passage_document
 
 load_dotenv()
 
 CORPUS_DIR = Path(__file__).resolve().parents[2] / "corpus"
 HEADING_RE = re.compile(r"^## (.+)$", re.MULTILINE)
+
+# intfloat/multilingual-e5-small's known output size. Cloud Inference computes
+# vectors server-side, so unlike the local-fastembed version of this script we
+# can't infer this dynamically from a vector we just produced — it has to be
+# declared upfront to create the collection.
+VECTOR_SIZE = 384
 
 
 def split_into_chunks(markdown_text: str) -> list[tuple[str, str]]:
@@ -56,6 +62,7 @@ def main() -> None:
     client = QdrantClient(
         url=os.environ["QDRANT_URL"],
         api_key=os.environ["QDRANT_API_KEY"],
+        cloud_inference=True,
     )
 
     records = load_corpus()
@@ -64,28 +71,25 @@ def main() -> None:
 
     print(f"Read {len(records)} chunks from {CORPUS_DIR}")
 
-    vectors = embed_passages([record["text"] for record in records])
-    vector_size = len(vectors[0])
-
     if client.collection_exists(collection):
         client.delete_collection(collection)
         print(f"Deleted existing collection '{collection}'")
 
     client.create_collection(
         collection_name=collection,
-        vectors_config=qmodels.VectorParams(size=vector_size, distance=qmodels.Distance.COSINE),
+        vectors_config=qmodels.VectorParams(size=VECTOR_SIZE, distance=qmodels.Distance.COSINE),
     )
-    print(f"Created collection '{collection}' (vector size {vector_size})")
+    print(f"Created collection '{collection}' (vector size {VECTOR_SIZE})")
 
     client.upsert(
         collection_name=collection,
         points=[
             qmodels.PointStruct(
                 id=i,
-                vector=vector,
+                vector=passage_document(record["text"]),
                 payload=record,
             )
-            for i, (record, vector) in enumerate(zip(records, vectors))
+            for i, record in enumerate(records)
         ],
     )
 
