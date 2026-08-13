@@ -43,6 +43,12 @@
   }
 }
 
+.nav-wrap {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
 .nav {
   display: flex;
   flex: 1;
@@ -63,6 +69,66 @@
   @media (max-width: 768px) {
     a {
       font-size: 0.55rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  :host {
+    height: auto;
+  }
+
+  .header-inner {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .name {
+    order: 1;
+  }
+
+  app-lang-switcher {
+    order: 2;
+  }
+
+  .nav-wrap {
+    order: 3;
+    flex-basis: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 28px;
+      background: linear-gradient(to right, transparent, vars.$paper);
+      pointer-events: none;
+    }
+  }
+
+  .nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 9px 14px;
+    border-top: 1px solid vars.$grid;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    a {
+      white-space: nowrap;
+      flex-shrink: 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease;
+
+      &:hover,
+      &:focus {
+        border-bottom-color: vars.$indigo;
+      }
     }
   }
 }

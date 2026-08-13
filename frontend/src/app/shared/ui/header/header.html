@@ -4,11 +4,13 @@
     <span class="short">CMC</span>
   </span>
 
-  <nav class="nav">
-    @for (link of navLinks; track link.href) {
-      <a [href]="link.href">{{ translation.t(link.labelKey) }}</a>
-    }
-  </nav>
+  <div class="nav-wrap">
+    <nav class="nav">
+      @for (link of navLinks; track link.href) {
+        <a [href]="link.href">{{ translation.t(link.labelKey) }}</a>
+      }
+    </nav>
+  </div>
 
   <app-lang-switcher />
 </div>
