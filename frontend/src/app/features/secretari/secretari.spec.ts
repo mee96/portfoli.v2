@@ -4,9 +4,14 @@ import { vi } from 'vitest';
 import { Secretari } from './secretari';
 import { WebSocketService } from '../../core/services/websocket.service';
 
+function stubMatchMedia(hoverCapable: boolean): void {
+  window.matchMedia = vi.fn().mockReturnValue({ matches: hoverCapable }) as unknown as typeof window.matchMedia;
+}
+
 describe('Secretari', () => {
   let component: Secretari;
   let fixture: ComponentFixture<Secretari>;
+  const originalMatchMedia = window.matchMedia;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -18,8 +23,42 @@ describe('Secretari', () => {
     await fixture.whenStable();
   });
 
+  afterEach(() => {
+    window.matchMedia = originalMatchMedia;
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('auto-focuses the input on open when the device has a real pointer (hover: hover)', async () => {
+    const ws = TestBed.inject(WebSocketService);
+    vi.spyOn(ws, 'connect').mockImplementation(() => {});
+    stubMatchMedia(true);
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    (compiled.querySelector('.fab') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    await new Promise((resolve) => setTimeout(resolve, 20));
+
+    const input = compiled.querySelector('input') as HTMLInputElement;
+    expect(document.activeElement).toBe(input);
+  });
+
+  it('does not auto-focus the input on open on touch-only devices (hover: none)', async () => {
+    const ws = TestBed.inject(WebSocketService);
+    vi.spyOn(ws, 'connect').mockImplementation(() => {});
+    stubMatchMedia(false);
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    (compiled.querySelector('.fab') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    await fixture.whenStable();
+    await new Promise((resolve) => setTimeout(resolve, 20));
+
+    const input = compiled.querySelector('input') as HTMLInputElement;
+    expect(document.activeElement).not.toBe(input);
   });
 
   it('refocuses the input once a streamed response finishes, after it is re-enabled', async () => {

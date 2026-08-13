@@ -99,6 +99,18 @@ export class Secretari {
 
     if (nowOpen) {
       this.ws.connect();
+
+      // Only auto-focus on devices with a real pointer (desktop): on a
+      // touch device this would pop the on-screen keyboard the instant the
+      // panel opens, which is intrusive if the user just wanted to glance
+      // at it. `matchMedia` isn't implemented in the jsdom test environment,
+      // so treat "can't tell" the same as "don't risk it".
+      if (typeof window.matchMedia === 'function' && window.matchMedia('(hover: hover)').matches) {
+        // Same setTimeout(0) trick as the post-response refocus below: the
+        // panel is behind an @if(open()), so at this point in the handler
+        // Angular hasn't rendered it (and #inputEl doesn't exist) yet.
+        setTimeout(() => this.inputEl()?.nativeElement.focus(), 0);
+      }
     }
   }
 
