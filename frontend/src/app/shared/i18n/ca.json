@@ -16,7 +16,8 @@
   "plate": {
     "title": "Mapa de placa",
     "sub": "Toca un pou per llegir la mostra.",
-    "empty": "Selecciona un pou per llegir la mostra."
+    "empty": "Selecciona un pou per llegir la mostra.",
+    "caption": "Inspirat en una placa EIA de 96 pocillos — el mateix format que es fa servir al laboratori per a assajos colorimètrics, un pou per mostra."
   },
   "legend": {
     "stack": "App full stack",

@@ -1,39 +1,45 @@
 <div class="plate">
-  <app-section-header
-    fig="Fig. 1"
-    [title]="translation.t('plate.title')"
-    [subtitle]="translation.t('plate.sub')"
-  />
+  <div class="plate-layout">
+    <div class="plate-main">
+      <app-section-header
+        fig="Fig. 1"
+        [title]="translation.t('plate.title')"
+        [subtitle]="translation.t('plate.sub')"
+      />
 
-  <div class="legend">
-    @for (item of legend; track item.kind) {
-      <span class="legend-item">
-        <i class="dot dot--{{ item.kind }}"></i>
-        {{ translation.t(item.labelKey) }}
-      </span>
-    }
-  </div>
-
-  <div class="plate-frame">
-    <div class="grid">
-      @for (row of rows; track row) {
-        @for (col of columns; track col) {
-          @let project = wellAt(row, col);
-          @if (project) {
-            <button
-              type="button"
-              class="well well--{{ project.kind }}"
-              [attr.data-well]="row + col"
-              (click)="select(project.id)"
-              (mouseenter)="select(project.id)"
-            ></button>
-          } @else {
-            <button type="button" class="well" [attr.data-well]="row + col" disabled></button>
-          }
+      <div class="legend">
+        @for (item of legend; track item.kind) {
+          <span class="legend-item">
+            <i class="dot dot--{{ item.kind }}"></i>
+            {{ translation.t(item.labelKey) }}
+          </span>
         }
-      }
-    </div>
-  </div>
+      </div>
 
-  <app-readout [project]="selected()" />
+      <div class="plate-frame">
+        <div class="grid">
+          @for (row of rows; track row) {
+            @for (col of columns; track col) {
+              @let project = wellAt(row, col);
+              @if (project) {
+                <button
+                  type="button"
+                  class="well well--{{ project.kind }}"
+                  [attr.data-well]="row + col"
+                  (click)="select(project.id)"
+                  (mouseenter)="select(project.id)"
+                ></button>
+              } @else {
+                <button type="button" class="well" [attr.data-well]="row + col" disabled></button>
+              }
+            }
+          }
+        </div>
+      </div>
+
+      <p class="plate-caption">{{ translation.t('plate.caption') }}</p>
+    </div>
+
+    <app-readout [project]="selected()" />
+  </div>
 </div>

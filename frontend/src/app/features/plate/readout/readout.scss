@@ -81,6 +81,23 @@
   }
 }
 
+.readout-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; // ~ .plate-frame's rendered height, so the message
+                     // centers within roughly the space the plate occupies
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .readout-empty {
+    min-height: 0;
+    display: block;
+    text-align: left;
+  }
+}
+
 .empty {
   font-family: vars.$font-mono;
   color: vars.$ink-35;

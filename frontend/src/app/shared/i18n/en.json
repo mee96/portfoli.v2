@@ -16,7 +16,8 @@
   "plate": {
     "title": "Plate map",
     "sub": "Tap a well to read the sample.",
-    "empty": "Select a well to read the sample."
+    "empty": "Select a well to read the sample.",
+    "caption": "Modeled after a 96-well EIA plate — same layout labs use to run colorimetric assays, one well per sample."
   },
   "legend": {
     "stack": "Full-stack app",
