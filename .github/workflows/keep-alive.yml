@@ -1,0 +1,13 @@
+name: Keep backend alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # permet disparar-lo manualment des de GitHub
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Bunsen backend
+        run: curl -sf https://bunsen-backend.onrender.com/health || true
