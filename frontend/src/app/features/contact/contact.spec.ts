@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { vi } from 'vitest';
 
 import { Contact } from './contact';
+import { TranslationService } from '../../core/services/translation.service';
 
 function setValue(root: HTMLElement, selector: string, value: string): void {
   const el = root.querySelector(selector) as HTMLInputElement | HTMLTextAreaElement;
@@ -134,12 +135,30 @@ describe('Contact', () => {
     expect(links[0].textContent).toContain('dev.mee96@gmail.com');
     expect(links[0].querySelector('svg')).not.toBeNull();
 
-    expect(links[1].getAttribute('href')).toBe('#');
+    expect(links[1].getAttribute('href')).toBe('/cv/CV_Carme_Medina_EN.pdf');
+    expect(links[1].hasAttribute('download')).toBe(true);
     expect(links[1].textContent).toContain('CV');
     expect(links[1].querySelector('svg')).not.toBeNull();
 
     const hrefs = links.map((link) => link.getAttribute('href'));
     expect(hrefs).not.toContain('https://github.com/mee96');
     expect(links.map((link) => link.textContent)).not.toContain('LinkedIn');
+  });
+
+  it('uses the CV PDF for the active language', async () => {
+    const translation = TestBed.inject(TranslationService);
+    const cvLink = () => fixture.nativeElement.querySelector('.links a[download]') as HTMLAnchorElement;
+
+    translation.setLang('ca');
+    fixture.detectChanges();
+    expect(cvLink().getAttribute('href')).toBe('/cv/CV_Carme_Medina_CA.pdf');
+
+    translation.setLang('es');
+    fixture.detectChanges();
+    expect(cvLink().getAttribute('href')).toBe('/cv/CV_Carme_Medina_ES.pdf');
+
+    translation.setLang('en');
+    fixture.detectChanges();
+    expect(cvLink().getAttribute('href')).toBe('/cv/CV_Carme_Medina_EN.pdf');
   });
 });

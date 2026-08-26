@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslationService } from '../../core/services/translation.service';
 import { SectionHeader } from '../../shared/ui/section-header/section-header';
@@ -15,6 +15,9 @@ type SubmitStatus = 'idle' | 'sending' | 'success' | 'error';
 })
 export class Contact {
   protected readonly translation = inject(TranslationService);
+  protected readonly cvHref = computed(
+    () => `/cv/CV_Carme_Medina_${this.translation.lang().toUpperCase()}.pdf`,
+  );
 
   protected photoFailed = false;
   protected readonly status = signal<SubmitStatus>('idle');
