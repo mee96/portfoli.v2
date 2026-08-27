@@ -1,24 +1,20 @@
-<div align="right">
-
-[![English](https://img.shields.io/badge/Language-English%20%F0%9F%87%AC%F0%9F%87%A7-5b9bd5?style=flat-square)](README.md)
-[![Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol%20%F0%9F%87%AA%F0%9F%87%B8-1b2e4b?style=flat-square)](#)
-[![Català](https://img.shields.io/badge/Llengua-Catal%C3%A0%20%F0%9F%87%A8%F0%9F%87%A1-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.ca.md)
-
-</div>
-
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=a8c4f0&height=180&section=header&text=Carme%20Medina%20%E2%80%94%20Portfolio%20V2&fontColor=1b2e4b&fontSize=32&desc=Mismo%20rigor.%20Otra%20mesa%20de%20trabajo.&descSize=16&descColor=1b2e4b&descAlignY=65&fontAlignY=42" width="100%" alt="Carme Medina — Portfolio V2" />
 
 <br/>
 
-<img src="frontend/public/foto.jpg" width="84px" style="border-radius:50%" alt="Carme Medina"/>
-&nbsp;&nbsp;
 <img src="frontend/public/Cat%20Spinning%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 &nbsp;&nbsp;
 <img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 
 <br/><br/>
+
+[![English](https://img.shields.io/badge/English-5b9bd5?style=flat-square)](README.md)
+[![Español](https://img.shields.io/badge/Español-1b2e4b?style=flat-square)](#)
+[![Català](https://img.shields.io/badge/Català-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.ca.md)
+
+<br/>
 
 ![Angular](https://img.shields.io/badge/Angular-22-a8c4f0?style=for-the-badge&logo=angular&logoColor=1b2e4b)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5b9bd5?style=for-the-badge&logo=typescript&logoColor=ffffff)
@@ -28,6 +24,7 @@
 ![Qdrant](https://img.shields.io/badge/Qdrant-b8e8d4?style=for-the-badge&logoColor=1b2e4b)
 ![WebSockets](https://img.shields.io/badge/WebSockets-5b9bd5?style=for-the-badge&logoColor=ffffff)
 ![Render](https://img.shields.io/badge/Render-1b2e4b?style=for-the-badge&logo=render&logoColor=ffffff)
+![Keep-Alive](https://img.shields.io/badge/Keep--Alive-1b2e4b?style=for-the-badge&logo=githubactions&logoColor=ffffff)
 
 <br/>
 
@@ -37,30 +34,6 @@
 &nbsp;
 [![Issues](https://img.shields.io/badge/🐛_Issues-5b9bd5?style=flat-square&logoColor=ffffff)](https://github.com/mee96/portfoli.v2/issues)
 
-</div>
-
-<br/>
-
----
-
-## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Vista previa
-
-<div align="center">
-<img src="docs/screenshots/plate.png" width="85%" alt="Plate map — rejilla interactiva de 96 pocillos"/>
-
-<sub><b>Fig. 1</b> — La Placa: proyecto <code>B2</code> (BBT) seleccionado, con su stack, descripción y enlaces.</sub>
-</div>
-
-<div align="center">
-<img src="docs/screenshots/bunsen-chat.png" width="40%" alt="Widget de chat de Bunsen abierto, en plena conversación"/>
-
-<sub><b>Fig. 2</b> — Bunsen, el secretario de IA, respondiendo en streaming sobre un WebSocket en vivo.</sub>
-</div>
-
-<div align="center">
-<img src="docs/screenshots/contact.png" width="85%" alt="Sección de contacto con formulario, foto, descarga de CV y redes sociales"/>
-
-<sub><b>Fig. 3</b> — Formulario de contacto, descarga de CV según idioma y enlaces sociales.</sub>
 </div>
 
 <br/>
@@ -89,7 +62,20 @@ Construido en solitario, de extremo a extremo: front en Angular 22, back en Fast
 | <img src="https://api.iconify.design/ph/magnifying-glass-fill.svg?color=%232FB5AE&height=18" height="16"> **RAG / Base vectorial** | Qdrant Cloud (Cloud Inference) · embeddings `intfloat/multilingual-e5-small` |
 | <img src="https://api.iconify.design/ph/envelope-simple-fill.svg?color=%23FF6FA8&height=18" height="16"> **Correo transaccional** | Resend (entrega del formulario de contacto) |
 | <img src="https://api.iconify.design/ph/plugs-connected-fill.svg?color=%235B9BD5&height=18" height="16"> **Comunicación en tiempo real** | WebSockets nativos (`/ws/secretari`), sin Socket.IO |
+| <img src="https://api.iconify.design/ph/heart-straight-fill.svg?color=%23FF6FA8&height=18" height="16"> **Disponibilidad** | [`mee96/keep-alive`](https://github.com/mee96/keep-alive) — ping programado para evitar cold starts en Render |
 | <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%231B2E4B&height=18" height="16"> **Deploy** | Render (frontend + backend, ambos como web services) |
+
+<br/>
+
+---
+
+## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Vista previa
+
+<div align="center">
+<img src="docs/screenshots/overview.png" width="85%" alt="Vista completa del portfolio: hero, Plate map, experiencia, skills, training log y contacto"/>
+
+<sub>Vista completa del sitio en vivo — hero, la rejilla de proyectos de la Placa (proyecto <code>B2</code>/BBT seleccionado), experiencia, skills, training log y contacto.</sub>
+</div>
 
 <br/>
 
