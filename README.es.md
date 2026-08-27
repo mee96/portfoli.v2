@@ -64,7 +64,7 @@ Construido en solitario, de extremo a extremo: front en Angular 22, back en Fast
 ## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Vista previa
 
 <div align="center">
-<img src="docs/screenshots/overview.png" width="90%" alt="Vista completa del portfolio: hero, Plate map, experiencia, skills, training log y contacto"/>
+<img src="docs/screenshots/overview-mid.png" width="90%" alt="Vista completa del portfolio: hero, Plate map, experiencia, skills, training log y contacto"/>
 
 <sub><b>Fig. 1</b> — Vista completa de la interfaz: hero, la rejilla de proyectos de la Placa (proyecto <code>B2</code>/BBT seleccionado), experiencia, skills, training log y contacto.</sub>
 </div>
