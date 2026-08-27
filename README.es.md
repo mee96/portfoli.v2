@@ -2,15 +2,9 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=a8c4f0&height=180&section=header&text=Carme%20Medina%20%E2%80%94%20Portfolio%20V2&fontColor=1b2e4b&fontSize=32&desc=Mismo%20rigor.%20Otra%20mesa%20de%20trabajo.&descSize=16&descColor=1b2e4b&descAlignY=65&fontAlignY=42" width="100%" alt="Carme Medina — Portfolio V2" />
 
-<br/>
+<br/><br/>
 
-<img src="frontend/public/Cat%20Spinning%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
-&nbsp;&nbsp;
-[![English](https://img.shields.io/badge/English-5b9bd5?style=flat-square)](README.md)
-[![Español](https://img.shields.io/badge/Español-1b2e4b?style=flat-square)](#)
-[![Català](https://img.shields.io/badge/Català-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.ca.md)
-&nbsp;&nbsp;
-<img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
+<img src="frontend/public/Cat%20Spinning%20Sticker%20by%20Pusheen.gif" width="50" align="middle" alt=""/> &nbsp; <a href="README.md"><img src="https://img.shields.io/badge/English-1b2e4b?style=flat-square" alt="English"></a> <a href="README.es.md"><img src="https://img.shields.io/badge/Espa%C3%B1ol-a8c4f0?style=flat-square&logoColor=1b2e4b" alt="Español"></a> <a href="README.ca.md"><img src="https://img.shields.io/badge/Catal%C3%A0-5b9bd5?style=flat-square" alt="Català"></a> &nbsp; <img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="50" align="middle" alt=""/>
 
 <br/><br/>
 
