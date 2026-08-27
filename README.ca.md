@@ -1,12 +1,14 @@
 <div align="right">
-  [![English](https://img.shields.io/badge/Language-English%20%F0%9F%87%AC%F0%9F%87%A7-5b9bd5?style=flat-square)](README.md)
-  [![Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol%20%F0%9F%87%AA%F0%9F%87%B8-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.es.md)
-  [![Català](https://img.shields.io/badge/Llengua-Catal%C3%A0%20%F0%9F%87%A8%F0%9F%87%A1-1b2e4b?style=flat-square)](#)
+
+[![English](https://img.shields.io/badge/Language-English%20%F0%9F%87%AC%F0%9F%87%A7-5b9bd5?style=flat-square)](README.md)
+[![Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol%20%F0%9F%87%AA%F0%9F%87%B8-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.es.md)
+[![Català](https://img.shields.io/badge/Llengua-Catal%C3%A0%20%F0%9F%87%A8%F0%9F%87%A1-1b2e4b?style=flat-square)](#)
+
 </div>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1b2e4b&height=180&section=header&text=Carme%20Medina%20%E2%80%94%20Portfolio%20V2&fontColor=a8c4f0&fontSize=32&desc=Mateix%20rigor.%20Un%20altre%20banc%20de%20feina.&descSize=16&descColor=e8eefc&descAlignY=65&fontAlignY=42" width="100%" alt="Carme Medina — Portfolio V2" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=a8c4f0&height=180&section=header&text=Carme%20Medina%20%E2%80%94%20Portfolio%20V2&fontColor=1b2e4b&fontSize=32&desc=Mateix%20rigor.%20Un%20altre%20banc%20de%20feina.&descSize=16&descColor=1b2e4b&descAlignY=65&fontAlignY=42" width="100%" alt="Carme Medina — Portfolio V2" />
 
 <br/>
 
@@ -44,20 +46,21 @@
 ## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Vista prèvia
 
 <div align="center">
+<img src="docs/screenshots/plate.png" width="85%" alt="Plate map — graella interactiva de 96 pous"/>
 
-<img src="docs/screenshots/plate.png" width="90%" alt="Plate map — graella interactiva de 96 pous"/>
-<br/><sub><b>Fig. 1</b> — La Placa: projecte <code>B2</code> (BBT) seleccionat, amb el seu stack, descripció i enllaços.</sub>
+<sub><b>Fig. 1</b> — La Placa: projecte <code>B2</code> (BBT) seleccionat, amb el seu stack, descripció i enllaços.</sub>
+</div>
 
-<br/><br/>
+<div align="center">
+<img src="docs/screenshots/bunsen-chat.png" width="40%" alt="Widget de xat de Bunsen obert, en plena conversa"/>
 
-<img src="docs/screenshots/bunsen-chat.png" width="340px" alt="Widget de xat de Bunsen obert, en plena conversa"/>
-<br/><sub><b>Fig. 2</b> — Bunsen, el secretari d'IA, responent en streaming sobre un WebSocket en directe.</sub>
+<sub><b>Fig. 2</b> — Bunsen, el secretari d'IA, responent en streaming sobre un WebSocket en directe.</sub>
+</div>
 
-<br/><br/>
+<div align="center">
+<img src="docs/screenshots/contact.png" width="85%" alt="Secció de contacte amb formulari, foto, descàrrega de CV i xarxes socials"/>
 
-<img src="docs/screenshots/contact.png" width="90%" alt="Secció de contacte amb formulari, foto, descàrrega de CV i xarxes socials"/>
-<br/><sub><b>Fig. 3</b> — Formulari de contacte, descàrrega de CV segons l'idioma i enllaços socials.</sub>
-
+<sub><b>Fig. 3</b> — Formulari de contacte, descàrrega de CV segons l'idioma i enllaços socials.</sub>
 </div>
 
 <br/>

@@ -1,12 +1,14 @@
 <div align="right">
-  [![English](https://img.shields.io/badge/Language-English%20%F0%9F%87%AC%F0%9F%87%A7-1b2e4b?style=flat-square)](#)
-  [![Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol%20%F0%9F%87%AA%F0%9F%87%B8-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.es.md)
-  [![Català](https://img.shields.io/badge/Llengua-Catal%C3%A0%20%F0%9F%87%A8%F0%9F%87%A1-5b9bd5?style=flat-square)](README.ca.md)
+
+[![English](https://img.shields.io/badge/Language-English%20%F0%9F%87%AC%F0%9F%87%A7-1b2e4b?style=flat-square)](#)
+[![Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol%20%F0%9F%87%AA%F0%9F%87%B8-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.es.md)
+[![Català](https://img.shields.io/badge/Llengua-Catal%C3%A0%20%F0%9F%87%A8%F0%9F%87%A1-5b9bd5?style=flat-square)](README.ca.md)
+
 </div>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1b2e4b&height=180&section=header&text=Carme%20Medina%20%E2%80%94%20Portfolio%20V2&fontColor=a8c4f0&fontSize=32&desc=Same%20rigour.%20Different%20bench.&descSize=16&descColor=e8eefc&descAlignY=65&fontAlignY=42" width="100%" alt="Carme Medina — Portfolio V2" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=a8c4f0&height=180&section=header&text=Carme%20Medina%20%E2%80%94%20Portfolio%20V2&fontColor=1b2e4b&fontSize=32&desc=Same%20rigour.%20Different%20bench.&descSize=16&descColor=1b2e4b&descAlignY=65&fontAlignY=42" width="100%" alt="Carme Medina — Portfolio V2" />
 
 <br/>
 
@@ -44,20 +46,21 @@
 ## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Preview
 
 <div align="center">
+<img src="docs/screenshots/plate.png" width="85%" alt="Plate map — interactive 96-well project grid"/>
 
-<img src="docs/screenshots/plate.png" width="90%" alt="Plate map — interactive 96-well project grid"/>
-<br/><sub><b>Fig. 1</b> — The Plate: project <code>B2</code> (BBT) selected, reading its stack, description and links.</sub>
+<sub><b>Fig. 1</b> — The Plate: project <code>B2</code> (BBT) selected, reading its stack, description and links.</sub>
+</div>
 
-<br/><br/>
+<div align="center">
+<img src="docs/screenshots/bunsen-chat.png" width="40%" alt="Bunsen AI chat widget open, mid-conversation"/>
 
-<img src="docs/screenshots/bunsen-chat.png" width="340px" alt="Bunsen AI chat widget open, mid-conversation"/>
-<br/><sub><b>Fig. 2</b> — Bunsen, the AI secretary, streaming a reply over a live WebSocket.</sub>
+<sub><b>Fig. 2</b> — Bunsen, the AI secretary, streaming a reply over a live WebSocket.</sub>
+</div>
 
-<br/><br/>
+<div align="center">
+<img src="docs/screenshots/contact.png" width="85%" alt="Contact section with form, photo, CV download and social links"/>
 
-<img src="docs/screenshots/contact.png" width="90%" alt="Contact section with form, photo, CV download and social links"/>
-<br/><sub><b>Fig. 3</b> — Contact form, language-aware CV download and social links.</sub>
-
+<sub><b>Fig. 3</b> — Contact form, language-aware CV download and social links.</sub>
 </div>
 
 <br/>
