@@ -7,14 +7,12 @@
 <img src="frontend/public/Cat%20Spinning%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 &nbsp;&nbsp;
 <img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
-
-<br/><br/>
-
+<br/>
 [![English](https://img.shields.io/badge/English-1b2e4b?style=flat-square)](#)
 [![Español](https://img.shields.io/badge/Español-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.es.md)
 [![Català](https://img.shields.io/badge/Català-5b9bd5?style=flat-square)](README.ca.md)
 
-<br/>
+<br/><br/>
 
 ![Angular](https://img.shields.io/badge/Angular-22-a8c4f0?style=for-the-badge&logo=angular&logoColor=1b2e4b)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5b9bd5?style=for-the-badge&logo=typescript&logoColor=ffffff)
@@ -156,6 +154,8 @@ cp .env.example .env         # fill in the credentials below
 uvicorn app.main:app --reload</code></pre>
 
 > Optional: after editing anything under `corpus/*.md`, reindex Qdrant with `python -m app.rag.index`.
+
+> **Cold starts:** in production the backend runs on Render's free tier, which spins the service down when idle. [`mee96/keep-alive`](https://github.com/mee96/keep-alive) is a small scheduled job that pings `/health` on an interval to keep it warm — point it at your own deployed `/health` URL if you fork this and deploy it yourself; it isn't needed for local development.
 
 ### Frontend
 <pre><code>cd frontend

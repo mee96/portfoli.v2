@@ -7,14 +7,12 @@
 <img src="frontend/public/Cat%20Spinning%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 &nbsp;&nbsp;
 <img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
-
-<br/><br/>
-
+<br/>
 [![English](https://img.shields.io/badge/English-5b9bd5?style=flat-square)](README.md)
 [![Español](https://img.shields.io/badge/Español-1b2e4b?style=flat-square)](#)
 [![Català](https://img.shields.io/badge/Català-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.ca.md)
 
-<br/>
+<br/><br/>
 
 ![Angular](https://img.shields.io/badge/Angular-22-a8c4f0?style=for-the-badge&logo=angular&logoColor=1b2e4b)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5b9bd5?style=for-the-badge&logo=typescript&logoColor=ffffff)
@@ -156,6 +154,8 @@ cp .env.example .env         # rellena las credenciales de abajo
 uvicorn app.main:app --reload</code></pre>
 
 > Opcional: tras editar cualquier fichero en `corpus/*.md`, reindexa Qdrant con `python -m app.rag.index`.
+
+> **Cold starts:** en producción el backend corre en el plan gratuito de Render, que detiene el servicio cuando está inactivo. [`mee96/keep-alive`](https://github.com/mee96/keep-alive) es un pequeño job programado que hace ping a `/health` a intervalos para mantenerlo despierto — apúntalo a tu propia URL de `/health` desplegada si haces un fork de esto y lo despliegas por tu cuenta; no hace falta para el desarrollo local.
 
 ### Frontend
 <pre><code>cd frontend
