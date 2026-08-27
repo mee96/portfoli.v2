@@ -64,9 +64,9 @@ Construït en solitari, de cap a cap: front en Angular 22, back en FastAPI, un p
 ## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Vista prèvia
 
 <div align="center">
-<img src="docs/screenshots/overview-mid.png" width="90%" alt="Vista completa del portfolio: hero, Plate map, experiència, skills, training log i contacte"/>
+<img src="docs/screenshots/overview-mid.png" width="90%" alt="Vista del portfolio: hero, la graella de projectes de la Placa amb un projecte seleccionat, i Bunsen el secretari d'IA en plena conversa"/>
 
-<sub><b>Fig. 1</b> — Vista completa de la interfície: hero, la graella de projectes de la Placa (projecte <code>B2</code>/BBT seleccionat), experiència, skills, training log i contacte.</sub>
+<sub><b>Fig. 1</b> — El hero i la Placa (projecte <code>B2</code>/BBT seleccionat) al costat de Bunsen, el secretari d'IA, responent una pregunta real en plena conversa sobre el seu WebSocket en directe.</sub>
 </div>
 
 <br/>

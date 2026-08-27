@@ -64,9 +64,9 @@ Built solo, end to end: Angular 22 front, FastAPI back, a from-scratch WebSocket
 ## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Preview
 
 <div align="center">
-<img src="docs/screenshots/overview-mid.png" width="90%" alt="Full-page overview of the portfolio: hero, Plate map, experience, skills, training log and contact"/>
+<img src="docs/screenshots/overview-mid.png" width="90%" alt="Portfolio overview: hero, the Plate project grid with a selected project, and Bunsen the AI secretary mid-conversation"/>
 
-<sub><b>Fig. 1</b> — Full interface overview: hero, the Plate project grid (project <code>B2</code>/BBT selected), experience, skills, training log and contact.</sub>
+<sub><b>Fig. 1</b> — The hero and the Plate (project <code>B2</code>/BBT selected) alongside Bunsen, the AI secretary, answering a real question mid-conversation over its live WebSocket.</sub>
 </div>
 
 <br/>
