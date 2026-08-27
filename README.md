@@ -6,11 +6,11 @@
 
 <img src="frontend/public/Cat%20Spinning%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 &nbsp;&nbsp;
-<img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
-<br/>
 [![English](https://img.shields.io/badge/English-1b2e4b?style=flat-square)](#)
 [![Español](https://img.shields.io/badge/Español-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.es.md)
 [![Català](https://img.shields.io/badge/Català-5b9bd5?style=flat-square)](README.ca.md)
+&nbsp;&nbsp;
+<img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 
 <br/><br/>
 
@@ -70,9 +70,9 @@ Built solo, end to end: Angular 22 front, FastAPI back, a from-scratch WebSocket
 ## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Preview
 
 <div align="center">
-<img src="docs/screenshots/overview.png" width="85%" alt="Full-page overview of the portfolio: hero, Plate map, experience, skills, training log and contact"/>
+<img src="docs/screenshots/overview.png" width="90%" alt="Full-page overview of the portfolio: hero, Plate map, experience, skills, training log and contact"/>
 
-<sub>Full-page view of the live site — hero, the Plate project grid (project <code>B2</code>/BBT selected), experience, skills, training log and contact.</sub>
+<sub><b>Fig. 1</b> — Full interface overview: hero, the Plate project grid (project <code>B2</code>/BBT selected), experience, skills, training log and contact.</sub>
 </div>
 
 <br/>

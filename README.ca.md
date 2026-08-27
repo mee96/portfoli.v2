@@ -6,11 +6,11 @@
 
 <img src="frontend/public/Cat%20Spinning%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 &nbsp;&nbsp;
-<img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
-<br/>
 [![English](https://img.shields.io/badge/English-5b9bd5?style=flat-square)](README.md)
 [![Español](https://img.shields.io/badge/Español-a8c4f0?style=flat-square&logoColor=1b2e4b)](README.es.md)
 [![Català](https://img.shields.io/badge/Català-1b2e4b?style=flat-square)](#)
+&nbsp;&nbsp;
+<img src="frontend/public/Embarrassed%20Video%20Games%20Sticker%20by%20Pusheen.gif" width="64px" alt=""/>
 
 <br/><br/>
 
@@ -70,9 +70,9 @@ Construït en solitari, de cap a cap: front en Angular 22, back en FastAPI, un p
 ## <img src="https://api.iconify.design/ph/image-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Vista prèvia
 
 <div align="center">
-<img src="docs/screenshots/overview.png" width="85%" alt="Vista completa del portfolio: hero, Plate map, experiència, skills, training log i contacte"/>
+<img src="docs/screenshots/overview.png" width="90%" alt="Vista completa del portfolio: hero, Plate map, experiència, skills, training log i contacte"/>
 
-<sub>Vista completa del lloc en directe — hero, la graella de projectes de la Placa (projecte <code>B2</code>/BBT seleccionat), experiència, skills, training log i contacte.</sub>
+<sub><b>Fig. 1</b> — Vista completa de la interfície: hero, la graella de projectes de la Placa (projecte <code>B2</code>/BBT seleccionat), experiència, skills, training log i contacte.</sub>
 </div>
 
 <br/>
