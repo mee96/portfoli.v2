@@ -9,7 +9,7 @@ export const EDUCATION: EducationEntry[] = [
     translations: {
       en: {
         dt: 'Feb–Jul 2026',
-        t: 'College Diploma — Full Stack Developer',
+        t: 'Dual Technical Diploma in Full Stack Software Development',
         d: 'Classroom training combined with placement work, building the projects on the plate above.',
       },
       es: {
@@ -101,7 +101,7 @@ export const EDUCATION: EducationEntry[] = [
     translations: {
       en: {
         dt: '2022',
-        t: 'College Diploma — Pharmaceutical & Biotechnological Products Manufacturing',
+        t: 'Higher Diploma — Pharmaceutical & Biotechnological Products Manufacturing',
       },
       es: {
         dt: '2022',
@@ -121,7 +121,7 @@ export const EDUCATION: EducationEntry[] = [
     translations: {
       en: {
         dt: '2020',
-        t: 'College Diploma — Clinical and Biomedical Laboratory',
+        t: 'Higher Diploma — Clinical and Biomedical Laboratory',
       },
       es: {
         dt: '2020',
