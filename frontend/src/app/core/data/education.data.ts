@@ -29,6 +29,7 @@ export const EDUCATION: EducationEntry[] = [
     group: 'dev',
     org: 'Microsoft',
     chips: ['Azure AI services', 'ML concepts', 'Responsible AI', 'Computer vision', 'NLP'],
+    verifyUrl: 'https://www.credly.com/users/carmeen-mc/badges/credly',
     translations: {
       en: {
         dt: '2026',

@@ -15,4 +15,6 @@ export class LogEntry {
   @Input({ required: true }) chips!: string[];
   @Input() active = false;
   @Input() activeLabel = '';
+  @Input() verifyUrl?: string;
+  @Input() verifyLabel = '';
 }

@@ -38,7 +38,8 @@
     "sub": "Read it as a curve, not a list.",
     "dev": "Development",
     "lab": "Laboratory",
-    "active": "In progress"
+    "active": "In progress",
+    "verifyCredly": "Verify on Credly"
   },
   "contact": {
     "title": "Let's talk.",

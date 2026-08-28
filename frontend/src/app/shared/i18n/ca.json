@@ -38,7 +38,8 @@
     "sub": "Llegeix-ho com una corba, no com una llista.",
     "dev": "Desenvolupament",
     "lab": "Laboratori",
-    "active": "En curs"
+    "active": "En curs",
+    "verifyCredly": "Verificar a Credly"
   },
   "contact": {
     "title": "Parlem-ne.",

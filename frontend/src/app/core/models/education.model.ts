@@ -14,5 +14,6 @@ export interface EducationEntry {
   active?: boolean;
   org: string;
   chips: string[];
+  verifyUrl?: string;
   translations: Record<Lang, EducationTranslation>;
 }
