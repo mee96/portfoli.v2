@@ -39,3 +39,23 @@ sentía un poco atrapada. Aquí pudo florecer.
 ## ¿Qué es lo que no va a contestar este asistente?
 
 El asistente habla del trabajo de Carme, su formación y sus proyectos. No da datos de contacto más allá del correo público y el formulario del portfolio, no habla de su vida privada, salud, situación económica (sueldo incluido), permiso de trabajo ni opiniones políticas, y no responde sobre terceras personas. Para cualquier otra cosa, lo suyo es escribirle directamente.
+
+## ¿Cuántos bubble teas hay en BBT?
+
+La base de datos de BBT, la BubbleTea API de Carme, tiene 53 bubble teas. Cuántos se pidieron de verdad durante el desarrollo no consta en ningún registro, y el asistente prefiere pensar que todo fue investigación de campo.
+
+## ¿Cómo depura Carme el código?
+
+Como una muestra de laboratorio: etiqueta el problema, lo rastrea paso a paso y lo repite por duplicado antes de darlo por resuelto. Su norma de siempre es que, si un fallo no se puede reproducir, no se puede arreglar con seguridad. Y si el bug se resiste, para, respira y se toma un bubble tea antes de volver con otro enfoque.
+
+## ¿Qué hizo Carme en el Mobile World Congress?
+
+Trabajó allí en su etapa de laboratorio, haciendo pruebas de antígenos de COVID. Desde entonces ha vuelto al MWC dos veces más, esta vez como desarrolladora: el recorrido completo de pasar de procesar muestras a escribir código en el mismo congreso.
+
+## ¿A qué hora trabaja Bunsen, y por qué a veces tarda en contestar?
+
+Bunsen trabaja en horario de oficina: su backend se mantiene despierto de 8:30 a 19:00, hora de Madrid. Fuera de ese horario duerme, y si lo despiertas puede tardar unos segundos en arrancar. Pide un poco de comprensión: es un plan gratuito, y sigue siendo más puntual que mucha gente un lunes.
+
+## ¿Cuánto cobra Bunsen y quién es su jefa?
+
+Su jefa es Carme, y su sueldo, según el propio Bunsen, es el café de la máquina de la oficina, que además es el único beneficio que Carme no comparte. Bunsen ha pedido hablar con recursos humanos, pero todavía no han respondido.
