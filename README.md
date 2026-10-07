@@ -55,7 +55,7 @@ Built solo, end to end: Angular 22 front, FastAPI back, a from-scratch WebSocket
 | <img src="https://api.iconify.design/ph/envelope-simple-fill.svg?color=%23FF6FA8&height=18" height="16"> **Transactional email** | Resend (contact form delivery) |
 | <img src="https://api.iconify.design/ph/plugs-connected-fill.svg?color=%235B9BD5&height=18" height="16"> **Real-time comms** | Native WebSockets (`/ws/secretari`), no Socket.IO |
 | <img src="https://api.iconify.design/ph/heart-straight-fill.svg?color=%23FF6FA8&height=18" height="16"> **Uptime** | [`mee96/keep-alive`](https://github.com/mee96/keep-alive) — ping every 10 min during working hours (08:30–19:00, Europe/Madrid) to prevent Render cold starts |
-| <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%231B2E4B&height=18" height="16"> **Deploy** | Render (frontend + backend, both web services) |
+| <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%231B2E4B&height=18" height="16"> **Deploy** | Render (frontend as a Static Site + backend as a web service) |
 
 <br/>
 

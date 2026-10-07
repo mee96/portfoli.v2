@@ -55,7 +55,7 @@ Construido en solitario, de extremo a extremo: front en Angular 22, back en Fast
 | <img src="https://api.iconify.design/ph/envelope-simple-fill.svg?color=%23FF6FA8&height=18" height="16"> **Correo transaccional** | Resend (entrega del formulario de contacto) |
 | <img src="https://api.iconify.design/ph/plugs-connected-fill.svg?color=%235B9BD5&height=18" height="16"> **Comunicación en tiempo real** | WebSockets nativos (`/ws/secretari`), sin Socket.IO |
 | <img src="https://api.iconify.design/ph/heart-straight-fill.svg?color=%23FF6FA8&height=18" height="16"> **Disponibilidad** | [`mee96/keep-alive`](https://github.com/mee96/keep-alive) — ping cada 10 min en horario laboral (08:30–19:00, Europe/Madrid) para evitar cold starts en Render |
-| <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%231B2E4B&height=18" height="16"> **Deploy** | Render (frontend + backend, ambos como web services) |
+| <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%231B2E4B&height=18" height="16"> **Deploy** | Render (frontend como Static Site + backend como web service) |
 
 <br/>
 
