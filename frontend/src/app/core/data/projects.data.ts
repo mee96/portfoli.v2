@@ -3,6 +3,7 @@ import { Project } from '../models/project.model';
 export const PROJECTS: Project[] = [
   {
     id: 'bbt',
+    name: 'BBT · BubbleTea API',
     well: 'B2',
     kind: 'stack',
     year: '2026',
@@ -114,6 +115,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'skincare',
+    name: 'SkinCareApp',
     well: 'C8',
     kind: 'stack',
     year: '2026',
@@ -145,6 +147,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'connect4',
+    name: 'Connect 4',
     well: 'D11',
     kind: 'ai',
     year: '2026',
@@ -269,6 +272,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'shop',
+    name: 'Online shop',
     well: 'G5',
     kind: 'client',
     year: '2026',
@@ -295,6 +299,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'wedding',
+    name: 'Wedding site',
     well: 'G12',
     kind: 'client',
     year: '2024–25',
@@ -324,6 +329,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'portfolio-v1',
+    name: 'Portfolio V1',
     well: 'A4',
     kind: 'client',
     year: '2024',

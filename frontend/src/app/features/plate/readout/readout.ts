@@ -20,7 +20,7 @@ export class Readout {
 
   protected get name(): string {
     if (!this.project) return '';
-    return this.translationForLang?.name ?? this.readableId(this.project.id);
+    return this.translationForLang?.name ?? this.project.name ?? this.readableId(this.project.id);
   }
 
   private readableId(id: string): string {

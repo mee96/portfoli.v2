@@ -11,6 +11,8 @@ export interface ProjectTranslation {
 
 export interface Project {
   id: string;
+  /** Display name for proper names the id can't express (e.g. "BBT · BubbleTea API"). */
+  name?: string;
   well: string;
   kind: ProjectKind;
   year: string;
