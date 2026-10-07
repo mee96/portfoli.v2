@@ -45,3 +45,15 @@ En este portfolio hay tests unitarios con Vitest en el frontend y con pytest en 
 ## ¿Cómo está hecho este portfolio?
 
 Es un proyecto full stack de Carme, de principio a fin. El frontend es Angular (componentes standalone, signals y SCSS con tokens compartidos) y está traducido al catalán, castellano e inglés con un servicio propio de unas treinta líneas, sin librerías de i18n. El backend es FastAPI: un chat por WebSocket que responde con Groq apoyándose en una búsqueda RAG sobre Qdrant Cloud — el asistente con el que estás hablando — y un formulario de contacto que envía el correo con Resend. Todo está desplegado en Render, con límites básicos contra abuso.
+
+## ¿Qué retos técnicos ha resuelto Carme?
+
+Varios, y casi todos de producción. Cuando el asistente de su proyecto Chat se quedaba sin memoria en el plan gratuito de Render (512 MB) por culpa de un modelo de embeddings local, migró la búsqueda a Qdrant Cloud Inference. Descubrió que ese servicio no aplicaba los prefijos que necesita el modelo E5 para buscar bien, y los añadió ella a mano. Cuando Groq retiró un modelo a mitad de proyecto y las llamadas empezaron a fallar con un 404, cambió de modelo. En Plantealo migró el almacenamiento de usuarios de Firebase a PostgreSQL enlazando ambos por el identificador de Firebase. Y en un sitio WordPress resolvió el problema recurrente de que el editor borra el HTML interactivo, usando estilos en línea y los componentes nativos de Elementor.
+
+## ¿De qué ha aprendido Carme tras un fallo?
+
+Un ejemplo claro: mantenía varios servicios de Render despiertos con pings muy frecuentes, y eso agotó las horas gratuitas del mes y dejó sus proyectos caídos casi un mes. Lo rediseñó: ahora solo mantiene despierto el backend de este portfolio en horario laboral, y los demás avisan honestamente de que pueden tardar en arrancar. Aprendió a medir el consumo antes de automatizar y a no prometer en un README algo que no se cumple.
+
+## ¿Qué domina Carme y qué conoce menos?
+
+Su tecnología principal ahora mismo es Angular, con la que trabaja a diario en proyectos y en Fundación Esplai. React también lo conoce, aunque últimamente se ha centrado menos en él. En backend ha construido APIs con FastAPI sobre MySQL y PostgreSQL, y en su puesto actual trabaja con WordPress y PHP y se está metiendo en Microsoft Graph, Power Apps y Microsoft 365. Es una desarrolladora junior: tiene recorrido y proyectos reales, pero todavía está creciendo, y aprende rápido.

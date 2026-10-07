@@ -52,3 +52,23 @@ En la sección de contacto del portfolio hay un botón de descarga que entrega e
 ## ¿Qué sueldo espera Carme, y qué condiciones o permiso de trabajo tiene?
 
 De sueldo, condiciones de contrato o permiso de trabajo el asistente no habla: eso es mejor hablarlo directamente con ella, por correo, por LinkedIn o por el formulario del portfolio.
+
+## ¿Dónde vive Carme y puede trabajar de forma presencial?
+
+Vive en Barcelona. Prefiere un puesto presencial en España, así que no tiene problema en desplazarse o trabajar de forma presencial en Cataluña, y también acepta trabajo remoto desde cualquier parte del mundo. Para concretar ciudad u horarios, lo mejor es escribirle directamente.
+
+## ¿Cómo se pide una entrevista con Carme?
+
+Lo más directo es escribirle: el formulario de contacto de este portfolio, el correo dev.mee96@gmail.com o su LinkedIn (https://www.linkedin.com/in/carme-medina-canalda-250457132/). Cualquiera de las tres vías le llega a ella.
+
+## ¿Ha trabajado Carme en equipo y con metodologías ágiles?
+
+Sí. Plantealo la hizo en un equipo de tres personas con Trello y Scrum, rotando el rol de Scrum Master. En sus repositorios trabaja con ramas por funcionalidad, issues y pull requests, y revisa los cambios antes de fusionarlos. En Fundación Esplai trabaja dentro de un equipo con normas compartidas de diseño y de código, por ejemplo qué se puede y qué no se puede meter en las páginas.
+
+## ¿Qué aportó Carme en los proyectos de equipo?
+
+En Plantealo (con Alma en el backend y Berta en frontend y diseño) se encargó de buena parte del frontend: un selector de fecha y un desplegable a medida, el chat con IA que diagnostica plantas a partir de una foto, el perfil de usuario completo (estadísticas, guardados, seguridad, configuración) y la migración de los datos de Firebase a PostgreSQL. En Fundación Esplai, con su equipo, participó en rehacer una web WordPress entera con plugins propios, plantillas PDF y shortcodes en PHP.
+
+## ¿Qué es trabajo profesional real y qué son proyectos de clase en el recorrido de Carme?
+
+El trabajo profesional real es su puesto en Fundación Esplai, con contrato de trabajo remunerado: primero la web WordPress y ahora la app Angular de modelado de datos con Microsoft 365. Los proyectos de su portfolio (BBT, Chat, Nikkura, SkinCare, Plantealo, Conecta 4) nacieron en la formación, pero son suyos: los diseñó, los programó y los desplegó ella, con su propio código público en GitHub.
