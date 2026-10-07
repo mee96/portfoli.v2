@@ -9,15 +9,30 @@ router = APIRouter()
 
 # Loaded once at import time, used verbatim as the system prompt — never
 # summarised or rewritten, per spec.
-SYSTEM_PROMPT_PATH = Path(__file__).resolve().parents[2] / "docs" / "secretario-prompt.md"
+SYSTEM_PROMPT_PATH = Path(__file__).resolve().parents[2] / "prompts" / "secretario-prompt.md"
 SYSTEM_PROMPT = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
 
-# Copied verbatim from the "PRIMER MENSAJE" section of secretario-prompt.md.
-WELCOME_MESSAGE = (
-    "Hola, soy Bunsen — el secretario de Carme. Pregúntame lo que quieras "
-    "sobre su trabajo, sus proyectos o cómo es currando; si además me pillas "
-    "en buen momento, seguro que se me escapa alguna anécdota de más."
-)
+# Welcome per UI language. The Spanish text is the one in the "PRIMER MENSAJE"
+# section of secretario-prompt.md; the frontend sends its active language as
+# ?lang= when it opens the socket.
+DEFAULT_LANG = "es"
+WELCOME_MESSAGES = {
+    "es": (
+        "Hola, soy Bunsen — el secretario de Carme. Pregúntame lo que quieras "
+        "sobre su trabajo, sus proyectos o cómo es currando; si además me pillas "
+        "en buen momento, seguro que se me escapa alguna anécdota de más."
+    ),
+    "en": (
+        "Hi, I'm Bunsen — Carme's secretary. Ask me anything about her work, "
+        "her projects or what she's like to work with; and if you catch me in "
+        "a good mood, I'll probably let a story or two slip."
+    ),
+    "ca": (
+        "Hola, sóc Bunsen — el secretari de Carme. Pregunta'm el que vulguis "
+        "sobre la seva feina, els seus projectes o com és currar amb ella; i si "
+        "em pesques de bon humor, segur que se m'escapa alguna anècdota de més."
+    ),
+}
 
 CONTEXT_HEADER = "FRAGMENTOS RECUPERADOS DEL EXPEDIENTE DE CARME:"
 NO_CONTEXT = "(No se ha recuperado ningún fragmento relevante para esta pregunta.)"
@@ -41,13 +56,15 @@ def _coffee_note(coffee_mentions: int) -> str | None:
 @router.websocket("/ws/secretari")
 async def secretari_ws(websocket: WebSocket) -> None:
     await websocket.accept()
-    await websocket.send_json({"type": "welcome", "text": WELCOME_MESSAGE})
+    lang = websocket.query_params.get("lang", DEFAULT_LANG)
+    welcome_message = WELCOME_MESSAGES.get(lang, WELCOME_MESSAGES[DEFAULT_LANG])
+    await websocket.send_json({"type": "welcome", "text": welcome_message})
 
     # Seed the history with the welcome as Bunsen's own turn — otherwise Groq
     # has no record of it, sees an empty history on the first real message,
     # and (per the system prompt's "PRIMER MENSAJE" instruction) repeats the
     # welcome text verbatim instead of actually answering.
-    history: list[dict] = [{"role": "assistant", "content": WELCOME_MESSAGE}]
+    history: list[dict] = [{"role": "assistant", "content": welcome_message}]
     coffee_mentions = 0
 
     try:

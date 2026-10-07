@@ -1,5 +1,6 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { TranslationService } from './translation.service';
 
 export interface SecretariTurn {
   role: 'bunsen' | 'user';
@@ -13,6 +14,7 @@ type ServerMessage =
 
 @Injectable({ providedIn: 'root' })
 export class WebSocketService {
+  private readonly translation = inject(TranslationService);
   private socket?: WebSocket;
   private pendingSends: string[] = [];
 
@@ -25,7 +27,7 @@ export class WebSocketService {
       return;
     }
 
-    this.socket = new WebSocket(environment.wsUrl);
+    this.socket = new WebSocket(`${environment.wsUrl}?lang=${this.translation.lang()}`);
 
     this.socket.addEventListener('open', () => {
       // Flush anything the user sent while the handshake was still in

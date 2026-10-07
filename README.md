@@ -93,7 +93,7 @@ Built solo, end to end: Angular 22 front, FastAPI back, a from-scratch WebSocket
 │   │   ├── 03-proyectos.md
 │   │   ├── 04-tecnico.md
 │   │   └── 05-personal.md
-│   ├── docs/                  → System prompts (frontend / backend / secretario)
+│   ├── prompts/               → Bunsen system prompt
 │   ├── requirements.txt
 │   └── .env.example
 │
