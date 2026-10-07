@@ -38,6 +38,14 @@ WELCOME_MESSAGES = {
     ),
 }
 
+# Reminder sent with every turn so short or ambiguous messages ("hi", "ok")
+# are answered in a sensible language instead of the prompt's Spanish.
+LANGUAGE_NOTES = {
+    "es": "Contesta en el idioma del último mensaje del usuario. Si es muy corto o ambiguo, contesta en castellano. Un saludo como 'hi' o 'hello' es inglés y se contesta en inglés.",
+    "en": "Reply in the language of the user's latest message. If it is very short or ambiguous, reply in English. A greeting such as 'hola' is Spanish and is answered in Spanish; 'hi' or 'hello' is English.",
+    "ca": "Contesta en l'idioma de l'últim missatge de l'usuari. Si és molt curt o ambigu, contesta en català. Una salutació com 'hi' o 'hello' és anglès i es contesta en anglès; 'hola' és castellà i es contesta en castellà.",
+}
+
 # Abuse limits. Anything over a limit gets a short canned reply (streamed like a
 # normal answer, so the frontend needs no special case) and never reaches Groq.
 MAX_MESSAGE_CHARS = 500  # per user message; keep in sync with the chat input's maxlength
@@ -157,6 +165,7 @@ async def secretari_ws(websocket: WebSocket) -> None:
                 if coffee_note:
                     messages.append({"role": "system", "content": coffee_note})
 
+                messages.append({"role": "system", "content": LANGUAGE_NOTES[lang]})
                 messages.append({"role": "user", "content": user_message})
 
                 full_response = ""
