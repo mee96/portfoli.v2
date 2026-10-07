@@ -2,6 +2,7 @@ import {
   Component,
   ElementRef,
   HostListener,
+  computed,
   effect,
   inject,
   signal,
@@ -9,6 +10,7 @@ import {
 } from '@angular/core';
 import { TranslationService } from '../../core/services/translation.service';
 import { WebSocketService } from '../../core/services/websocket.service';
+import { TextSegment, parseActions } from './actions';
 
 const COLDSTART_DELAY_MS = 3000;
 const COLDSTART2_DELAY_MS = 15000;
@@ -26,6 +28,8 @@ export class Secretari {
   protected readonly open = signal(false);
   protected readonly awaitingResponse = signal(false);
   protected readonly coldStartStage = signal<0 | 1 | 2>(0);
+
+  protected readonly partialSegments = computed(() => parseActions(this.ws.partial()));
 
   private readonly messagesEl = viewChild<ElementRef<HTMLDivElement>>('messagesEl');
   private readonly inputEl = viewChild<ElementRef<HTMLInputElement>>('inputEl');
@@ -91,6 +95,11 @@ export class Secretari {
     }
 
     this.open.set(false);
+  }
+
+  protected segments(turn: { role: string; text: string }): TextSegment[] {
+    // Only Bunsen's text uses *action* markup; the visitor's is shown as typed.
+    return turn.role === 'bunsen' ? parseActions(turn.text) : [{ text: turn.text, action: false }];
   }
 
   protected toggle(): void {

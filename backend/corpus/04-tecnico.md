@@ -19,7 +19,7 @@ Principalmente MySQL, casi siempre alojado en Aiven, y también PostgreSQL. Ha u
 ## ¿Qué experiencia tiene Carme con inteligencia artificial?
 
 Es la capa que más ha desarrollado en el último año. Ha integrado modelos de Groq en varios proyectos: un asistente conversacional, un oponente de juego, un generador de rutinas y un chat con visión. Ha montado sistemas RAG completos de principio a fin, con fragmentación de documentos, embeddings y búsqueda vectorial en Qdrant. Tiene la certificación Azure AI Fundamentals (AI-900) de Microsoft.
-Y bueno, aquí estás hablando conmigo, soy el fruto de todo esto jeje (me he sonrojado)
+Y bueno, aquí estás hablando conmigo, soy el fruto de todo esto jeje *me he sonrojado*
 
 ## ¿Qué usa Carme para desplegar y para infraestructura?
 
