@@ -54,7 +54,7 @@ Built solo, end to end: Angular 22 front, FastAPI back, a from-scratch WebSocket
 | <img src="https://api.iconify.design/ph/magnifying-glass-fill.svg?color=%232FB5AE&height=18" height="16"> **RAG / Vector DB** | Qdrant Cloud (Cloud Inference) · `intfloat/multilingual-e5-small` embeddings |
 | <img src="https://api.iconify.design/ph/envelope-simple-fill.svg?color=%23FF6FA8&height=18" height="16"> **Transactional email** | Resend (contact form delivery) |
 | <img src="https://api.iconify.design/ph/plugs-connected-fill.svg?color=%235B9BD5&height=18" height="16"> **Real-time comms** | Native WebSockets (`/ws/secretari`), no Socket.IO |
-| <img src="https://api.iconify.design/ph/heart-straight-fill.svg?color=%23FF6FA8&height=18" height="16"> **Uptime** | [`mee96/keep-alive`](https://github.com/mee96/keep-alive) — ping every 10 min during working hours (08:30–19:00, Europe/Madrid) to prevent Render cold starts |
+| <img src="https://api.iconify.design/ph/heart-straight-fill.svg?color=%23FF6FA8&height=18" height="16"> **Uptime** | [`mee96/keep-alive`](https://github.com/mee96/keep-alive) — ping every 10 min during working hours (08:00–19:00, Europe/Madrid) to prevent Render cold starts |
 | <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%231B2E4B&height=18" height="16"> **Deploy** | Render (frontend as a Static Site + backend as a web service) |
 
 <br/>
@@ -149,7 +149,7 @@ uvicorn app.main:app --reload</code></pre>
 
 > Optional: after editing anything under `corpus/*.md`, reindex Qdrant with `python -m app.rag.index`.
 
-> **Cold starts:** in production the backend runs on Render's free tier, which spins the service down when idle. [`mee96/keep-alive`](https://github.com/mee96/keep-alive) is a small scheduled job that pings `/health` every 10 minutes during working hours (08:30–19:00, Europe/Madrid) to keep it warm — point it at your own deployed `/health` URL if you fork this and deploy it yourself; it isn't needed for local development.
+> **Cold starts:** in production the backend runs on Render's free tier, which spins the service down when idle. [`mee96/keep-alive`](https://github.com/mee96/keep-alive) is a small scheduled job that pings `/health` every 10 minutes during working hours (08:00–19:00, Europe/Madrid) to keep it warm — point it at your own deployed `/health` URL if you fork this and deploy it yourself; it isn't needed for local development.
 
 ### Frontend
 <pre><code>cd frontend
@@ -189,7 +189,7 @@ The frontend has no runtime env vars — `apiUrl`/`wsUrl` are compile-time swapp
 
 Both services are deployed on **Render**: the [live site](https://carme-portfoli.onrender.com/) and the [backend API](https://bunsen-backend.onrender.com/health). There's currently no CI pipeline in this repo (`.github/workflows/` is empty) — tests run locally via `ng test`.
 
-Render's free tier spins services down when idle. A dedicated keep-alive pinger (previously an in-repo GitHub Action, now its own project — [`mee96/keep-alive`](https://github.com/mee96/keep-alive)) hits the backend every 10 minutes during working hours (08:30–19:00, Europe/Madrid) to reduce cold starts; the chat widget also degrades gracefully with staged waiting messages when a cold start does happen.
+Render's free tier spins services down when idle. A dedicated keep-alive pinger (previously an in-repo GitHub Action, now its own project — [`mee96/keep-alive`](https://github.com/mee96/keep-alive)) hits the backend every 10 minutes during working hours (08:00–19:00, Europe/Madrid) to reduce cold starts; the chat widget also degrades gracefully with staged waiting messages when a cold start does happen.
 
 <br/>
 
