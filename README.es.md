@@ -204,7 +204,7 @@ El plan gratuito de Render detiene los servicios cuando están inactivos. Un pin
 ## <img src="https://api.iconify.design/ph/warning-fill.svg?color=%23E0A63B&height=24" height="22"> &nbsp;Limitaciones conocidas
 
 * **Sin persistencia del historial de chat:** el estado de la conversación de Bunsen vive en memoria durante la vida de una única conexión WebSocket — recargar la página empieza una conversación nueva.
-* **Sin autenticación ni límite de peticiones** en `/contact` ni en `/ws/secretari` — aceptable para la escala de un sitio personal, no para un producto público.
+* **Protección básica contra abuso:** `/contact` y `/ws/secretari` tienen límites de tamaño, de peticiones por IP y globales, y un tope de turnos por chat, todo en memoria: se reinicia con el servicio y no se comparte entre instancias. No hay autenticación.
 * **Dominio de envío compartido:** el formulario de contacto envía desde la dirección de pruebas de Resend `onboarding@resend.dev`, a la espera de verificar un dominio propio.
 * **Sin fichero `LICENSE`** todavía en el repositorio.
 
