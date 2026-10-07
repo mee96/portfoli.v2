@@ -205,3 +205,16 @@ def test_contact_rate_limits_per_ip(resend_ok, monkeypatch):
     assert post_contact().status_code == 200
     assert post_contact().status_code == 429
     assert len(resend_ok) == 2
+
+
+def test_coffee_joke_is_paced():
+    from app.ws import secretari as s
+
+    # Too early: no joke in the first answers.
+    assert s._coffee_note(0, user_turns=1) == s.COFFEE_NOTE_PAUSE
+    assert s._coffee_note(0, user_turns=3) is None
+    # Right after the first joke: pause; later: allowed once more.
+    assert s._coffee_note(1, user_turns=4, last_coffee_turn=3) == s.COFFEE_NOTE_PAUSE
+    assert s._coffee_note(1, user_turns=8, last_coffee_turn=3) == s.COFFEE_NOTE_ONCE
+    # After two jokes: never again.
+    assert s._coffee_note(2, user_turns=20, last_coffee_turn=8) == s.COFFEE_NOTE_ENOUGH

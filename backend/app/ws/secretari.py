@@ -88,6 +88,10 @@ COFFEE_NOTE_ONCE = (
     "volver sobre el tema, usa la variante del suspiro con la máquina de la "
     "oficina, no repitas la oferta literal."
 )
+COFFEE_NOTE_PAUSE = "No hagas ninguna broma sobre el café en esta respuesta."
+COFFEE_MIN_TURNS_BEFORE_FIRST = 3  # first joke only from the 3rd answer on
+COFFEE_MIN_TURNS_BETWEEN = 4  # then at least this many answers before the next
+COFFEE_WORDS = ("café", "cafè", "coffee")
 COFFEE_NOTE_ENOUGH = "Ya has mencionado el café dos veces en esta conversación. No lo menciones más."
 
 
@@ -105,10 +109,12 @@ def _safe_search(query: str) -> list[str]:
         return []
 
 
-def _coffee_note(coffee_mentions: int) -> str | None:
+def _coffee_note(coffee_mentions: int, user_turns: int = 99, last_coffee_turn: int = 0) -> str | None:
     if coffee_mentions == 0:
-        return None
+        return COFFEE_NOTE_PAUSE if user_turns < COFFEE_MIN_TURNS_BEFORE_FIRST else None
     if coffee_mentions == 1:
+        if user_turns - last_coffee_turn < COFFEE_MIN_TURNS_BETWEEN:
+            return COFFEE_NOTE_PAUSE
         return COFFEE_NOTE_ONCE
     return COFFEE_NOTE_ENOUGH
 
@@ -129,6 +135,7 @@ async def secretari_ws(websocket: WebSocket) -> None:
     # welcome text verbatim instead of actually answering.
     history: list[dict] = [{"role": "assistant", "content": welcome_message}]
     coffee_mentions = 0
+    last_coffee_turn = 0
     user_turns = 0
 
     try:
@@ -161,7 +168,7 @@ async def secretari_ws(websocket: WebSocket) -> None:
                     {"role": "system", "content": f"{CONTEXT_HEADER}\n\n{context_block}"},
                 ]
 
-                coffee_note = _coffee_note(coffee_mentions)
+                coffee_note = _coffee_note(coffee_mentions, user_turns, last_coffee_turn)
                 if coffee_note:
                     messages.append({"role": "system", "content": coffee_note})
 
@@ -187,7 +194,8 @@ async def secretari_ws(websocket: WebSocket) -> None:
             history.append({"role": "user", "content": user_message})
             history.append({"role": "assistant", "content": full_response})
 
-            if "café" in full_response.lower():
+            if any(word in full_response.lower() for word in COFFEE_WORDS):
                 coffee_mentions += 1
+                last_coffee_turn = user_turns
     except WebSocketDisconnect:
         pass
