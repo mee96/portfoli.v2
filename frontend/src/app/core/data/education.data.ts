@@ -10,17 +10,17 @@ export const EDUCATION: EducationEntry[] = [
       en: {
         dt: 'Feb–Jul 2026',
         t: 'Dual Technical Diploma in Full Stack Software Development',
-        d: 'Classroom training combined with placement work, building the projects on the plate above.',
+        d: 'Classroom training combined with paid work, building the projects on the plate above.',
       },
       es: {
         dt: 'Feb–Jul 2026',
         t: 'FPO Dual — Desarrollo Full Stack',
-        d: 'Formación en aula combinada con trabajo en prácticas, construyendo los proyectos de la placa de arriba.',
+        d: 'Formación en aula combinada con trabajo remunerado, construyendo los proyectos de la placa de arriba.',
       },
       ca: {
         dt: 'Feb–Jul 2026',
         t: 'FPO Dual — Desenvolupament Full Stack',
-        d: "Formació a l'aula combinada amb feina en pràctiques, construint els projectes de la placa de dalt.",
+        d: "Formació a l'aula combinada amb feina remunerada, construint els projectes de la placa de dalt.",
       },
     },
   },

@@ -1,12 +1,16 @@
 ---
 doc: laboratorio
 lang: es
-actualizado: 2026-08
+actualizado: 2026-10
 ---
 
 ## ¿A qué se dedicaba Carme antes de programar?
 
-Trabajó varios años como técnica de laboratorio, entre 2021 y 2024. Pasó por tres centros: Unilabs, donde hacía extracciones, atención al paciente y análisis bioquímico; Synlab, donde trabajó en los departamentos de EIA, RIA y UGM; y en Reference Laboratory, especializada en análisis por radioinmunoensayo. De camino, también trabajó administrando tests de antígenos de COVID en el Mobile World Congress con Quirón Prevención, en junio de 2021 — su primera vez trabajando en un evento tecnológico, años antes de asistir a esa misma convencion como desarrolladora.
+Trabajó varios años como técnica de laboratorio, entre 2021 y 2024. Pasó por tres centros: Unilabs, donde hacía extracciones, atención al paciente y análisis bioquímico; Synlab, donde trabajó en los departamentos de EIA, RIA y UGM; y en Reference Laboratory, especializada en análisis por radioinmunoensayo. De camino, también trabajó administrando tests de antígenos de COVID en el Mobile World Congress con Quirón Prevención, en junio de 2021 — su primera vez trabajando en un evento tecnológico, años antes de asistir a esa misma convención como desarrolladora.
+
+## ¿Qué estudió Carme en el ámbito del laboratorio?
+
+Dos ciclos formativos de grado superior (CFGS): Laboratorio Clínico y Biomédico, en la Escola Ramon i Cajal de Barcelona (2020), y Fabricación de Productos Farmacéuticos, Biotecnológicos y Afines, en el INS Severo Ochoa de Esplugues de Llobregat (2022).
 
 ## ¿Qué son las técnicas RIA y EIA?
 
@@ -34,4 +38,4 @@ de escribir su primera línea de código, así que cuando llegó el
 momento de diseñar su portfolio, no quiso separar las dos partes de
 su carrera — quiso fusionarlas en una sola pieza. Por eso cada
 proyecto suyo ocupa un pocillo, coloreado según el tipo y "leerlo" es literalmente eso: tocar un
-pocillo y ver qué resultado da, la carmen es un poco friki lo se pero ella siempre dice que no se puede ser buen informatico sin ser un poco friki jeje
+pocillo y ver qué resultado da. Carme es un poco friki, lo sé, pero ella siempre dice que no se puede ser buen informático sin ser un poco friki, jeje.

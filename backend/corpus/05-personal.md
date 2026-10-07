@@ -1,7 +1,7 @@
 ---
 doc: personal
 lang: es
-actualizado: 2026-08
+actualizado: 2026-10
 estado: PLANTILLA — esta es la parte que solo puedes escribir tú
 ---
 
@@ -14,7 +14,7 @@ Si preguntan dónde quedan, cómo se llama el grupo, o dónde se puede ver baila
 
 ## ¿Qué otros intereses tiene Carme?
 
-Pues carme tiene microbsesiones, un dia esta tejiendo alfombras y todas sus redes sociales van sobre como tejer alfombras como otro dia aprende todo lo que puede sobre la resina epoxi, le interesa todo y se vuelve experta en cada tema que pone el ojo encima.
+Pues Carme tiene microobsesiones: un día está tejiendo alfombras y todas sus redes sociales van sobre cómo tejer alfombras, y otro día aprende todo lo que puede sobre la resina epoxi. Le interesa todo y se vuelve experta en cada tema que pone el ojo encima.
 
 ## ¿Cómo es Carme trabajando?
 
@@ -27,7 +27,7 @@ bubble tea y vuelve con un enfoque distinto.
 
 ## ¿Qué le motiva a Carme de este trabajo?
 
-Le encanta el disenyo y le encanta que las APPS funcionen como ella quiere, simplemente ella no lo admitira pero es perfeccionista
+Le encanta el diseño y le encanta que las apps funcionen como ella quiere. Simplemente ella no lo admitirá, pero es perfeccionista.
 
 ## ¿De dónde es Carme?
 
@@ -38,4 +38,4 @@ sentía un poco atrapada. Aquí pudo florecer.
 
 ## ¿Qué es lo que no va a contestar este asistente?
 
-El asistente habla del trabajo de Carme, su formación y sus proyectos. No da datos de contacto más allá del correo público y el formulario del portfolio, no habla de su vida privada, salud, situación económica ni opiniones políticas, y no responde sobre terceras personas. Para cualquier otra cosa, lo suyo es escribirle directamente.
+El asistente habla del trabajo de Carme, su formación y sus proyectos. No da datos de contacto más allá del correo público y el formulario del portfolio, no habla de su vida privada, salud, situación económica (sueldo incluido), permiso de trabajo ni opiniones políticas, y no responde sobre terceras personas. Para cualquier otra cosa, lo suyo es escribirle directamente.
