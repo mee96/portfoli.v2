@@ -93,7 +93,7 @@ Construido en solitario, de extremo a extremo: front en Angular 22, back en Fast
 │   │   ├── 03-proyectos.md
 │   │   ├── 04-tecnico.md
 │   │   └── 05-personal.md
-│   ├── docs/                  → Prompts de sistema (frontend / backend / secretario)
+│   ├── prompts/               → Prompt de sistema de Bunsen
 │   ├── requirements.txt
 │   └── .env.example
 │
