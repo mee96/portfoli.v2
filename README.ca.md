@@ -204,7 +204,7 @@ El pla gratuït de Render atura els serveis quan estan inactius. Un pinger de ke
 ## <img src="https://api.iconify.design/ph/warning-fill.svg?color=%23E0A63B&height=24" height="22"> &nbsp;Limitacions conegudes
 
 * **Sense persistència de l'historial de xat:** l'estat de la conversa de Bunsen viu a la memòria durant la vida d'una única connexió WebSocket — recarregar la pàgina comença una conversa nova.
-* **Sense autenticació ni límit de peticions** a `/contact` ni a `/ws/secretari` — acceptable per a l'escala d'un lloc personal, no per a un producte públic.
+* **Protecció bàsica contra l'abús:** `/contact` i `/ws/secretari` tenen límits de mida, de peticions per IP i globals, i un topall de torns per xat, tot en memòria: es reinicia amb el servei i no es comparteix entre instàncies. No hi ha autenticació.
 * **Domini d'enviament compartit:** el formulari de contacte envia des de l'adreça de proves de Resend `onboarding@resend.dev`, a l'espera de verificar un domini propi.
 * **Sense fitxer `LICENSE`** encara al repositori.
 

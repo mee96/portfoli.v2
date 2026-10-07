@@ -55,7 +55,7 @@
     <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
       <label class="field">
         <span>{{ translation.t('contact.name') }}</span>
-        <input type="text" formControlName="name" />
+        <input type="text" formControlName="name" maxlength="100" />
       </label>
 
       <label class="field">
@@ -65,7 +65,7 @@
 
       <label class="field">
         <span>{{ translation.t('contact.message') }}</span>
-        <textarea formControlName="message"></textarea>
+        <textarea formControlName="message" maxlength="5000"></textarea>
       </label>
 
       <div class="submit-row">

@@ -204,7 +204,7 @@ Render's free tier spins services down when idle. A dedicated keep-alive pinger 
 ## <img src="https://api.iconify.design/ph/warning-fill.svg?color=%23E0A63B&height=24" height="22"> &nbsp;Known limitations
 
 * **No persistence for chat history:** Bunsen's conversation state lives in memory for the lifetime of a single WebSocket connection — refreshing the page starts a new conversation.
-* **No authentication or rate limiting** on `/contact` or `/ws/secretari` — acceptable for a personal-site scale, not for a public product.
+* **Basic abuse protection only:** `/contact` and `/ws/secretari` have size limits, per-IP and global rate limits and a cap on turns per chat, all kept in memory — they reset when the service restarts and aren't shared between instances. There is no authentication.
 * **Shared sending domain:** the contact form sends via Resend's `onboarding@resend.dev` testing address pending a verified custom domain.
 * **No `LICENSE` file yet** in the repository.
 
