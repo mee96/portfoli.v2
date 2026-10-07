@@ -27,8 +27,8 @@
                   class="well well--{{ project.kind }}"
                   [class.well--selected]="selectedId() === project.id"
                   [attr.data-well]="row + col"
-                  (click)="select(project.id)"
                   (mouseenter)="select(project.id)"
+                  (focus)="select(project.id)"
                 ></button>
               } @else {
                 <button type="button" class="well" [attr.data-well]="row + col" disabled></button>

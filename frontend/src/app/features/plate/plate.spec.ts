@@ -28,12 +28,12 @@ describe('Plate', () => {
     expect(compiled.querySelectorAll('button.well').length).toBe(96);
   });
 
-  it('clicking an occupied well updates selected()', async () => {
+  it('hovering an occupied well updates selected()', async () => {
     const bbt = PROJECTS.find((p) => p.id === 'bbt')!;
     const compiled = fixture.nativeElement as HTMLElement;
     const button = compiled.querySelector(`[data-well="${bbt.well}"]`) as HTMLButtonElement;
 
-    button.click();
+    button.dispatchEvent(new MouseEvent('mouseenter'));
     await fixture.whenStable();
 
     expect(component.selected()?.id).toBe('bbt');
@@ -55,7 +55,18 @@ describe('Plate', () => {
     expect(marked[0].getAttribute('data-well')).toBe(component.selected()?.well);
   });
 
-  it('clicking an empty well keeps the current selection', async () => {
+  it('focusing an occupied well updates selected()', async () => {
+    const bbt = PROJECTS.find((p) => p.id === 'bbt')!;
+    const compiled = fixture.nativeElement as HTMLElement;
+    const button = compiled.querySelector(`[data-well="${bbt.well}"]`) as HTMLButtonElement;
+
+    button.dispatchEvent(new FocusEvent('focus'));
+    await fixture.whenStable();
+
+    expect(component.selected()?.id).toBe('bbt');
+  });
+
+  it('an empty well keeps the current selection', async () => {
     const before = component.selectedId();
     const compiled = fixture.nativeElement as HTMLElement;
     // A1 has no project in PROJECTS
