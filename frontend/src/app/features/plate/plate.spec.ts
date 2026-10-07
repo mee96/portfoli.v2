@@ -39,7 +39,24 @@ describe('Plate', () => {
     expect(component.selected()?.id).toBe('bbt');
   });
 
-  it('clicking an empty well does nothing', async () => {
+  it('starts with a featured project selected', () => {
+    const featuredIds = PROJECTS.filter((p) => p.featured).map((p) => p.id);
+
+    expect(featuredIds.length).toBeGreaterThan(0);
+    expect(featuredIds).toContain(component.selected()?.id);
+  });
+
+  it('marks only the selected well', async () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    await fixture.whenStable();
+
+    const marked = compiled.querySelectorAll('button.well--selected');
+    expect(marked.length).toBe(1);
+    expect(marked[0].getAttribute('data-well')).toBe(component.selected()?.well);
+  });
+
+  it('clicking an empty well keeps the current selection', async () => {
+    const before = component.selectedId();
     const compiled = fixture.nativeElement as HTMLElement;
     // A1 has no project in PROJECTS
     const button = compiled.querySelector('[data-well="A1"]') as HTMLButtonElement;
@@ -47,8 +64,7 @@ describe('Plate', () => {
     button.click();
     await fixture.whenStable();
 
-    expect(component.selectedId()).toBeNull();
-    expect(component.selected()).toBeNull();
+    expect(component.selectedId()).toBe(before);
   });
 
   it('passes the correct inputs to SectionHeader', () => {

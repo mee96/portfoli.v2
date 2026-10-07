@@ -5,6 +5,8 @@ import { Readout } from './readout/readout';
 import { TranslationService } from '../../core/services/translation.service';
 import { SectionHeader } from '../../shared/ui/section-header/section-header';
 
+const FEATURED_IDS = PROJECTS.filter((p) => p.featured).map((p) => p.id);
+
 const ROWS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 const COLUMNS = Array.from({ length: 12 }, (_, i) => i + 1);
 
@@ -31,7 +33,11 @@ export class Plate {
     PROJECTS.map((project) => [project.well, project]),
   );
 
-  readonly selectedId = signal<string | null>(null);
+  // Start on a random featured project so the readout is never empty on first
+  // load; hovering or clicking a well replaces it from then on.
+  readonly selectedId = signal<string | null>(
+    FEATURED_IDS.length ? FEATURED_IDS[Math.floor(Math.random() * FEATURED_IDS.length)] : null,
+  );
   readonly selected = computed(() => PROJECTS.find((p) => p.id === this.selectedId()) ?? null);
 
   protected wellAt(row: string, col: number): Project | null {

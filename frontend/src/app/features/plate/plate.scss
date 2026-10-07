@@ -136,4 +136,10 @@ app-readout {
     border-color: vars.$cyan;
     cursor: pointer;
   }
+
+  &--selected {
+    box-shadow:
+      0 0 0 2px vars.$paper,
+      0 0 0 3.5px vars.$ink;
+  }
 }

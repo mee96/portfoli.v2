@@ -13,6 +13,8 @@ export interface Project {
   id: string;
   /** Display name for proper names the id can't express (e.g. "BBT · BubbleTea API"). */
   name?: string;
+  /** Eligible to be pre-selected (at random) when the plate first loads. */
+  featured?: boolean;
   well: string;
   kind: ProjectKind;
   year: string;

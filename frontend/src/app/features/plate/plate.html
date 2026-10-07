@@ -25,6 +25,7 @@
                 <button
                   type="button"
                   class="well well--{{ project.kind }}"
+                  [class.well--selected]="selectedId() === project.id"
                   [attr.data-well]="row + col"
                   (click)="select(project.id)"
                   (mouseenter)="select(project.id)"

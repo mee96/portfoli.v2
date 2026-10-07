@@ -3,6 +3,7 @@ import { Project } from '../models/project.model';
 export const PROJECTS: Project[] = [
   {
     id: 'bbt',
+    featured: true,
     name: 'BBT · BubbleTea API',
     well: 'B2',
     kind: 'stack',
@@ -44,6 +45,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'chat',
+    featured: true,
     well: 'D3',
     kind: 'ai',
     year: '2026',
@@ -179,6 +181,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'plantealo',
+    featured: true,
     well: 'E6',
     kind: 'ai',
     year: '2026',
