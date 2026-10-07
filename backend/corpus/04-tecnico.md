@@ -6,7 +6,7 @@ actualizado: 2026-08
 
 ## ¿Qué tecnologías usa Carme en el frontend?
 
-Angular es su herramienta principal: signals, componentes standalone, la nueva sintaxis de control de flujo y rutas protegidas con guards. También trabaja con Ionic para móvil, TypeScript, SCSS y Figma para diseño. Tiene además base de React y Next.js desde el bootcamp de Adalab — no es su día a día, pero si un proyecto lo pidiera, no partiría de cero.
+Angular es su herramienta principal: signals, componentes standalone, la nueva sintaxis de control de flujo y rutas protegidas con guards. También trabaja con TypeScript, SCSS y Figma para diseño. Conoce Ionic para móvil, que aprendió y usó en el FPO Dual de Fundación Esplai, aunque no forma parte de su trabajo actual. Tiene además base de React y Next.js desde el bootcamp de Adalab — no es su día a día, pero si un proyecto lo pidiera, no partiría de cero.
 
 ## ¿Qué tecnologías usa Carme en el backend?
 
