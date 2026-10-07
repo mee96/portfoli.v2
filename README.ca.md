@@ -25,6 +25,8 @@
 [![Salut del backend](https://img.shields.io/badge/📡_API_Health-b8e8d4?style=flat-square&logoColor=1b2e4b)](https://bunsen-backend.onrender.com/health)
 &nbsp;
 [![Issues](https://img.shields.io/badge/🐛_Issues-5b9bd5?style=flat-square&logoColor=ffffff)](https://github.com/mee96/portfoli.v2/issues)
+&nbsp;
+[![CI](https://github.com/mee96/portfoli.v2/actions/workflows/ci.yml/badge.svg)](https://github.com/mee96/portfoli.v2/actions/workflows/ci.yml)
 
 </div>
 
@@ -36,7 +38,7 @@
 
 **Portfolio V2** és un lloc personal full-stack construït al voltant d'una sola idea: tres anys validant **immunoassaigs RIA i EIA** en un laboratori, i després un canvi de carrera cap al desenvolupament de software — però el mètode no ha canviat. *Defineix la mostra, aplica el mètode, llegeix el resultat.*
 
-Aquesta idea guia tota la interfície. Els projectes no es llisten: es **col·loquen en placa**. Una graella de 96 pous (`A1`–`H12`) amb l'aspecte d'una placa EIA real, on cada pou és un projecte lliurat i, en fer-hi clic, s'imprimeix la seva "lectura" (stack, enfocament, resultat). L'experiència està recolzada per **Bunsen**, un assistent de xat amb IA en streaming ("el secretari de Carme") que respon preguntes de les persones visitants sobre la seva feina fent servir un **pipeline RAG** real, basat en un corpus en primera persona — no una FAQ enllaunada.
+Aquesta idea guia tota la interfície. Els projectes no es llisten: es **col·loquen en placa**. Una graella de 96 pous (`A1`–`H12`) amb l'aspecte d'una placa EIA real, on cada pou és un projecte lliurat i, en passar-hi el ratolí, s'imprimeix la seva "lectura" (stack, enfocament, resultat). L'experiència està recolzada per **Bunsen**, un assistent de xat amb IA en streaming ("el secretari de Carme") que respon preguntes de les persones visitants sobre la seva feina fent servir un **pipeline RAG** real, basat en un corpus en primera persona — no una FAQ enllaunada.
 
 Construït en solitari, de cap a cap: front en Angular 22, back en FastAPI, un protocol de xat per WebSocket fet des de zero, una capa de cerca vectorial a Qdrant Cloud, correu transaccional amb Resend, i i18n complet en **anglès, castellà i català** — sense cap llibreria d'i18n de tercers, un servei d'unes 30 línies en el seu lloc.
 
@@ -162,6 +164,10 @@ ng serve</code></pre>
 <pre><code>cd frontend
 ng test</code></pre>
 
+<pre><code>cd backend
+pip install -r requirements-dev.txt
+pytest</code></pre>
+
 <br/>
 
 ---
@@ -187,7 +193,7 @@ El frontend no té variables d'entorn en temps d'execució — `apiUrl`/`wsUrl` 
 
 ## <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Desplegament i disponibilitat
 
-Tots dos serveis estan desplegats a **Render**: el [lloc en directe](https://carme-portfoli.onrender.com/) i l'[API del backend](https://bunsen-backend.onrender.com/health). Actualment no hi ha cap pipeline de CI en aquest repositori (`.github/workflows/` és buit) — els tests s'executen en local amb `ng test`.
+Tots dos serveis estan desplegats a **Render**: el [lloc en directe](https://carme-portfoli.onrender.com/) i l'[API del backend](https://bunsen-backend.onrender.com/health). [GitHub Actions](.github/workflows/ci.yml) executa els tests i el build del frontend i els tests del backend a cada push i pull request; el desplegament el gestiona Render.
 
 El pla gratuït de Render atura els serveis quan estan inactius. Un pinger de keep-alive dedicat (abans una GitHub Action dins d'aquest repo, ara un projecte propi — [`mee96/keep-alive`](https://github.com/mee96/keep-alive)) fa ping al backend cada 10 minuts en horari laboral (08:00–19:00, Europe/Madrid) per reduir els cold starts; el widget de xat també degrada amb elegància mostrant missatges d'espera esglaonats quan sí que passa un cold start.
 
@@ -200,7 +206,6 @@ El pla gratuït de Render atura els serveis quan estan inactius. Un pinger de ke
 * **Sense persistència de l'historial de xat:** l'estat de la conversa de Bunsen viu a la memòria durant la vida d'una única connexió WebSocket — recarregar la pàgina comença una conversa nova.
 * **Sense autenticació ni límit de peticions** a `/contact` ni a `/ws/secretari` — acceptable per a l'escala d'un lloc personal, no per a un producte públic.
 * **Domini d'enviament compartit:** el formulari de contacte envia des de l'adreça de proves de Resend `onboarding@resend.dev`, a l'espera de verificar un domini propi.
-* **Sense CI automatitzat:** el linting i els tests (`ng test`) s'executen només en local per ara, no a cada push/PR.
 * **Sense fitxer `LICENSE`** encara al repositori.
 
 <br/>

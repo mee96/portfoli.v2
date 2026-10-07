@@ -25,6 +25,8 @@
 [![Backend Health](https://img.shields.io/badge/📡_API_Health-b8e8d4?style=flat-square&logoColor=1b2e4b)](https://bunsen-backend.onrender.com/health)
 &nbsp;
 [![Issues](https://img.shields.io/badge/🐛_Issues-5b9bd5?style=flat-square&logoColor=ffffff)](https://github.com/mee96/portfoli.v2/issues)
+&nbsp;
+[![CI](https://github.com/mee96/portfoli.v2/actions/workflows/ci.yml/badge.svg)](https://github.com/mee96/portfoli.v2/actions/workflows/ci.yml)
 
 </div>
 
@@ -36,7 +38,7 @@
 
 **Portfolio V2** is a full-stack personal site built around a single conceit: three years spent validating **RIA and EIA clinical assays** in a lab, then a career change into software — but the method never changed. *Define the sample, run the method, read the result.*
 
-That idea drives the whole UI. Projects aren't listed — they're **plated**: a 96-well grid (`A1`–`H12`) styled after a real EIA plate, where each well is a shipped project and clicking one prints its "reading" (stack, approach, outcome). The experience is backed by **Bunsen**, a streaming AI chat assistant ("Carme's secretary") that answers visitor questions about her work using a real **RAG pipeline** grounded in a first-person corpus, not a canned FAQ.
+That idea drives the whole UI. Projects aren't listed — they're **plated**: a 96-well grid (`A1`–`H12`) styled after a real EIA plate, where each well is a shipped project and hovering over one prints its "reading" (stack, approach, outcome). The experience is backed by **Bunsen**, a streaming AI chat assistant ("Carme's secretary") that answers visitor questions about her work using a real **RAG pipeline** grounded in a first-person corpus, not a canned FAQ.
 
 Built solo, end to end: Angular 22 front, FastAPI back, a from-scratch WebSocket chat protocol, a vector-search layer on Qdrant Cloud, transactional email via Resend, and full **English / Spanish / Catalan** i18n — no third-party i18n library, a ~30-line service instead.
 
@@ -162,6 +164,10 @@ ng serve</code></pre>
 <pre><code>cd frontend
 ng test</code></pre>
 
+<pre><code>cd backend
+pip install -r requirements-dev.txt
+pytest</code></pre>
+
 <br/>
 
 ---
@@ -187,7 +193,7 @@ The frontend has no runtime env vars — `apiUrl`/`wsUrl` are compile-time swapp
 
 ## <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Deployment & availability
 
-Both services are deployed on **Render**: the [live site](https://carme-portfoli.onrender.com/) and the [backend API](https://bunsen-backend.onrender.com/health). There's currently no CI pipeline in this repo (`.github/workflows/` is empty) — tests run locally via `ng test`.
+Both services are deployed on **Render**: the [live site](https://carme-portfoli.onrender.com/) and the [backend API](https://bunsen-backend.onrender.com/health). [GitHub Actions](.github/workflows/ci.yml) runs the frontend tests and build and the backend tests on every push and pull request; deployment is handled by Render.
 
 Render's free tier spins services down when idle. A dedicated keep-alive pinger (previously an in-repo GitHub Action, now its own project — [`mee96/keep-alive`](https://github.com/mee96/keep-alive)) hits the backend every 10 minutes during working hours (08:00–19:00, Europe/Madrid) to reduce cold starts; the chat widget also degrades gracefully with staged waiting messages when a cold start does happen.
 
@@ -200,7 +206,6 @@ Render's free tier spins services down when idle. A dedicated keep-alive pinger 
 * **No persistence for chat history:** Bunsen's conversation state lives in memory for the lifetime of a single WebSocket connection — refreshing the page starts a new conversation.
 * **No authentication or rate limiting** on `/contact` or `/ws/secretari` — acceptable for a personal-site scale, not for a public product.
 * **Shared sending domain:** the contact form sends via Resend's `onboarding@resend.dev` testing address pending a verified custom domain.
-* **No automated CI:** linting and tests (`ng test`) currently run locally only, not on push/PR.
 * **No `LICENSE` file yet** in the repository.
 
 <br/>

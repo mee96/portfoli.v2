@@ -25,6 +25,8 @@
 [![Salud del backend](https://img.shields.io/badge/📡_API_Health-b8e8d4?style=flat-square&logoColor=1b2e4b)](https://bunsen-backend.onrender.com/health)
 &nbsp;
 [![Issues](https://img.shields.io/badge/🐛_Issues-5b9bd5?style=flat-square&logoColor=ffffff)](https://github.com/mee96/portfoli.v2/issues)
+&nbsp;
+[![CI](https://github.com/mee96/portfoli.v2/actions/workflows/ci.yml/badge.svg)](https://github.com/mee96/portfoli.v2/actions/workflows/ci.yml)
 
 </div>
 
@@ -36,7 +38,7 @@
 
 **Portfolio V2** es un sitio personal full-stack construido alrededor de una única idea: tres años validando **inmunoensayos RIA y EIA** en un laboratorio, y luego un cambio de carrera hacia el desarrollo de software — pero el método no cambió. *Define la muestra, aplica el método, lee el resultado.*
 
-Esa idea guía toda la interfaz. Los proyectos no se listan: se **colocan en placa**. Una rejilla de 96 pocillos (`A1`–`H12`) con el aspecto de una placa EIA real, donde cada pocillo es un proyecto entregado y al hacer clic se imprime su "lectura" (stack, enfoque, resultado). La experiencia está respaldada por **Bunsen**, un asistente de chat con IA en streaming ("el secretario de Carme") que responde preguntas de los visitantes sobre su trabajo usando un **pipeline RAG** real, apoyado en un corpus en primera persona — no una FAQ enlatada.
+Esa idea guía toda la interfaz. Los proyectos no se listan: se **colocan en placa**. Una rejilla de 96 pocillos (`A1`–`H12`) con el aspecto de una placa EIA real, donde cada pocillo es un proyecto entregado y al pasar el ratón se imprime su "lectura" (stack, enfoque, resultado). La experiencia está respaldada por **Bunsen**, un asistente de chat con IA en streaming ("el secretario de Carme") que responde preguntas de los visitantes sobre su trabajo usando un **pipeline RAG** real, apoyado en un corpus en primera persona — no una FAQ enlatada.
 
 Construido en solitario, de extremo a extremo: front en Angular 22, back en FastAPI, un protocolo de chat por WebSocket hecho desde cero, una capa de búsqueda vectorial en Qdrant Cloud, correo transaccional con Resend, e i18n completo en **inglés, castellano y catalán** — sin librería de i18n de terceros, un servicio de ~30 líneas en su lugar.
 
@@ -162,6 +164,10 @@ ng serve</code></pre>
 <pre><code>cd frontend
 ng test</code></pre>
 
+<pre><code>cd backend
+pip install -r requirements-dev.txt
+pytest</code></pre>
+
 <br/>
 
 ---
@@ -187,7 +193,7 @@ El frontend no tiene variables de entorno en tiempo de ejecución — `apiUrl`/`
 
 ## <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%235B9BD5&height=24" height="22"> &nbsp;Despliegue y disponibilidad
 
-Ambos servicios están desplegados en **Render**: el [sitio en vivo](https://carme-portfoli.onrender.com/) y la [API del backend](https://bunsen-backend.onrender.com/health). Actualmente no hay ningún pipeline de CI en este repositorio (`.github/workflows/` está vacío) — los tests se ejecutan en local con `ng test`.
+Ambos servicios están desplegados en **Render**: el [sitio en vivo](https://carme-portfoli.onrender.com/) y la [API del backend](https://bunsen-backend.onrender.com/health). [GitHub Actions](.github/workflows/ci.yml) ejecuta los tests y el build del frontend y los tests del backend en cada push y pull request; el despliegue lo gestiona Render.
 
 El plan gratuito de Render detiene los servicios cuando están inactivos. Un pinger de keep-alive dedicado (antes una GitHub Action dentro de este repo, ahora un proyecto propio — [`mee96/keep-alive`](https://github.com/mee96/keep-alive)) hace ping al backend cada 10 minutos en horario laboral (08:00–19:00, Europe/Madrid) para reducir los cold starts; el widget de chat también degrada con elegancia mostrando mensajes de espera escalonados cuando sí ocurre un cold start.
 
@@ -200,7 +206,6 @@ El plan gratuito de Render detiene los servicios cuando están inactivos. Un pin
 * **Sin persistencia del historial de chat:** el estado de la conversación de Bunsen vive en memoria durante la vida de una única conexión WebSocket — recargar la página empieza una conversación nueva.
 * **Sin autenticación ni límite de peticiones** en `/contact` ni en `/ws/secretari` — aceptable para la escala de un sitio personal, no para un producto público.
 * **Dominio de envío compartido:** el formulario de contacto envía desde la dirección de pruebas de Resend `onboarding@resend.dev`, a la espera de verificar un dominio propio.
-* **Sin CI automatizado:** el linting y los tests (`ng test`) se ejecutan solo en local por ahora, no en cada push/PR.
 * **Sin fichero `LICENSE`** todavía en el repositorio.
 
 <br/>
