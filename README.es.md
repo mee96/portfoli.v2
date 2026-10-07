@@ -34,7 +34,7 @@
 
 ## <img src="https://api.iconify.design/ph/question-fill.svg?color=%23FF6FA8&height=24" height="22"> &nbsp;Sobre el proyecto
 
-**Portfolio V2** es un sitio personal full-stack construido alrededor de una única idea: tres años validando **ensayos clínicos RIA y EIA** en un laboratorio, y luego un cambio de carrera hacia el desarrollo de software — pero el método no cambió. *Define la muestra, aplica el método, lee el resultado.*
+**Portfolio V2** es un sitio personal full-stack construido alrededor de una única idea: tres años validando **inmunoensayos RIA y EIA** en un laboratorio, y luego un cambio de carrera hacia el desarrollo de software — pero el método no cambió. *Define la muestra, aplica el método, lee el resultado.*
 
 Esa idea guía toda la interfaz. Los proyectos no se listan: se **colocan en placa**. Una rejilla de 96 pocillos (`A1`–`H12`) con el aspecto de una placa EIA real, donde cada pocillo es un proyecto entregado y al hacer clic se imprime su "lectura" (stack, enfoque, resultado). La experiencia está respaldada por **Bunsen**, un asistente de chat con IA en streaming ("el secretario de Carme") que responde preguntas de los visitantes sobre su trabajo usando un **pipeline RAG** real, apoyado en un corpus en primera persona — no una FAQ enlatada.
 

@@ -34,7 +34,7 @@
 
 ## <img src="https://api.iconify.design/ph/question-fill.svg?color=%23FF6FA8&height=24" height="22"> &nbsp;Sobre el projecte
 
-**Portfolio V2** és un lloc personal full-stack construït al voltant d'una sola idea: tres anys validant **assajos clínics RIA i EIA** en un laboratori, i després un canvi de carrera cap al desenvolupament de software — però el mètode no ha canviat. *Defineix la mostra, aplica el mètode, llegeix el resultat.*
+**Portfolio V2** és un lloc personal full-stack construït al voltant d'una sola idea: tres anys validant **immunoassaigs RIA i EIA** en un laboratori, i després un canvi de carrera cap al desenvolupament de software — però el mètode no ha canviat. *Defineix la mostra, aplica el mètode, llegeix el resultat.*
 
 Aquesta idea guia tota la interfície. Els projectes no es llisten: es **col·loquen en placa**. Una graella de 96 pous (`A1`–`H12`) amb l'aspecte d'una placa EIA real, on cada pou és un projecte lliurat i, en fer-hi clic, s'imprimeix la seva "lectura" (stack, enfocament, resultat). L'experiència està recolzada per **Bunsen**, un assistent de xat amb IA en streaming ("el secretari de Carme") que respon preguntes de les persones visitants sobre la seva feina fent servir un **pipeline RAG** real, basat en un corpus en primera persona — no una FAQ enllaunada.
 
