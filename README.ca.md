@@ -54,7 +54,7 @@ Construït en solitari, de cap a cap: front en Angular 22, back en FastAPI, un p
 | <img src="https://api.iconify.design/ph/magnifying-glass-fill.svg?color=%232FB5AE&height=18" height="16"> **RAG / Base vectorial** | Qdrant Cloud (Cloud Inference) · embeddings `intfloat/multilingual-e5-small` |
 | <img src="https://api.iconify.design/ph/envelope-simple-fill.svg?color=%23FF6FA8&height=18" height="16"> **Correu transaccional** | Resend (lliurament del formulari de contacte) |
 | <img src="https://api.iconify.design/ph/plugs-connected-fill.svg?color=%235B9BD5&height=18" height="16"> **Comunicació en temps real** | WebSockets natius (`/ws/secretari`), sense Socket.IO |
-| <img src="https://api.iconify.design/ph/heart-straight-fill.svg?color=%23FF6FA8&height=18" height="16"> **Disponibilitat** | [`mee96/keep-alive`](https://github.com/mee96/keep-alive) — ping programat per evitar cold starts a Render |
+| <img src="https://api.iconify.design/ph/heart-straight-fill.svg?color=%23FF6FA8&height=18" height="16"> **Disponibilitat** | [`mee96/keep-alive`](https://github.com/mee96/keep-alive) — ping cada 10 min en horari laboral (08:30–19:00, Europe/Madrid) per evitar cold starts a Render |
 | <img src="https://api.iconify.design/ph/rocket-launch-fill.svg?color=%231B2E4B&height=18" height="16"> **Desplegament** | Render (frontend + backend, tots dos com a web services) |
 
 <br/>
@@ -149,7 +149,7 @@ uvicorn app.main:app --reload</code></pre>
 
 > Opcional: després d'editar qualsevol fitxer de `corpus/*.md`, reindexa Qdrant amb `python -m app.rag.index`.
 
-> **Cold starts:** en producció el backend corre en el pla gratuït de Render, que atura el servei quan està inactiu. [`mee96/keep-alive`](https://github.com/mee96/keep-alive) és un petit job programat que fa ping a `/health` a intervals per mantenir-lo despert — apunta'l a la teva pròpia URL de `/health` desplegada si en fas un fork i el desplegues pel teu compte; no cal per al desenvolupament local.
+> **Cold starts:** en producció el backend corre en el pla gratuït de Render, que atura el servei quan està inactiu. [`mee96/keep-alive`](https://github.com/mee96/keep-alive) és un petit job programat que fa ping a `/health` cada 10 minuts en horari laboral (08:30–19:00, Europe/Madrid) per mantenir-lo despert — apunta'l a la teva pròpia URL de `/health` desplegada si en fas un fork i el desplegues pel teu compte; no cal per al desenvolupament local.
 
 ### Frontend
 <pre><code>cd frontend
@@ -189,7 +189,7 @@ El frontend no té variables d'entorn en temps d'execució — `apiUrl`/`wsUrl` 
 
 Tots dos serveis estan desplegats a **Render**: el [lloc en directe](https://carme-portfoli.onrender.com/) i l'[API del backend](https://bunsen-backend.onrender.com/health). Actualment no hi ha cap pipeline de CI en aquest repositori (`.github/workflows/` és buit) — els tests s'executen en local amb `ng test`.
 
-El pla gratuït de Render atura els serveis quan estan inactius. Un pinger de keep-alive dedicat (abans una GitHub Action dins d'aquest repo, ara un projecte propi — [`mee96/keep-alive`](https://github.com/mee96/keep-alive)) fa ping periòdicament al backend per reduir els cold starts; el widget de xat també degrada amb elegància mostrant missatges d'espera esglaonats quan sí que passa un cold start.
+El pla gratuït de Render atura els serveis quan estan inactius. Un pinger de keep-alive dedicat (abans una GitHub Action dins d'aquest repo, ara un projecte propi — [`mee96/keep-alive`](https://github.com/mee96/keep-alive)) fa ping al backend cada 10 minuts en horari laboral (08:30–19:00, Europe/Madrid) per reduir els cold starts; el widget de xat també degrada amb elegància mostrant missatges d'espera esglaonats quan sí que passa un cold start.
 
 <br/>
 
