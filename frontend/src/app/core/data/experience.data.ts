@@ -14,7 +14,6 @@ export const EXPERIENCE: ExperienceEntry[] = [
       'PHP',
       'Git',
       'Python',
-      'Ionic',
     ],
     translations: {
       en: {
