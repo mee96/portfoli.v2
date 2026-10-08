@@ -28,7 +28,7 @@ describe('Experience', () => {
     expect(entries.length).toBe(4);
   });
 
-  it('marks Fundación Esplai as active with activeLabel "Now", and the other three as not active', () => {
+  it('marks Fundación Esplai as active with activeLabel "Current role", and the other three as not active', () => {
     const entries = fixture.debugElement
       .queryAll(By.directive(LogEntry))
       .map((el) => el.componentInstance as LogEntry);
@@ -39,7 +39,7 @@ describe('Experience', () => {
     const teleperformance = entries.find((e) => e.org === 'Teleperformance');
 
     expect(esplai?.active).toBe(true);
-    expect(esplai?.activeLabel).toBe('Now');
+    expect(esplai?.activeLabel).toBe('Current role');
     expect(freelance?.active).toBe(false);
     expect(lab?.active).toBe(false);
     expect(teleperformance?.active).toBe(false);
