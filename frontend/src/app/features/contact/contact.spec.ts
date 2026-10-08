@@ -107,14 +107,14 @@ describe('Contact', () => {
     expect(compiled.querySelector('.footer-text')?.textContent).toContain('Barcelona ·');
   });
 
-  it('renders 3 social links with aria-label, opening in a new tab safely', () => {
+  it('renders 2 social links with aria-label, opening in a new tab safely', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const links = Array.from(compiled.querySelectorAll('.footer-socials a'));
 
-    expect(links.length).toBe(3);
+    expect(links.length).toBe(2);
 
     const labels = links.map((link) => link.getAttribute('aria-label'));
-    expect(labels).toEqual(['GitHub', 'LinkedIn', 'Instagram']);
+    expect(labels).toEqual(['GitHub', 'LinkedIn']);
 
     for (const link of links) {
       expect(link.getAttribute('target')).toBe('_blank');
