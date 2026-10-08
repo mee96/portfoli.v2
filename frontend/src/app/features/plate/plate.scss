@@ -121,25 +121,29 @@ app-readout {
 
   &--stack {
     background: vars.$indigo;
+    --well-color: vars.$indigo;
     border-color: vars.$indigo;
     cursor: pointer;
   }
 
   &--ai {
     background: vars.$eosin;
+    --well-color: vars.$eosin;
     border-color: vars.$eosin;
     cursor: pointer;
   }
 
   &--client {
     background: vars.$cyan;
+    --well-color: vars.$cyan;
     border-color: vars.$cyan;
     cursor: pointer;
   }
 
   &--selected {
+    // Halo in the well's own colour: white gap, then a ring of its category colour.
     box-shadow:
       0 0 0 2px vars.$paper,
-      0 0 0 3.5px vars.$ink;
+      0 0 0 3.5px var(--well-color, #{vars.$ink});
   }
 }
