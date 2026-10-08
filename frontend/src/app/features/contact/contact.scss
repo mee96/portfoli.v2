@@ -53,7 +53,7 @@
   gap: 0.5rem;
 
   a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
     font-family: vars.$font-mono;
