@@ -11,7 +11,7 @@ Carme Medina Canalda es desarrolladora web full stack junior, con base en Barcel
 
 ## ¿En qué trabaja Carme ahora mismo?
 
-Es desarrolladora web junior en Fundación Esplai, con contrato de trabajo desde marzo de 2026, una organización del tercer sector que construye webs y aplicaciones para entidades que no pueden permitirse grandes consultoras. Los primeros seis meses rehizo junto a su equipo una web completa en WordPress, con plugins propios, usando HTML, CSS, PHP y elementos de WordPress. Ahora trabaja en una app en Angular de modelado de datos que usa Microsoft Graph para enviar datos al entorno de Microsoft 365 y automatizar tareas de Microsoft, y en la puesta en marcha de un tenant personalizado y de Power Apps. Su día a día combina desarrollo con Angular y despliegues semanales con Git y GitHub, dentro de un equipo multidisciplinar.
+Es desarrolladora full stack junior en Fundación Esplai, con contrato de trabajo desde marzo de 2026, una organización del tercer sector que construye webs y aplicaciones para entidades que no pueden permitirse grandes consultoras. Los primeros seis meses rehizo junto a su equipo una web completa en WordPress, con plugins propios, usando HTML, CSS, PHP y elementos de WordPress. Ahora trabaja en una app en Angular de modelado de datos que usa Microsoft Graph para enviar datos al entorno de Microsoft 365 y automatizar tareas de Microsoft, y en la puesta en marcha de un tenant personalizado y de Power Apps. Su día a día combina desarrollo con Angular y despliegues semanales con Git y GitHub, dentro de un equipo multidisciplinar.
 
 ## ¿Cuál es la formación de Carme?
 

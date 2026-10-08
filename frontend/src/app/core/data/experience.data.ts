@@ -18,17 +18,17 @@ export const EXPERIENCE: ExperienceEntry[] = [
     translations: {
       en: {
         dt: 'Mar 2026 – Present',
-        t: 'Junior Web Developer',
+        t: 'Junior Full Stack Developer',
         d: 'First six months: rebuilt a full WordPress site, with custom plugins, in HTML, CSS, PHP and WordPress elements. Now: an Angular data-modelling app that uses Microsoft Graph to send data into Microsoft 365 and automate tasks there, plus a custom tenant and Power Apps.',
       },
       es: {
         dt: 'Mar 2026 – Actualidad',
-        t: 'Desarrolladora Web Junior',
+        t: 'Desarrolladora Full Stack Junior',
         d: 'Primeros seis meses: rediseño completo de una web en WordPress, con plugins propios, en HTML, CSS, PHP y elementos de WordPress. Ahora: una app en Angular de modelado de datos que usa Microsoft Graph para llevar datos al entorno de Microsoft 365 y automatizar tareas, junto con un tenant personalizado y Power Apps.',
       },
       ca: {
         dt: 'Mar 2026 – Actualitat',
-        t: 'Desenvolupadora Web Júnior',
+        t: 'Desenvolupadora Full Stack Júnior',
         d: "Primers sis mesos: redisseny complet d'una web en WordPress, amb plugins propis, en HTML, CSS, PHP i elements de WordPress. Ara: una app en Angular de modelatge de dades que fa servir Microsoft Graph per portar dades a l'entorn de Microsoft 365 i automatitzar tasques, juntament amb un tenant personalitzat i Power Apps.",
       },
     },
