@@ -121,21 +121,21 @@ app-readout {
 
   &--stack {
     background: vars.$indigo;
-    --well-color: vars.$indigo;
+    --well-color: #{vars.$indigo};
     border-color: vars.$indigo;
     cursor: pointer;
   }
 
   &--ai {
     background: vars.$eosin;
-    --well-color: vars.$eosin;
+    --well-color: #{vars.$eosin};
     border-color: vars.$eosin;
     cursor: pointer;
   }
 
   &--client {
     background: vars.$cyan;
-    --well-color: vars.$cyan;
+    --well-color: #{vars.$cyan};
     border-color: vars.$cyan;
     cursor: pointer;
   }
