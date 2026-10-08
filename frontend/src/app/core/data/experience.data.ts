@@ -62,17 +62,17 @@ export const EXPERIENCE: ExperienceEntry[] = [
       en: {
         dt: '2021–2024',
         t: 'Laboratory Technician',
-        d: 'Three years across RIA, EIA and UGM departments — patient intake, sample extraction, and immunoassay analysis. UGM (Sample Management Unit) is where incoming samples are received, pre-treated and distributed to the right department. Along the way, also ran COVID antigen testing at Mobile World Congress — years before going back twice more as a developer.',
+        d: 'Three years across RIA, EIA and UGM departments — patient intake, sample extraction, and immunoassay analysis. UGM (Sample Management Unit) is where incoming samples are received, pre-treated and distributed to the right department.',
       },
       es: {
         dt: '2021–2024',
         t: 'Técnica de Laboratorio',
-        d: 'Tres años entre los departamentos de RIA, EIA y UGM — atención al paciente, extracción de muestras y análisis por inmunoensayo. La UGM (Unidad de Gestión de Muestras) es donde llegan las muestras, se les da el tratamiento previo y se distribuyen al departamento que corresponda. De paso, también hizo tests de antígenos de COVID en el Mobile World Congress — años antes de volver dos veces más como desarrolladora.',
+        d: 'Tres años entre los departamentos de RIA, EIA y UGM — atención al paciente, extracción de muestras y análisis por inmunoensayo. La UGM (Unidad de Gestión de Muestras) es donde llegan las muestras, se les da el tratamiento previo y se distribuyen al departamento que corresponda.',
       },
       ca: {
         dt: '2021–2024',
         t: 'Tècnica de Laboratori',
-        d: "Tres anys entre els departaments de RIA, EIA i UGM — atenció al pacient, extracció de mostres i anàlisi per immunoassaig. La UGM (Unitat de Gestió de Mostres) és on arriben les mostres, se'ls fa el tractament previ i es distribueixen al departament que toqui. De pas, també va fer tests d'antígens de COVID al Mobile World Congress — anys abans de tornar-hi dues vegades més com a desenvolupadora.",
+        d: "Tres anys entre els departaments de RIA, EIA i UGM — atenció al pacient, extracció de mostres i anàlisi per immunoassaig. La UGM (Unitat de Gestió de Mostres) és on arriben les mostres, se'ls fa el tractament previ i es distribueixen al departament que toqui.",
       },
     },
   },
