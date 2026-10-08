@@ -33,7 +33,7 @@ export class Plate {
     PROJECTS.map((project) => [project.well, project]),
   );
 
-  // Start on a random featured project so the readout is never empty on first
+  // Start on the featured project (the current work) so the readout is never empty on first
   // load; hovering or clicking a well replaces it from then on.
   readonly selectedId = signal<string | null>(
     FEATURED_IDS.length ? FEATURED_IDS[Math.floor(Math.random() * FEATURED_IDS.length)] : null,
