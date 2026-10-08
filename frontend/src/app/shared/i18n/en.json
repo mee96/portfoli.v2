@@ -11,7 +11,14 @@
     "title": "Same rigour.<br>Different <em>bench</em>.",
     "lede": "Three years reading clinical assays, then a change of direction. More than ten projects later the method hasn't changed: define the sample, run the method, read the result.",
     "cta1": "Read the plate",
-    "cta2": "Get in touch"
+    "cta2": "Get in touch",
+    "card": {
+      "title": "Sample 001",
+      "statusLabel": "Status",
+      "status": "Looking for work",
+      "modeLabel": "Mode",
+      "mode": "Remote · On-site in Spain"
+    }
   },
   "plate": {
     "title": "Plate map",

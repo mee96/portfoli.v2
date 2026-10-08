@@ -46,3 +46,85 @@ h1 {
   gap: 0.75rem;
   margin-top: 1rem;
 }
+
+.hero {
+  position: relative;
+}
+
+.card {
+  margin-top: 40px;
+  max-width: 340px;
+  border-top: 1px solid vars.$ink-35;
+  border-bottom: 1px solid vars.$ink-35;
+  padding: 14px 0;
+  font-family: vars.$font-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: vars.$ink-60;
+
+  .card-title {
+    margin: 0 0 12px;
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: vars.$ink-35;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 0;
+  }
+
+  dt {
+    color: vars.$ink-35;
+  }
+
+  dd {
+    margin: 0;
+    text-align: right;
+    color: vars.$ink;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: vars.$cyan;
+  }
+
+  .links {
+    display: flex;
+    gap: 18px;
+    margin: 12px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(145, 138, 166, 0.35);
+  }
+
+  .links a {
+    color: vars.$ink;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: vars.$indigo;
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .card {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    margin-top: 0;
+    width: 320px;
+  }
+}

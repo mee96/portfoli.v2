@@ -11,7 +11,14 @@
     "title": "El mismo rigor.<br>Otra <em>poyata</em>.",
     "lede": "Tres años leyendo inmunoensayos y después un cambio de rumbo. Más de diez proyectos después, el método sigue siendo el mismo: definir la muestra, aplicar el método, leer el resultado.",
     "cta1": "Leer la placa",
-    "cta2": "Escríbeme"
+    "cta2": "Escríbeme",
+    "card": {
+      "title": "Muestra 001",
+      "statusLabel": "Estado",
+      "status": "En busca de empleo",
+      "modeLabel": "Modalidad",
+      "mode": "Remoto · Presencial en España"
+    }
   },
   "plate": {
     "title": "Mapa de placa",

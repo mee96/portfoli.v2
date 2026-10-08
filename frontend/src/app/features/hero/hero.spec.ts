@@ -49,4 +49,15 @@ describe('Hero', () => {
     expect(secondary.href).toBe('#contact');
     expect(secondary.variant).toBe('secondary');
   });
+
+  it('shows the job-search status card with CV, GitHub and LinkedIn links', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.card')?.textContent).toContain('Looking for work');
+    const hrefs = Array.from(compiled.querySelectorAll('.card .links a')).map((a) =>
+      a.getAttribute('href'),
+    );
+    expect(hrefs[0]).toBe('/cv/CV_Carme_Medina_EN.pdf');
+    expect(hrefs[1]).toBe('https://github.com/mee96');
+    expect(hrefs[2]).toContain('linkedin.com');
+  });
 });

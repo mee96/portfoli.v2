@@ -7,4 +7,28 @@
     <app-button [label]="translation.t('hero.cta1')" href="#plate" variant="primary" />
     <app-button [label]="translation.t('hero.cta2')" href="#contact" variant="secondary" />
   </div>
+
+  <aside class="card" [attr.aria-label]="translation.t('hero.card.title')">
+    <p class="card-title">{{ translation.t('hero.card.title') }}</p>
+    <dl>
+      <div class="row">
+        <dt>{{ translation.t('hero.card.statusLabel') }}</dt>
+        <dd><span class="dot" aria-hidden="true"></span>{{ translation.t('hero.card.status') }}</dd>
+      </div>
+      <div class="row">
+        <dt>{{ translation.t('hero.card.modeLabel') }}</dt>
+        <dd>{{ translation.t('hero.card.mode') }}</dd>
+      </div>
+    </dl>
+    <p class="links">
+      <a [href]="cvHref()" download>CV&nbsp;↓</a>
+      <a href="https://github.com/mee96" target="_blank" rel="noopener noreferrer">GitHub&nbsp;↗</a>
+      <a
+        href="https://www.linkedin.com/in/carme-medina-canalda-250457132/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >LinkedIn&nbsp;↗</a
+      >
+    </p>
+  </aside>
 </section>
