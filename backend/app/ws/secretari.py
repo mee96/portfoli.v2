@@ -41,9 +41,9 @@ WELCOME_MESSAGES = {
 # Reminder sent with every turn so short or ambiguous messages ("hi", "ok")
 # are answered in a sensible language instead of the prompt's Spanish.
 LANGUAGE_NOTES = {
-    "es": "Contesta en el idioma del último mensaje del usuario. Si es muy corto o ambiguo, contesta en castellano. Un saludo como 'hi' o 'hello' es inglés y se contesta en inglés.",
-    "en": "Reply in the language of the user's latest message. If it is very short or ambiguous, reply in English. A greeting such as 'hola' is Spanish and is answered in Spanish; 'hi' or 'hello' is English.",
-    "ca": "Contesta en l'idioma de l'últim missatge de l'usuari. Si és molt curt o ambigu, contesta en català. Una salutació com 'hi' o 'hello' és anglès i es contesta en anglès; 'hola' és castellà i es contesta en castellà.",
+    "es": "Contesta en el idioma del último mensaje del usuario. Si es corto o ambiguo (un 'hola', 'qué tal'), contesta en castellano. Un saludo como 'hi' o 'hello' es inglés y se contesta en inglés. No uses asteriscos ni gestos (*suspiro*, etc.) salvo en una broma acordada.",
+    "en": "Reply in the language of the user's latest message. If it is short or ambiguous, reply in English. 'hi' or 'hello' is English; clearly Spanish or Catalan sentences are answered in that language. Do not use asterisks or gestures (*sigh*, etc.) except in an agreed joke.",
+    "ca": "L'usuari està navegant el web en català. Contesta SEMPRE en català, tret que l'últim missatge sigui clarament una frase llarga en castellà o anglès. Missatges curts o ambigus ('hola', 'què tal', 'hola que tal', errors d'ortografia) són català: contesta en català i continua en català encara que els torns anteriors fossin en altra llengua. Només un 'hi' o 'hello' es contesta en anglès. No facis servir asteriscs ni gestos (*sospir*, etc.) tret d'una broma acordada.",
 }
 
 # Abuse limits. Anything over a limit gets a short canned reply (streamed like a
