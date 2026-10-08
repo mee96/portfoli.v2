@@ -213,6 +213,39 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    id: 'm365',
+    well: 'H7',
+    kind: 'client',
+    year: '2026',
+    stack: ['Angular', 'Microsoft Graph', 'Power Apps', 'Microsoft 365'],
+    translations: {
+      en: {
+        name: 'Microsoft 365 data app',
+        tag: 'Angular data-modelling app that automates tasks inside Microsoft 365. Current work at Fundación Esplai.',
+        method:
+          'Angular front end that talks to Microsoft Graph, on a custom tenant, alongside Power Apps.',
+        reading:
+          'Sends data into Microsoft 365 and automates tasks there. Day-to-day work with weekly releases, in a multidisciplinary team.',
+      },
+      es: {
+        name: 'App de datos con Microsoft 365',
+        tag: 'App Angular de modelado de datos que automatiza tareas dentro de Microsoft 365. Trabajo actual en Fundación Esplai.',
+        method:
+          'Front en Angular que habla con Microsoft Graph, sobre un tenant personalizado, junto a Power Apps.',
+        reading:
+          'Envía datos a Microsoft 365 y automatiza tareas allí. Trabajo del día a día con despliegues semanales, en un equipo multidisciplinar.',
+      },
+      ca: {
+        name: 'App de dades amb Microsoft 365',
+        tag: 'App Angular de modelatge de dades que automatitza tasques dins de Microsoft 365. Feina actual a Fundación Esplai.',
+        method:
+          'Front en Angular que parla amb Microsoft Graph, sobre un tenant personalitzat, juntament amb Power Apps.',
+        reading:
+          'Envia dades a Microsoft 365 i hi automatitza tasques. Feina del dia a dia amb desplegaments setmanals, en un equip multidisciplinari.',
+      },
+    },
+  },
+  {
     id: 'cms',
     well: 'F2',
     kind: 'client',
