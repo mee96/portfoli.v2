@@ -8,10 +8,11 @@ import { Skills } from './features/skills/skills';
 import { TrainingLog } from './features/training-log/training-log';
 import { Contact } from './features/contact/contact';
 import { Secretari } from './features/secretari/secretari';
+import { MorphBubble } from './features/morph-bubble/morph-bubble';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Hero, Plate, Experience, Skills, TrainingLog, Contact, Secretari],
+  imports: [MorphBubble, Header, Hero, Plate, Experience, Skills, TrainingLog, Contact, Secretari],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

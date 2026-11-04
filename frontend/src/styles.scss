@@ -16,11 +16,11 @@ body::before {
   inset: -18%;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 18% 24%, rgb(190 164 255 / 58%), transparent 34%),
-    radial-gradient(ellipse at 78% 18%, rgb(255 181 220 / 43%), transparent 32%),
-    radial-gradient(ellipse at 68% 72%, rgb(174 190 255 / 45%), transparent 36%),
-    radial-gradient(ellipse at 26% 82%, rgb(234 208 255 / 48%), transparent 34%),
-    linear-gradient(135deg, #f8f5ff 0%, #f3f1f8 48%, #f9f3fb 100%);
+    radial-gradient(ellipse at 18% 24%, rgb(175 168 252 / 62%), transparent 34%),
+    radial-gradient(ellipse at 82% 12%, rgb(144 137 234 / 48%), transparent 32%),
+    radial-gradient(ellipse at 68% 78%, rgb(167 183 246 / 50%), transparent 36%),
+    radial-gradient(ellipse at 40% 52%, rgb(252 251 255 / 70%), transparent 30%),
+    linear-gradient(135deg, #f4f3fd 0%, #f2f1fb 48%, #f3f4fd 100%);
   background-size: 155% 155%, 150% 150%, 165% 165%, 150% 150%, 100% 100%;
   background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 50%;
   filter: blur(32px);
@@ -61,4 +61,9 @@ app-root {
   body::before {
     animation: none;
   }
+}
+
+/* Once the WebGL backdrop (app-morph-bubble) has faded in, it paints its own mesh gradient. */
+.webgl-ready body::before {
+  display: none;
 }
